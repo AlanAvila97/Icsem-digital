@@ -57,6 +57,16 @@ export default defineNuxtConfig({
     },
   },
   ssr: true,
+  css:[
+    // 'bootstrap/dist/css/bootstrap.min.css',
+    '@/assets/css/main.css',
+    '@/assets/css/navbar.css',
+    '@/assets/css/footer.css',
+    '@/assets/css/global.css',
+    // 'swiper/css',
+    // 'swiper/css/navigation',
+    // 'swiper/css/pagination',
+  ],
   modules: [
     'nuxt-gtag', 
     'nuxt-icon',
@@ -65,7 +75,9 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@pinia/nuxt', 
     '@unlazy/nuxt',
-    '@nuxtjs/web-vitals'
+    '@nuxtjs/web-vitals',
+    '@nuxtjs/color-mode',
+    '@nuxtjs/google-fonts',
   ],
   devtools: { 
     enabled: true 
@@ -113,5 +125,8 @@ export default defineNuxtConfig({
     // provider: '', // auto detectd
     debug: true,
     disabled: false
-  }
+  },
+  googleFonts: {
+    // Options 
+  },
 })
