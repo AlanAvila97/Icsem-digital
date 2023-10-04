@@ -58,7 +58,7 @@ export default defineNuxtConfig({
   },
   ssr: true,
   css:[
-    // 'bootstrap/dist/css/bootstrap.min.css',
+    'bootstrap/dist/css/bootstrap.min.css',
     '@/assets/css/main.css',
     '@/assets/css/navbar.css',
     '@/assets/css/footer.css',
