@@ -16,7 +16,13 @@
     "vue-router": "^4.2.5"
   },
   "dependencies": {
+    "@nuxt/image": "^1.0.0-rc.3",
+    "@nuxtjs/web-vitals": "^0.2.6",
+    "@pinia/nuxt": "^0.4.11",
+    "@unlazy/nuxt": "^0.10.1",
+    "nuxt-delay-hydration": "^1.2.2",
     "nuxt-gtag": "^1.1.1",
-    "nuxt-icon": "^0.5.0"
+    "nuxt-icon": "^0.5.0",
+    "nuxt-link-checker": "^2.1.9"
   }
 }

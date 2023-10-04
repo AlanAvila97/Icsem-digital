@@ -60,6 +60,12 @@ export default defineNuxtConfig({
   modules: [
     'nuxt-gtag', 
     'nuxt-icon',
+    'nuxt-link-checker',
+    'nuxt-delay-hydration',
+    '@nuxt/image',
+    '@pinia/nuxt', 
+    '@unlazy/nuxt',
+    '@nuxtjs/web-vitals'
   ],
   devtools: { 
     enabled: true 
@@ -68,4 +74,44 @@ export default defineNuxtConfig({
     // id: 'G-XXXXXXXXXX',
     // initialConsent: false
   },
+  delayHydration: {
+    debug: process.env.NODE_ENV === 'development',
+    mode: 'init',
+    replayClick: false,
+  },
+  image: {
+    // domains: ['https://canaloncetv.s3.us-east-1.amazonaws.com'],
+    screens: {
+        xs: 320,
+        sm: 640,
+        md: 768,
+        lg: 1024,
+        xl: 1780,
+        xxl: 1836,
+        '2xl': 1536      
+    },
+    presets: {
+        cover: {
+          modifiers: {
+            fit: "cover",
+            format: "jpg",
+            width: 250,
+            height: 250,
+          },
+        },
+        blog: {
+            modifiers: {
+              format: 'webp',
+              fit: 'cover',
+              quality: '90',
+            }
+        },
+    },
+    
+  },
+  webVitals: {
+    // provider: '', // auto detectd
+    debug: true,
+    disabled: false
+  }
 })
