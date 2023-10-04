@@ -101,7 +101,7 @@
                     <h2>Titulo Productos Servicios</h2>
                 </div>
                 <div class="content-items-products-services d-grid w-100">
-                    <nuxt-link to="/productos/1" class="items-products-services d-flex" aria-label="Redirección">
+                    <nuxt-link to="./productos/1" class="items-products-services d-flex" aria-label="Redirección">
                         <div class="visuals-products-services">
                             <NuxtPicture
                                 src="images/img-600x400-3.jpg"
