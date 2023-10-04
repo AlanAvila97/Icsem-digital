@@ -56,5 +56,16 @@ export default defineNuxtConfig({
         ]
     },
   },
-  devtools: { enabled: true }
+  ssr: true,
+  modules: [
+    'nuxt-gtag', 
+    'nuxt-icon',
+  ],
+  devtools: { 
+    enabled: true 
+  },
+  gtag: {
+    // id: 'G-XXXXXXXXXX',
+    // initialConsent: false
+  },
 })
