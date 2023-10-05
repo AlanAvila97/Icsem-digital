@@ -55,6 +55,8 @@ export default defineNuxtConfig({
         noscript: [
         ]
     },
+    pageTransition: { name: 'page', mode: 'out-in' },
+    layoutTransition: { name: 'layout', mode: 'out-in' }
   },
   ssr: true,
   css:[
@@ -62,10 +64,11 @@ export default defineNuxtConfig({
     '@/assets/css/main.css',
     '@/assets/css/navbar.css',
     '@/assets/css/footer.css',
+    '@/assets/css/btnUp.css',
     '@/assets/css/global.css',
-    // 'swiper/css',
-    // 'swiper/css/navigation',
-    // 'swiper/css/pagination',
+    'swiper/css',
+    'swiper/css/navigation',
+    'swiper/css/pagination',
   ],
   modules: [
     'nuxt-gtag', 
