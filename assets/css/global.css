@@ -893,6 +893,36 @@
     color: var(--green-logo-color);
     font-size: calc(0.5rem + 1vh);
 }
+.section-products-services .container-products-services .categories-products{
+    width: 100%;
+    height: auto;
+    padding-bottom: 1.5rem;
+}
+.section-products-services .container-products-services .categories-products .list-categories{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    width: auto;
+    gap: 2rem;
+}
+.section-products-services .container-products-services .categories-products .list-categories li{
+    cursor: pointer;
+}
+.section-products-services .container-products-services .categories-products .list-categories li:hover{
+    text-decoration: underline;
+}
+.section-products-services .container-products-services .categories-products .list-categories li p{
+    color: var(--Outer-color);
+    font-size: calc(0.6rem + 1vh);
+    text-transform: capitalize;
+    margin: 0;
+}
+.section-products-services .container-products-services .categories-products .list-categories li.active{
+    color: var(--green-logo-color);
+}
+.section-products-services .container-products-services .categories-products .list-categories li.active p{
+    color: var(--green-logo-color);
+}
 /*-------------------------------------------------------------
 # Seccion Experiencia
 --------------------------------------------------------------*/
