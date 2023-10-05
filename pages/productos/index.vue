@@ -1,14 +1,50 @@
 <template>
     <main id="wrapper" class="product">
-        <section class="pt-md-70 section-contact">
-        <h2 style="color:#000;">Product</h2>
+        <section class="pt-md-70 section-product">
+            <div class="container-product d-flex">
+                <div class="info-product">
+                    <div class="image-product d-flex">
+                        <NuxtPicture
+                            src="https://api.iconify.design/ri:aliens-line.svg?color=%23888888"
+                            densities="x1 x2"
+                            preset="blog" 
+                            format="webp" 
+                            quality="90" 
+                            fit="cover" 
+                            preload
+                            :imgAttrs="{
+                                id:'img-us-2', 
+                                class:'img-fluid bg-products-services', 
+                                style:'display:block', 
+                                alt: 'Image',                                
+                                title: 'Imagen',
+                                'data-my-data': 'my-value'}"/>  
+                    </div>
+                    <div class="name-product d-flex">
+                        <h1>Productos</h1>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="container-sinopsis-product">
+                <div class="sinopsis">
+                    <h2>Subtitulo</h2>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo eligendi nulla quidem labore possimus cumque corporis explicabo, 
+                        necessitatibus libero nam. Nihil earum corrupti nam possimus laboriosam perferendis quaerat quasi quas.
+                    </p>
+                </div>
+                <hr>
+            </div> -->
         </section>
+        <ProductosView></ProductosView>
     </main>
 </template>
 
 <script setup>
     // Vue
     import { useRoute, useRouter } from "vue-router";
+    // 
+    import 'assets/css/productos.css'
     // 
     const route = useRoute();
     const router = useRouter();
