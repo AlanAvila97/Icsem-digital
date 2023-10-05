@@ -1,28 +1,44 @@
 import {defineStore} from 'pinia'
 // 
 export const dataGlobal = defineStore('dataGlobal', () => {
-    function getElement(element) {
+    const getElement = (element) => {
         return document.querySelector(element);
-    }    
-    function getAllElement(element) {
+    }  
+    /**
+     * @description Función 
+    */   
+    const getAllElement = (element) => {
         return document.querySelectorAll(element);
     }
+    /**
+     * @description Función 
+    */ 
     const addClassElement = (element, typeClass) => {
         element.classList.add(typeClass);
     }
+    /**
+     * @description Función 
+    */ 
     const addAllClass = (elements, typeClass) => {
         elements.forEach(div => {
             div.classList.add(typeClass);
         });
     }
+    /**
+     * @description Función 
+    */ 
     const removeClass = (element, typeClass) => {
         element.classList.remove(typeClass);
     }
+    /**
+     * @description Función 
+    */ 
     const removeAllClass = (elements, typeClass) => {
         elements.forEach(div => {
             div.classList.remove(typeClass);
         });
     }
+
     /**
      * @description Función para hace un scroll a una seccion del index (Blog, Podcast)
     */ 
@@ -34,6 +50,9 @@ export const dataGlobal = defineStore('dataGlobal', () => {
                             behavior: 'smooth'
                             });
     }
+    /**
+     * @description Función 
+    */ 
     const parseoTexto = (cadena) => {
         let txt = String(cadena);
         let textParser = txt.replaceAll(' ', '-');
@@ -41,6 +60,9 @@ export const dataGlobal = defineStore('dataGlobal', () => {
               textParser = eliminarAcentos(textParser);
         return eliminarCaracteres(textParser);
     }
+    /**
+     * @description Función 
+    */ 
     const eliminarAcentos = (cadena) => {
         var chars={
             "á":"a", "é":"e", "í":"i", "ó":"o", "ú":"u",
@@ -51,10 +73,16 @@ export const dataGlobal = defineStore('dataGlobal', () => {
         var res = cadena?.replace(expr,function(e){return chars[e]});
         return res; 
     }
+    /**
+     * @description Función 
+    */     
     const eliminarCaracteres = (cadena) => {
         var outString = cadena.replace(/[`~!¡@#$%^&*()_|+\=¿?;:'",.<>\{\}\[\]\\\/]/gi, '');
         return outString;
     }
+    /**
+     * @description Función 
+    */     
     const fadeLoader = () => {
         const status =  true
         setTimeout(function(){
