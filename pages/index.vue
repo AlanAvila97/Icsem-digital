@@ -202,147 +202,7 @@
                 </div>
             </div>
         </section>
-        <section class="section-products-services">
-            <div class="container-products-services d-flex">
-                <div class="title-products-services w-100 d-flex">
-                    <h2>Titulo Productos Servicios</h2>
-                </div>
-                <div class="content-items-products-services d-flex w-100">
-                    <nuxt-link to="./productos/1" class="items-products-services d-flex first" aria-label="Redirección">
-                        <div class="visuals-products-services">
-                            <NuxtPicture
-                                src="images/img-600x400-3.jpg"
-                                densities="x1 x2"
-                                preset="blog" 
-                                format="webp" 
-                                quality="90" 
-                                fit="cover" 
-                                preload
-                                :imgAttrs="{
-                                    id:'img-us-1', 
-                                    class:'img-fluid bg-products-services', 
-                                    alt: 'Image',                                
-                                    title: 'Imagen',
-                                    'data-my-data': 'my-value'}"/>  
-                        </div> 
-                        <div class="info-products-services">
-                            <div class="image-item">
-                                <NuxtPicture
-                                src="https://api.iconify.design/ri:aliens-line.svg?color=%23888888"
-                                densities="x1 x2"
-                                preset="blog" 
-                                format="webp" 
-                                quality="90" 
-                                fit="cover" 
-                                preload
-                                :imgAttrs="{
-                                    id:'img-us-2', 
-                                    class:'img-fluid bg-products-services', 
-                                    style:'display:block', 
-                                    alt: 'Image',                                
-                                    title: 'Imagen',
-                                    'data-my-data': 'my-value'}"/>  
-                            </div>
-                            <h2>Producto 1</h2>
-                            <p class="sinopsis">
-                                Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.
-                            </p>
-                            <p class="redirect"> 
-                                Da click para para saber más <Icon name="ri:arrow-right-line" />
-                            </p>    
-                        </div>   
-                    </nuxt-link>
-                    <nuxt-link to="./productos/2" class="items-products-services d-flex second" aria-label="Redirección">
-                        <div class="visuals-products-services">
-                            <NuxtPicture
-                                src="images/img-600x400-4.jpg"
-                                densities="x1 x2"
-                                preset="blog" 
-                                format="webp" 
-                                quality="90" 
-                                fit="cover" 
-                                preload
-                                :imgAttrs="{
-                                    id:'img-us-3', 
-                                    class:'img-fluid bg-products-services', 
-                                    alt: 'Image',                                
-                                    title: 'Imagen',
-                                    'data-my-data': 'my-value'}"/>
-                        </div>    
-                        <div class="info-products-services">
-                            <div class="image-item">
-                                <NuxtPicture
-                                src="https://api.iconify.design/ri:aliens-line.svg?color=%23888888"
-                                densities="x1 x2"
-                                preset="blog" 
-                                format="webp" 
-                                quality="90" 
-                                fit="cover" 
-                                preload
-                                :imgAttrs="{
-                                    id:'img-us-4', 
-                                    class:'img-fluid bg-products-services', 
-                                    style:'display:block', 
-                                    alt: 'Image',                                
-                                    title: 'Imagen',
-                                    'data-my-data': 'my-value'}"/>  
-                            </div>
-                            <h2>Producto 2</h2>
-                            <p class="sinopsis">
-                                Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.
-                            </p>
-                            <p class="redirect"> 
-                                Da click para para saber más <Icon name="ri:arrow-right-line" />
-                            </p>    
-                        </div>    
-                    </nuxt-link>
-                    <nuxt-link to="./productos/3" class="items-products-services d-flex three" aria-label="Redirección">
-                        <div class="visuals-products-services">
-                            <NuxtPicture
-                                src="images/img-600x400-5.jpg"
-                                densities="x1 x2"
-                                preset="blog" 
-                                format="webp" 
-                                quality="90" 
-                                fit="cover" 
-                                preload
-                                :imgAttrs="{
-                                    id:'img-us-5', 
-                                    class:'img-fluid bg-products-services', 
-                                    alt: 'Image',                                
-                                    title: 'Imagen',
-                                    'data-my-data': 'my-value'}"/>                                       
-                        </div>    
-                        <div class="info-products-services">
-                            <div class="image-item">
-                                <NuxtPicture
-                                src="https://api.iconify.design/ri:aliens-line.svg?color=%23888888"
-                                densities="x1 x2"
-                                preset="blog" 
-                                format="webp" 
-                                quality="90" 
-                                fit="cover" 
-                                preload
-                                :imgAttrs="{
-                                    id:'img-us-6', 
-                                    class:'img-fluid bg-products-services', 
-                                    style:'display:block', 
-                                    alt: 'Image',                                
-                                    title: 'Imagen',
-                                    'data-my-data': 'my-value'}"/>  
-                            </div>
-                            <h2>Producto 3</h2>
-                            <p class="sinopsis">
-                                Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.
-                            </p>
-                            <p class="redirect"> 
-                                Da click para para saber más <Icon name="ri:arrow-right-line" />
-                            </p>                            
-                        </div>  
-                    </nuxt-link>
-                </div>
-            </div>
-        </section>
+        <ProductosView></ProductosView>
         <section class="section-post-sell">
             <div class="container-post-sell">
                 <div class="info-post-sell d-flex">
@@ -642,16 +502,12 @@
 
     #Contactanos {
         scroll-margin-block-start: 110px;
-        /*Adds margin to the top of the viewport*/
         scroll-margin-block-end: 110px;
-        /*Adds margin to the bottom of the viewport*/
     }
     @media(max-width: 780px){
         #Experiencias {
             scroll-margin-block-start: 110px;
-            /*Adds margin to the top of the viewport*/
             scroll-margin-block-end: 110px;
-            /*Adds margin to the bottom of the viewport*/
         }   
     }
 </style>
