@@ -25,16 +25,16 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="container-sinopsis-product">
+            <div class="container-sinopsis-product">
                 <div class="sinopsis">
                     <h2>Subtitulo</h2>
+                    <hr>
                     <p>
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo eligendi nulla quidem labore possimus cumque corporis explicabo, 
                         necessitatibus libero nam. Nihil earum corrupti nam possimus laboriosam perferendis quaerat quasi quas.
                     </p>
                 </div>
-                <hr>
-            </div> -->
+            </div>
         </section>
         <ProductosView></ProductosView>
     </main>
