@@ -4,6 +4,22 @@
             <div class="title-products-services w-100 d-flex">
                 <h2>Titulo Productos Servicios</h2>
             </div>
+            <div class="categories-products">
+                <lu class="list-categories">
+                    <li class="active">
+                        <p>Mostrar todo</p>
+                    </li>
+                    <li>
+                        <p>Mecánica</p>
+                    </li>
+                    <li>
+                        <p>Electricidad</p>
+                    </li>
+                    <li>
+                        <p>Farmacia</p>
+                    </li>
+                </lu>
+            </div>
             <div class="content-items-products-services d-flex w-100">
                 <nuxt-link to="./productos/1" class="items-products-services d-flex first" aria-label="Redirección">
                     <div class="visuals-products-services">
@@ -143,9 +159,28 @@
 </template>
 
 <script setup>
-
+    // 
+    import { onMounted } from "vue";
+    // Global Data (Pinia)
+    import {dataGlobal} from '@/store/globalData'
+    // 
+    const DataGlobal = dataGlobal();   
+    // 
+    const { getElement, scrollSection } = DataGlobal; 
+    const initializationIsotope = () => {
+        let container = getElement('.portfolio-container');
+        var portfolioIsotope = container.isotope({
+                itemSelector: '.portfolio-item',
+                layoutMode: 'fitRows'
+            });
+    }
+    onMounted(() => {
+        // initializationIsotope();
+    });
 </script>
 
 <style scoped>
-
+    .title-products-services{
+        padding-bottom: 1rem!important;
+    }
 </style>
