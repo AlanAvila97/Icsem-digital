@@ -26,7 +26,7 @@
         setTimeout(function(){
             document.querySelector('body').classList.add('overflow-auto');
             loading.value = false;
-        }, 800);    
+        }, 500);    
     }
     onMounted(() => {
         // setCubesItems()
