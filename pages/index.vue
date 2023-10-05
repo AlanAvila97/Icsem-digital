@@ -1,5 +1,113 @@
 <template>
     <main id="wrapper" class="index">
+        <section class="pt-md-70 section-slider-head">
+            <div class="container-slider-head">
+                 <swiper 
+                     :direction="'vertical'"
+                     :slidesPerView="1"
+                     :spaceBetween="30"
+                     :rewind="true"
+                     :grabCursor="true"  
+            
+                     :pagination='{
+                         clickable: true,
+                         dynamicBullets: true,
+                         dynamicMainBullets: 1,
+                         renderBullet: function (index, className) {
+                             let title = "paginacion-"+(index + 1);
+                             return "<span id="+title+" class="+className+" title="+title+"></span>";
+                         }
+                     }'                    
+                     :modules="modules" 
+                     class="swiper-head">
+                     <swiper-slide>
+                         <NuxtPicture
+                             src="images/carousel-1.jpg"
+                             densities="x1 x2"
+                             preset="blog" 
+                             format="webp" 
+                             quality="90" 
+                             fit="cover" 
+                             preload
+                             :imgAttrs="{
+                                 id:'img-1', 
+                                 class:'img-fluid', 
+                                 alt: 'Image',                                
+                                 title: 'Imagen',
+                                 'data-my-data': 'my-value'}"/>
+                         <div class="container-info">
+                             <h1>Titulo</h1>
+                             <p>Subtitilo</p>
+                             <nuxt-link class="button" to="/productos/1">
+                                 <span class="button-icon-wrapper">
+                                     <Icon name="ri:home-office-line" class="follow" />
+                                     <Icon name="ri:home-office-line" class="follow-hover" />
+                                 </span>
+                                 Conoce Más
+                             </nuxt-link>
+                         </div>                                
+                     </swiper-slide>
+                     <swiper-slide>
+                         <NuxtPicture
+                             src="images/carousel-2.jpg"
+                             densities="x1 x2"
+                             preset="blog" 
+                             format="webp" 
+                             quality="90" 
+                             fit="cover" 
+                             preload
+                             :imgAttrs="{
+                                 id:'img-1', 
+                                 class:'img-fluid', 
+                                 alt: 'Image',                                
+                                 title: 'Imagen',
+                                 'data-my-data': 'my-value'}"/>
+                         <div class="container-info">
+                             <h1>Prueba para Titulo Largo</h1>
+                             <p>
+                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est nam non nemo nostrum, amet qui enim 
+                                 dignissimos itaque pariatur? Nemo dicta autem dignissimos sunt, voluptatem accusantium temporibus. 
+                                 Vitae, tenetur corporis!
+                             </p>
+                             <nuxt-link class="button" to="/productos/1">
+                                 <span class="button-icon-wrapper">
+                                     <Icon name="ri:home-office-line" class="follow" />
+                                     <Icon name="ri:home-office-line" class="follow-hover" />
+                                 </span>
+                                 Conoce Más
+                             </nuxt-link>
+                         </div>
+                     </swiper-slide>
+                     <swiper-slide>
+                         <NuxtPicture
+                             src="images/carousel-3.jpg"
+                             densities="x1 x2"
+                             preset="blog" 
+                             format="webp" 
+                             quality="90" 
+                             fit="cover" 
+                             preload
+                             :imgAttrs="{
+                                 id:'img-1', 
+                                 class:'img-fluid', 
+                                 alt: 'Image',                                
+                                 title: 'Imagen',
+                                 'data-my-data': 'my-value'}"/>
+                         <div class="container-info">
+                             <h1>Titulo</h1>
+                             <p>Subtitilo</p>
+                             <nuxt-link class="button" to="/productos/1">
+                                 <span class="button-icon-wrapper">
+                                     <Icon name="ri:home-office-line" class="follow" />
+                                     <Icon name="ri:home-office-line" class="follow-hover" />
+                                 </span>
+                                 Conoce Más
+                             </nuxt-link>
+                         </div>
+                     </swiper-slide>
+                 </swiper>
+            </div>
+        </section>
         <section class="section-values">
             <div class="title-value d-flex">
                 <h2>Nuestros Valores</h2>
@@ -66,7 +174,6 @@
         <section class="section-us">
             <div class="content-us">
                 <div class="container-img-us">
-                    <!-- <img class="img-fluid" src="images/about.jpg" alt="" srcset=""> -->
                     <NuxtPicture
                         src="images/about-2.jpg"
                         densities="x1 x2"
@@ -100,8 +207,8 @@
                 <div class="title-products-services w-100 d-flex">
                     <h2>Titulo Productos Servicios</h2>
                 </div>
-                <div class="content-items-products-services d-grid w-100">
-                    <nuxt-link to="./productos/1" class="items-products-services d-flex" aria-label="Redirección">
+                <div class="content-items-products-services d-flex w-100">
+                    <nuxt-link to="./productos/1" class="items-products-services d-flex first" aria-label="Redirección">
                         <div class="visuals-products-services">
                             <NuxtPicture
                                 src="images/img-600x400-3.jpg"
@@ -114,7 +221,6 @@
                                 :imgAttrs="{
                                     id:'img-us-1', 
                                     class:'img-fluid bg-products-services', 
-                                    style:'display:block', 
                                     alt: 'Image',                                
                                     title: 'Imagen',
                                     'data-my-data': 'my-value'}"/>  
@@ -146,7 +252,7 @@
                             </p>    
                         </div>   
                     </nuxt-link>
-                    <nuxt-link to="./productos/2" class="items-products-services" aria-label="Redirección">
+                    <nuxt-link to="./productos/2" class="items-products-services d-flex second" aria-label="Redirección">
                         <div class="visuals-products-services">
                             <NuxtPicture
                                 src="images/img-600x400-4.jpg"
@@ -159,7 +265,6 @@
                                 :imgAttrs="{
                                     id:'img-us-3', 
                                     class:'img-fluid bg-products-services', 
-                                    style:'display:block', 
                                     alt: 'Image',                                
                                     title: 'Imagen',
                                     'data-my-data': 'my-value'}"/>
@@ -191,7 +296,7 @@
                             </p>    
                         </div>    
                     </nuxt-link>
-                    <nuxt-link to="./productos/3" class="items-products-services" aria-label="Redirección">
+                    <nuxt-link to="./productos/3" class="items-products-services d-flex three" aria-label="Redirección">
                         <div class="visuals-products-services">
                             <NuxtPicture
                                 src="images/img-600x400-5.jpg"
@@ -204,7 +309,6 @@
                                 :imgAttrs="{
                                     id:'img-us-5', 
                                     class:'img-fluid bg-products-services', 
-                                    style:'display:block', 
                                     alt: 'Image',                                
                                     title: 'Imagen',
                                     'data-my-data': 'my-value'}"/>                                       
@@ -249,7 +353,7 @@
                         Algún patio trasero será el patio trasero y ellos. Era una clita en sí misma e Internet y lo era, 
                         pero si era un sitio web o una clita eran solo dos cosas.
                     </p>
-                    <div class="items-post-sell d-grid">
+                    <div class="items-post-sell d-flex">
                         <div class="item">
                             <Icon name="uil:github" size="3rem"/>
                             <h2 class="title-item">Primer Post</h2>
@@ -280,7 +384,6 @@
                         :imgAttrs="{
                             id:'my-id', 
                             class:'img-fluid ', 
-                            style:'display:block', 
                             alt: 'Image',                                
                             title: 'Imagen',
                             'data-my-data': 'my-value'}"/>
@@ -288,10 +391,10 @@
             </div> 
         </section>
         <section  class="section-emails">        
+            <div class="title-emails w-100 d-flex">
+                <h2 id="Contactanos" >Contactanos</h2>
+            </div>
             <div class="container-emails d-flex">
-                <div class="title-emails w-100 d-flex">
-                    <h2 id="Contactanos" >Contactanos</h2>
-                </div>
                 <div id="infoMail1" class="card-emails">
                     <div class="card-content">
                         <div class="card-title">Contacto 1</div>
@@ -357,7 +460,6 @@
                     </div>
                 </div>
             </div>
-
         </section>
         <section class="section-contact-general">
             <div class="container-contact-general d-flex">
@@ -490,6 +592,9 @@
     import { onMounted } from "vue";
     // vue router
     import { useRoute, useRouter } from "vue-router";
+    // Import Swiper Vue.js components
+    import { Swiper, SwiperSlide } from 'swiper/vue';
+    import { Pagination, Navigation, Mousewheel, Autoplay } from 'swiper/modules';
     // Global Data (Pinia)
     import {dataGlobal} from '@/store/globalData'
     // 
@@ -498,6 +603,8 @@
     const router = useRouter();
     // 
     const { getElement, scrollSection } = DataGlobal; 
+    // 
+    const modules = [Navigation, Pagination, Mousewheel, Autoplay];
     // 
     function getInfoMail(e) {
         let id = e.target.dataset.id;
@@ -538,5 +645,13 @@
         /*Adds margin to the top of the viewport*/
         scroll-margin-block-end: 110px;
         /*Adds margin to the bottom of the viewport*/
+    }
+    @media(max-width: 780px){
+        #Experiencias {
+            scroll-margin-block-start: 110px;
+            /*Adds margin to the top of the viewport*/
+            scroll-margin-block-end: 110px;
+            /*Adds margin to the bottom of the viewport*/
+        }   
     }
 </style>
