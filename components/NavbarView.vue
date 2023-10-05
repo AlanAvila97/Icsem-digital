@@ -3,11 +3,12 @@
         <div class="container-header">
             <div class="content-menu-hamburguer">
                 <label for="check" class="menuButton">
-                    <input id="check" type="checkbox">
+                    <input id="check" type="checkbox" @click="openMenu">
                     <span class="top"></span>
                     <span class="mid"></span>
                     <span class="bot"></span>
-                </label>    
+  
+                </label> 
             </div><!-- End div content menu hamburguer -->
             <div class="logo h-100">
                 <nuxt-link to="/">                    
@@ -30,41 +31,71 @@
             <div class="sections-nav">
                 <ul class="elements-nav">
                     <li>
-                        <nuxt-link to="/">
+                        <nuxt-link to="/" @click.prevent="actionLink()" aria-label="Redirección Inicio">
                             Inicio
                         </nuxt-link>
                     </li>
                     <li>   
-                        <nuxt-link to="/productos/1">
+                        <nuxt-link to="/productos" @click.prevent="actionLink()" aria-label="Redirección a Productos">
                             Productos
                         </nuxt-link>
                     </li>
                     <li>   
-                        <nuxt-link to="/servicios/1">
+                        <nuxt-link to="/servicios" @click.prevent="actionLink()" aria-label="Redirección a Servicios">
                             Servicios
                         </nuxt-link>
                     </li>
                     <li>   
-                        <div class="scroll-element scroll-contactanos" data-element="Contactanos" @click="clickScrollElementsIndex">
+                        <div class="scroll-element scroll-contactanos" data-element="Contactanos" @click="clickScrollElementsIndex" aria-label="Scroll a Sección Contactanos">
                             Contactanos
                         </div>
                     </li>
                     <li>   
-                        <div class="scroll-element scroll-experiencia" data-element="Experiencias" @click="clickScrollElementsIndex">
+                        <div class="scroll-element scroll-experiencia" data-element="Experiencias" @click="clickScrollElementsIndex" aria-label="Scroll a Sección Inicio">
                             Experiencia
                         </div>
                     </li>
                 </ul>
             </div><!-- End div sections nav -->
         </div>
+        <div id="sidebarMenu">
+            <div class="container-menu scroll-menu">
+                <nuxt-link @click.prevent="actionLink()" id="MenuInicio" to="/" class="items Seccion-Menu" aria-label="Redirección Inicio">
+                    Inicio
+                </nuxt-link>
+                <nuxt-link @click.prevent="actionLink()" id="MenuProductor" to="/productos" class="items Seccion-Menu" aria-label="Redirección a Productos">
+                    Productos
+                </nuxt-link>
+                <nuxt-link @click.prevent="actionLink()" id="MenuProductor" to="/servicios" class="items Seccion-Menu" aria-label="Redirección a Servicios">
+                    Servicios
+                </nuxt-link>
+                <p                 
+                    @click.prevent="actionScroll()" @click="clickScrollElementsIndex" 
+                    id="MenuProductor" class="items Seccion-Menu" data-element="Contactanos"
+                    aria-label="Scroll a Sección Contactanos">
+                    Contactanos
+                </p>
+                <p 
+                    @click.prevent="actionScroll()" @click="clickScrollElementsIndex" 
+                    id="MenuProductor" class="items Seccion-Menu" data-element="Experiencias"
+                    aria-label="Scroll a Sección Inicio">
+                    Experiencia
+                </p>
+            </div>
+        </div> 
     </header>
 </template>
 
 <script setup>
+    // 
+    import { onMounted } from "vue";
     // vue router
     import { useRoute, useRouter } from "vue-router";
     // Global Data (Pinia)
     import {dataGlobal} from '@/store/globalData'
+    // Composables
+    const preload = actionPreload();
+    const { hiddenPreoload } = preload; 
     // 
     const DataGlobal = dataGlobal();   
     const router = useRouter();
@@ -73,17 +104,19 @@
     /**
      * @description Funcion que da opacidad o da backgound solido al navbar dependiendo de la posición del top de la vista
     */
-    // window.onscroll = function() {  };
-    import { onMounted } from "vue";
     function scrollFunction() {
         let mobile = (/iphone|webOS|Windows Phone|iPod|Android|ipad/i.test(navigator.userAgent.toLowerCase()));
-        if(mobile) {
-            document.querySelector('.header').classList.add('top-0')                
-        }else{
-            if (document.body.scrollTop > 39 || document.documentElement.scrollTop > 39) {
-                document.querySelector('.header').classList.add('top-0')                
-            } else {
-                document.querySelector('.header').classList.remove('top-0');
+        if (document.body.scrollTop > 39 || document.documentElement.scrollTop > 39) {
+            document.querySelector('.header').classList.add('top-0') 
+        } else {
+            document.querySelector('.header').classList.remove('top-0');
+        }
+    }
+    function reportWindowSize() {
+        let status = getElement('#check').checked;
+        if(window.innerWidth >= '780'){
+            if(status){
+                getElement('#check').click();
             }
         }
     }
@@ -99,8 +132,32 @@
             scrollSection(getElement('#'+element), 70);
         }
     }
+    const actionLink = () => {
+        document.body.scrollTop = 0; 
+        document.documentElement.scrollTop = 0;
+        getElement('#check').click();
+        const divPreload =  document.querySelector('.preloader');
+        hiddenPreoload(divPreload, 'preloader');
+    }
+    const actionScroll = () => {
+        getElement('#check').click();
+    }
+    const openMenu = (e) => {
+        let status = e.target.checked;
+        let element = getElement('#sidebarMenu');
+        let body = getElement('body');
+        if(status){
+            body.classList.add('overflow-hidden')
+            element.classList.add('active');    
+        }else{
+            body.classList.remove('overflow-hidden')
+            element.classList.remove('active');    
+        }
+    }
+
     onMounted(() => {
         window.onscroll = function() { scrollFunction(); };
+        window.onresize = function() { reportWindowSize(); };
     });
 </script>
 
