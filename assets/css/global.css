@@ -8,9 +8,7 @@
     align-items: center;
     width: 100%;
     height: max(320px, 550px);
-    /* padding: 0% 2%; */
     position: relative;
-
 }
 .section-slider-head .container-slider-head .swiper {
     width: 100%;
@@ -48,7 +46,8 @@
 }
 .section-slider-head .container-slider-head .swiper-vertical > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic, 
 .section-slider-head .container-slider-head .swiper-pagination-vertical.swiper-pagination-bullets.swiper-pagination-bullets-dynamic{
-    width: 4%;
+    width: 4rem;
+    right: 1rem;
 }
 .section-slider-head .container-slider-head .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next{
     transform: scale(1);
@@ -277,7 +276,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 3rem 5rem;
+    padding: 1rem 5rem;
 }
 .section-post-sell .container-post-sell .info-post-sell small{
     color: var(--green-logo-color);
@@ -296,46 +295,48 @@
 }
 .section-post-sell .container-post-sell .info-post-sell .items-post-sell{
     width: 100%;
-    grid-template-columns: repeat(2,minmax(300px,1fr));
-    grid-template-rows: repeat(2,minmax(80px,1fr));
+    flex-wrap: wrap;
 }
 .section-post-sell .container-post-sell .info-post-sell .items-post-sell .item{
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
     gap: 0.5rem;
+    width: 50%;
 }
 .section-post-sell .container-post-sell .info-post-sell .items-post-sell .item svg{
     color: var(--green-logo-color);
 }
 .section-post-sell .container-post-sell .info-post-sell .items-post-sell .title-item{
     color: var(--Outer-color);
-    font-size: calc(1rem + 1vh);
+    font-size: calc(0.7rem + 1vh);
     font-weight: bolder;
     margin: 0;
 }
 /*-------------------------------------------------------------
 # Seccion Emails
 --------------------------------------------------------------*/
-.section-emails .container-emails{
-    height: 100%;
-    width: 100%;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 3rem 3rem;
-}
-.section-emails .container-emails .title-emails{
+.section-emails .title-emails{
     justify-content: center;
+    padding: 3rem 3rem;
     padding-bottom: 2rem;
 }
-.section-emails .container-emails .title-emails h2{
+.section-emails .title-emails h2{
     color: var(--Outer-color);
     font-size: calc(2rem + 1vh);
     font-weight: bold;
     margin: 0;
 }
+.section-emails .container-emails{
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0rem 3rem 3rem;
+    gap: 1rem;
+}
 .section-emails .container-emails .card-emails{
-    width: max(300px, 450px);
+    width: 31%;
     height: max(300px, 500px);
     background-color: var(--white-icon-color);
     border: 1px solid #0d818491;
@@ -621,9 +622,8 @@
     height: 100%;
 }
 .section-contact-general .container-contact-general .image-contact picture img{
-    height: auto;
+    height: 100%;
     width: 100%;
-    max-height: 620px;
 }
 .section-contact-general .container-contact-general .info-contact{
     width: 50%;
@@ -635,8 +635,9 @@
     display: flex;
     flex-direction: column;
     width: max(300px, 90%);
+    height: auto;
     background-color: var(--white-icon-color);
-    padding: 2rem;
+    padding: 1rem;
     border-radius: 20px;
     position: relative;
 }
@@ -712,12 +713,14 @@
     outline: 0;
     border: 1px solid rgba(105, 105, 105, 0.397);
     border-radius: 10px;
+    height: 40px;
 }  
 .section-contact-general .container-contact-general .form-contact label .select {
     cursor: pointer;
 }
 .section-contact-general .container-contact-general .form-contact label .textarea {
-    max-height: 160px;
+    height: 100%;
+    max-height: 120px;
     resize:none;
 }
 .section-contact-general .container-contact-general .form-contact label span {
@@ -769,7 +772,7 @@
     width: 100%;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 3rem 2rem;
+    padding: 3rem;
 }
 .section-products-services .container-products-services .title-products-services{
     justify-content: center;
@@ -783,11 +786,12 @@
     margin: 0;
 }
 .section-products-services .container-products-services .content-items-products-services{
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-    justify-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 3rem;
     text-decoration: none;
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 .section-products-services .container-products-services .content-items-products-services .items-products-services{
     color: var(--Outer-color);
@@ -796,7 +800,7 @@
     box-shadow: 0px 4px 10px 2px rgb(0 0 0 / 53%);
     flex-direction: column;
     height: 100%;
-    width: max(300px, 450px);
+    width: max(300px, 90%);
     /* max-width: 400px; */
 }
 .section-products-services .container-products-services .content-items-products-services .items-products-services:hover .info-products-services .image-item{
@@ -915,10 +919,10 @@
     margin: 0;
 }
 .section-experience .container-experience .content-items-experience{
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat( 3 ,minmax(300px,1fr));
+    display: flex;
+    justify-content: space-between;
     gap: 2rem;
+    width: 100%;
 }
 .section-experience .container-experience .content-items-experience .items-experience{
     flex-direction: column;
@@ -928,7 +932,7 @@
     border-radius: 0.5rem;
     box-shadow: 0px 4px 10px 2px rgb(0 0 0 / 53%);
     text-decoration: none;
-    width: max(300px, 450px);
+    width: 33%;
     height: max(300px, 480px);
 }
 .section-experience .container-experience .content-items-experience .items-experience .visual-experience{
@@ -1029,8 +1033,426 @@
 /*-------------------------------------------------------------
 # Responsive
 --------------------------------------------------------------*/
-@media(max-width: 460){
-    
+@media(max-width: 991px){
+    /*-------------------------------------------------------------
+    # Seccion Valores
+    --------------------------------------------------------------*/
+    .section-values .container-values{
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .section-values .container-values .item-values{
+        width: 45%;
+    }
+    /*-------------------------------------------------------------
+    # Seccion Quienes Somos
+    --------------------------------------------------------------*/
+    .section-us .content-us{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .section-us .content-us .container-img-us{
+        width: 100%;
+        padding: 3rem 3rem 0rem;
+    }
+    .section-us .content-us .info-us{
+        width: 100%;
+        padding: 2rem 3rem 0rem;
+    }
+    .section-us .content-us .container-img-us picture img{
+        max-height: 450px;
+        border-radius: 0.5rem;
+        -webkit-border-radius: 0.5rem;
+        -moz-border-radius: 0.5rem;
+        -ms-border-radius: 0.5rem;
+        -o-border-radius: 0.5rem;
+    }
+    /*-------------------------------------------------------------
+    # Seccion Productos Servicios   
+    --------------------------------------------------------------*/    
+    .section-products-services .container-products-services .content-items-products-services{
+        flex-wrap: wrap;
+    }
+    .section-products-services .container-products-services .content-items-products-services .items-products-services{
+        width: max(300px, 45%);
+        max-height: 520px;
+    }
+    .section-products-services .container-products-services .items-products-services .visuals-products-services::before{
+        transform: skewX(45deg) translateX(800px);
+        -webkit-transform: skewX(45deg) translateX(800px);
+        -moz-transform: skewX(45deg) translateX(800px);
+        -ms-transform: skewX(45deg) translateX(800px);
+        -o-transform: skewX(45deg) translateX(800px);
+    }
+    /*-------------------------------------------------------------
+    # Seccion Post Ventas
+    --------------------------------------------------------------*/
+    .section-post-sell .container-post-sell{
+        flex-direction: column;        
+    }
+    .section-post-sell .container-post-sell .info-post-sell{
+        width: 100%;
+        padding: 2rem 3rem 0rem;
+    }
+    .section-post-sell .container-post-sell .container-img-post-sell {
+        width: 100%;
+        padding: 3rem;
+    }
+    .section-post-sell .container-post-sell .container-img-post-sell picture img {
+        max-height: 450px;
+        border-radius: 0.5rem;
+        -webkit-border-radius: 0.5rem;
+        -moz-border-radius: 0.5rem;
+        -ms-border-radius: 0.5rem;
+        -o-border-radius: 0.5rem;
+    }
+    /*-------------------------------------------------------------
+    # Seccion Emails
+    --------------------------------------------------------------*/
+    .section-emails .container-emails .card-emails{
+        width: 45%;
+    }
+    /*-------------------------------------------------------------
+    # Seccion Contacto General
+    --------------------------------------------------------------*/
+    .section-contact-general .container-contact-general{
+        flex-direction: column;
+    }
+    .section-contact-general .container-contact-general .image-contact{
+        width: 100%;
+        padding: 3rem 3rem 0rem;
+    }
+    .section-contact-general .container-contact-general .image-contact picture img{
+        height: auto;
+        max-height: 600px;
+        border-radius: 0.5rem;
+        -webkit-border-radius: 0.5rem;
+        -moz-border-radius: 0.5rem;
+        -ms-border-radius: 0.5rem;
+        -o-border-radius: 0.5rem;
+    }
+    .section-contact-general .container-contact-general .info-contact{
+        width: 100%;
+        padding: 2rem 3rem 0rem;
+    }
+    .section-contact-general .container-contact-general .form-contact{
+        width: max(300px, 100%);
+    }
+    /*-------------------------------------------------------------
+    # Seccion Experiencia
+    --------------------------------------------------------------*/
+    .section-experience .container-experience .content-items-experience{
+        flex-wrap: wrap;
+    }
+    .section-experience .container-experience .content-items-experience .items-experience{
+        width: 45%;
+    }
+}
+@media(max-width: 780px){
+    /*-------------------------------------------------------------
+    # Seccion Slider Principal
+    --------------------------------------------------------------*/
+    .section-slider-head .container-slider-head .container-info{
+        width: max(300px, 90%);
+        height: max(300px, 90%);
+        justify-content: center;
+    }
+    /*-------------------------------------------------------------
+    # Seccion Valores
+    --------------------------------------------------------------*/
+    .section-values .container-values .item-values .title-values{
+        flex-direction: column;
+    }
+    /*-------------------------------------------------------------
+    # Seccion Quienes Somos
+    --------------------------------------------------------------*/
+    .section-us .content-us .container-img-us picture img{
+        max-height: 450px;
+    }
+    /*-------------------------------------------------------------
+    # Seccion Productos Servicios   
+    --------------------------------------------------------------*/    
+    .section-products-services .container-products-services .content-items-products-services{
+        flex-wrap: wrap;
+    }
+    .section-products-services .container-products-services .content-items-products-services .items-products-services{
+        width: max(300px, 100%);
+        max-height: 540px;
+    }
+    .section-products-services .container-products-services .content-items-products-services .items-products-services .visuals-products-services .bg-products-services{
+        object-position: 0px -4px;
+        max-height: 270px;
+        object-fit: cover;
+    }
+    /*-------------------------------------------------------------
+    # Seccion Post Ventas
+    --------------------------------------------------------------*/
+    .section-post-sell .container-post-sell .container-img-post-sell picture img{
+        max-height: 450px;
+    }
+    /*-------------------------------------------------------------
+    # Seccion Emails
+    --------------------------------------------------------------*/
+    .section-emails .container-emails{
+        gap: 2rem;
+    }
+    .section-emails .container-emails .card-emails{
+        width: 100%;
+    }
+    /*-------------------------------------------------------------
+    # Seccion Contacto General
+    --------------------------------------------------------------*/
+    .section-contact-general .container-contact-general .image-contact picture img{
+        max-height: 500px;
+    }
+    /*-------------------------------------------------------------
+    # Seccion Experiencia
+    --------------------------------------------------------------*/
+    .section-experience .container-experience .content-items-experience .items-experience{
+        width: 100%;
+        max-height: 540px;
+    }
+    .section-experience .container-experience .content-items-experience .items-experience .visual-experience::before{
+        transform: skewX(45deg) translateX(800px);
+        -webkit-transform: skewX(45deg) translateX(800px);
+        -moz-transform: skewX(45deg) translateX(800px);
+        -ms-transform: skewX(45deg) translateX(800px);
+        -o-transform: skewX(45deg) translateX(800px);
+}
+    .section-experience .container-experience .content-items-experience .items-experience .visual-experience picture img{
+        -o-object-position: 0px -4px;
+        object-position: 0px -4px;
+        max-height: 270px;
+        -o-object-fit: cover;
+        object-fit: cover;
+    }
+}
+@media(max-width: 650px){
+    /*-------------------------------------------------------------
+    # Seccion Quienes Somos
+    --------------------------------------------------------------*/
+    .section-us .content-us .container-img-us picture img{
+        max-height: 350px;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        object-position: 0px -24px;
+    }
+    .section-us .content-us .info-us h2{
+        font-size: calc(1.3rem + 1vh);
+    }
+    /*-------------------------------------------------------------
+    # Seccion Productos Servicios   
+    --------------------------------------------------------------*/
+    .section-products-services .container-products-services .title-products-services h2{
+        font-size: calc(1.8rem + 1vh);
+        text-align: center;
+    }
+    /*-------------------------------------------------------------
+    # Seccion Post Ventas
+    --------------------------------------------------------------*/
+    .section-post-sell .container-post-sell .container-img-post-sell picture img{
+        max-height: 350px;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        object-position: 0px -24px;
+    }
+    .section-post-sell .container-post-sell .info-post-sell .title-post-sell{
+        font-size: calc(1.3rem + 1vh);
+    }
+
+    /*-------------------------------------------------------------
+    # Seccion Experiencia
+    --------------------------------------------------------------*/
+    .section-experience .container-experience .title-experience h2{
+        font-size: calc(1.8rem + 1vh);
+        text-align: center;
+    }
+}
+@media(max-width: 580px){
+    /*-------------------------------------------------------------
+    # Seccion Valores
+    --------------------------------------------------------------*/
+    .section-values .container-values{
+        padding: 0rem 2rem 2rem 2rem;
+    }
+    .section-values .container-values{
+        justify-content: center;
+    }
+    .section-values .container-values .item-values{
+        max-height: 250px;
+    }
+    .section-values .container-values .item-values .title-values h2{
+        font-size: calc(0.7rem + 1vh);
+        text-align: center;
+    }
+    .section-values .container-values .item-values .info-values p{
+        font-size: calc(0.7rem + 0.5vh);
+    }
+}
+@media(max-width: 480px){
+    /*-------------------------------------------------------------
+    # Seccion Slider Principal
+    --------------------------------------------------------------*/
+    .section-slider-head{
+        padding-top: 0;
+    }
+    .section-slider-head .container-slider-head{
+        height: max(320px, 440px);
+    }
+    .section-slider-head .container-slider-head .container-info{
+        height: max(300px, 100%);
+        gap: 0.2rem;
+    }
+    .section-slider-head .container-slider-head .container-info h1{
+        font-size: calc(1.3rem + 1vh);
+        font-weight: bold;
+    }
+    .section-slider-head .container-slider-head .container-info p{
+        font-size: calc(0.7rem + 1vh);
+        margin: 0;
+    }    
+    .section-slider-head .container-slider-head .container-info .button{
+        min-height: 55px;
+    }
+    .section-slider-head .container-slider-head .swiper-slide img{
+        object-fit: cover;
+    }
+    /*-------------------------------------------------------------
+    # Seccion Valores
+    --------------------------------------------------------------*/
+    .section-values .title-value{
+        padding: 2rem 3rem 2rem;
+    }
+    .section-values .title-value h2{
+        font-size: calc(1.5rem + 1vh);
+        text-align: center;
+    }
+    .section-values .container-values{
+        padding: 0rem 1rem 1rem 1rem;
+    }
+    .section-values .container-values .item-values{
+        width: 44%;   
+    }
+    .section-values .container-values .item-values .title-values h2{
+        font-size: calc(0.5rem + 1vh);
+    }
+    .section-values .container-values .item-values .info-values p{
+        font-size: calc(0.5rem + 0.5vh);
+    }
+    /*-------------------------------------------------------------
+    # Seccion Quienes Somos
+    --------------------------------------------------------------*/
+    .section-us .content-us .container-img-us,
+    .section-us .content-us .info-us{
+        padding: 2rem 1rem 0rem;
+    }
+    .section-us .content-us .container-img-us picture img{
+        max-height: 320px;
+        object-position: 0px -12px;
+    }
+    .section-us .content-us .info-us h2{
+        font-size: calc(1rem + 1vh);
+    }
+    /*-------------------------------------------------------------
+    # Seccion Productos Servicios   
+    --------------------------------------------------------------*/  
+    .section-products-services .container-products-services{
+        padding: 2rem 1rem 1rem;
+    }
+    .section-products-services .container-products-services .title-products-services h2{
+        font-size: calc(1.5rem + 1vh);
+    }
+    /*-------------------------------------------------------------
+    # Seccion Post Ventas
+    --------------------------------------------------------------*/
+    .section-post-sell .container-post-sell .info-post-sell{
+        padding: 2rem 1rem 0rem;
+    }    
+    .section-post-sell .container-post-sell .container-img-post-sell{
+        padding: 2rem 1rem;
+    }
+    .section-post-sell .container-post-sell .container-img-post-sell picture img{
+        max-height: 320px;
+        object-position: 0px -12px;
+    }    
+    .section-post-sell .container-post-sell .info-post-sell .title-post-sell{
+        font-size: calc(1rem + 1vh);
+    }
+    .section-post-sell .container-post-sell .info-post-sell .items-post-sell .item{
+        flex-direction: column;
+        gap: 0;
+    }
+    /*-------------------------------------------------------------
+    # Seccion Emails
+    --------------------------------------------------------------*/
+    .section-emails .title-emails h2{
+        font-size: calc(1.5rem + 1vh);
+        text-align: center;
+    }
+    .section-emails .container-emails{
+        padding: 1rem 1rem 0rem;
+    }
+    /*-------------------------------------------------------------
+    # Seccion Contacto General
+    --------------------------------------------------------------*/
+    .section-contact-general .container-contact-general .image-contact{
+        padding: 2rem 1rem 0rem;
+    }
+    .section-contact-general .container-contact-general .info-contact{
+        padding: 2rem 1rem;
+    }
+    .section-contact-general .container-contact-general .form-contact .text-desc{
+        flex-direction: column;
+    }
+    .section-contact-general .container-contact-general .form-contact .text-desc p{
+        font-size: calc(0.6rem + 1vh);
+    }
+    /*-------------------------------------------------------------
+    # Seccion Experiencia
+    --------------------------------------------------------------*/
+    .section-experience .container-experience{
+        padding: 2rem 1rem;
+    }
+    .section-experience .container-experience .title-experience h2{
+        font-size: calc(1.5rem + 1vh);
+    }
+}
+@media(max-width: 380px){
+    /*-------------------------------------------------------------
+    # Seccion Valores
+    --------------------------------------------------------------*/
+    .section-values .title-value h2{
+        font-size: calc(1rem + 1vh);
+    }
+    /*-------------------------------------------------------------
+    # Seccion Quienes Somos
+    --------------------------------------------------------------*/
+    .section-us .content-us .container-img-us picture img{
+        max-height: 250px;
+        object-position: 0px;
+    }
+    /*-------------------------------------------------------------
+    # Seccion Productos Servicios   
+    --------------------------------------------------------------*/ 
+    .section-products-services .container-products-services .content-items-products-services .items-products-services{
+        max-height: 500px;
+    }
+    .section-products-services .container-products-services .info-products-services .image-item{
+        width: 100px;
+        height: 100px;
+    } 
+    /*-------------------------------------------------------------
+    # Seccion Contacto General
+    --------------------------------------------------------------*/
+    .section-contact-general .container-contact-general .form-contact .flex{
+        gap: 0;
+        flex-direction: column;
+    }
+    .section-contact-general .container-contact-general .form-contact label{
+        width: 100%!important;
+    }
 }
 /*-------------------------------------------------------------
 # Animaciones
