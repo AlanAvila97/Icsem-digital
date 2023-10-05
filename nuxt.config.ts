@@ -51,7 +51,7 @@ export default defineNuxtConfig({
         ],              
         script: [
           { src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js', tagPosition: 'bodyClose' },
-          { src: 'https://once.fabricaapps.com/js/Isotope/isotope.pkgd.min.js', tagPosition: 'bodyClose' },
+          // { src: '', tagPosition: 'bodyClose' },
         ],
         noscript: [
         ]
@@ -71,18 +71,18 @@ export default defineNuxtConfig({
     'swiper/css/navigation',
     'swiper/css/pagination',
   ],
-  modules: [
-    'nuxt-gtag', 
-    'nuxt-icon',
-    'nuxt-link-checker',
-    'nuxt-delay-hydration',
-    '@nuxt/image',
-    '@pinia/nuxt', 
-    '@unlazy/nuxt',
-    '@nuxtjs/web-vitals',
-    '@nuxtjs/color-mode',
-    '@nuxtjs/google-fonts',
-  ],
+  modules: ['nuxt-gtag', 
+            'nuxt-icon', 
+            'nuxt-link-checker', 
+            'nuxt-delay-hydration', 
+            '@nuxt/image', 
+            '@pinia/nuxt', 
+            '@unlazy/nuxt', 
+            '@nuxtjs/web-vitals', 
+            '@nuxtjs/color-mode', 
+            '@nuxtjs/google-fonts', 
+            '@nuxtjs/partytown'
+          ],
   devtools: { 
     enabled: true 
   },
