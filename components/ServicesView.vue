@@ -25,7 +25,7 @@
                 </div>
             </div>
             <div class="content-items-products-services d-flex w-100">
-                <nuxt-link to="/productos/1" class="items-products-services d-flex product-mecanica"
+                <nuxt-link to="/servicios/1" class="items-products-services d-flex services-mecanica"
                            @click.prevent="actionLink()" aria-label="Redirección">
                     <div class="visuals-products-services">
                         <NuxtPicture
@@ -61,7 +61,7 @@
                                 title: 'Imagen',
                                 'data-my-data': 'my-value'}"/>  
                         </div>
-                        <h2>Producto 1</h2>
+                        <h2>Servicio 1</h2>
                         <p class="sinopsis">
                             Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.
                         </p>
@@ -70,7 +70,7 @@
                         </p>    
                     </div>   
                 </nuxt-link>
-                <nuxt-link to="/productos/2" class="items-products-services d-flex product-electricidad" 
+                <nuxt-link to="/servicios/2" class="items-products-services d-flex services-electricidad" 
                           @click.prevent="actionLink()" aria-label="Redirección">
                     <div class="visuals-products-services">
                         <NuxtPicture
@@ -106,7 +106,7 @@
                                 title: 'Imagen',
                                 'data-my-data': 'my-value'}"/>  
                         </div>
-                        <h2>Producto 2</h2>
+                        <h2>Servicio 2</h2>
                         <p class="sinopsis">
                             Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.
                         </p>
@@ -115,7 +115,7 @@
                         </p>    
                     </div>    
                 </nuxt-link>
-                <nuxt-link to="/productos/3" class="items-products-services d-flex product-farmacia" 
+                <nuxt-link to="/servicios/3" class="items-products-services d-flex services-farmacia" 
                            @click.prevent="actionLink()" aria-label="Redirección">
                     <div class="visuals-products-services">
                         <NuxtPicture
@@ -151,7 +151,7 @@
                                 title: 'Imagen',
                                 'data-my-data': 'my-value'}"/>  
                         </div>
-                        <h2>Producto 3</h2>
+                        <h2>Servicio 3</h2>
                         <p class="sinopsis">
                             Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.
                         </p>
@@ -189,7 +189,7 @@
     // 
     const hiddenProducts = (elements, typeClassElements, categorie) => {
         addAllClass(elements, typeClassElements)
-        removeClass(getElement('.product-'+categorie), typeClassElements);
+        removeClass(getElement('.services-'+categorie), typeClassElements);
     }
     const filterProducts = (e) => {
         let categorie = e.target.dataset.categorie;

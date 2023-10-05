@@ -1,12 +1,12 @@
 /*-------------------------------------------------------------
 # Seccion Contacto General
 --------------------------------------------------------------*/
-.section-product .container-product{
+.section-services .container-services{
     width: 100%;
     height: 100%;
     padding-bottom: 4rem;
 }
-.section-product .container-product .info-product{
+.section-services .container-services .info-services{
     gap: 3rem;
     padding: 3rem 3rem 0rem;
     position: relative;
@@ -20,7 +20,7 @@
     width: 100%;
     min-height: 500px;
 }
-.section-product .container-product .info-product .image-product{
+.section-services .container-services .info-services .image-services{
     background-color: var(--green-logo-color);
     bottom: -5rem;
     border: 1px solid var(--white-icon-color);
@@ -36,17 +36,17 @@
     -ms-border-radius: 6rem;
     -o-border-radius: 6rem;
 }
-.section-product .container-product .info-product .image-product picture{
+.section-services .container-services .info-services .image-services picture{
     height: auto;
     width: auto;
 }
-.section-product .container-product .info-product .image-product picture img{
+.section-services .container-services .info-services .image-services picture img{
     width: 260px;
     max-height: 155px;
     filter: brightness(2) drop-shadow(2px 4px 6px #2a3a41);
     -webkit-filter: brightness(2) drop-shadow(2px 4px 6px #2a3a41);
 }
-.section-product .container-product .info-product .name-product{
+.section-services .container-services .info-services .name-services{
     background-color: var(--green-logo-color);
     bottom: -4rem;
     border: 1px solid var(--white-icon-color);
@@ -62,17 +62,17 @@
     -ms-border-radius: 0.5rem;
     -o-border-radius: 0.5rem;
 }
-.section-product .container-product .info-product .name-product h1{
+.section-services .container-services .info-services .name-services h1{
     font-size: calc(1.5rem + 2vh);
     font-weight: bold;
     color: var(--white-icon-color);
 }
-.section-product .container-sinopsis-product{
+.section-services .container-sinopsis-services{
     padding: 4rem 3rem 0rem;
     width: 100%;
     height: 100%;
 }
-.section-product .container-sinopsis-product .sinopsis{
+.section-services .container-sinopsis-services .sinopsis{
     max-height: 300px;
     height: 250px;
     border-radius: 0.5rem;
@@ -80,16 +80,16 @@
     padding: 3rem;
     box-shadow: 0px 0px 4px 1px #0000004a;
 }
-.section-product .container-sinopsis-product h2{
+.section-services .container-sinopsis-services h2{
     font-size: calc(1.2rem + 1vh);
     font-weight: bold;
     color: var(--green-logo-color);
 }
-.section-product .container-sinopsis-product p{
+.section-services .container-sinopsis-services p{
     font-size: calc(0.7rem + 1vh);
     color: var(--Outer-color);
 }
-.section-product .container-sinopsis-product hr{
+.section-services .container-sinopsis-services hr{
     background: #2a3a41;
     border-radius: 15px;
     border: 1px solid #0d8184;
@@ -102,7 +102,7 @@
 # Responsive
 --------------------------------------------------------------*/
 @media(max-width: 991px){
-    .section-product .container-sinopsis-product .sinopsis{
+    .section-services .container-sinopsis-services .sinopsis{
         max-height: 100%;
         height: auto;
     }
@@ -111,23 +111,23 @@
     /*-------------------------------------------------------------
     # Seccion Contacto General
     --------------------------------------------------------------*/
-    .section-product .container-product .info-product .image-product {
+    .section-services .container-services .info-services .image-services {
         height: 150px;
         width: 150px;
     }
-    .section-product .container-product .info-product .image-product picture img{
+    .section-services .container-services .info-services .image-services picture img{
         width: 120px;
     }
-    .section-product .container-product .info-product .name-product{
+    .section-services .container-services .info-services .name-services{
         height: 120px;
         width: max(200px, 280px);
     }
 
-    .section-product .container-sinopsis-product .sinopsis{
+    .section-services .container-sinopsis-services .sinopsis{
         padding: 2rem;
         height: auto;
     }
-    .section-product .container-sinopsis-product p{
+    .section-services .container-sinopsis-services p{
         font-size: calc(0.7rem + 0.7vh);
     }
 }
@@ -135,21 +135,21 @@
     /*-------------------------------------------------------------
     # Seccion Contacto General
     --------------------------------------------------------------*/
-    .section-product .container-product .info-product{
+    .section-services .container-services .info-services{
         min-height: 350px;
     }
-    .section-product .container-product .info-product .image-product {
+    .section-services .container-services .info-services .image-services {
         height: 120px;
         width: 120px;
     }
-    .section-product .container-product .info-product .image-product picture img{
+    .section-services .container-services .info-services .image-services picture img{
         width: 80px;
     }
-    .section-product .container-product .info-product .name-product {
+    .section-services .container-services .info-services .name-services {
         height: 100px;
         width: max(200px, 220px);
     }
-    .section-product .container-product .info-product .name-product h1{
+    .section-services .container-services .info-services .name-services h1{
         font-size: calc(1rem + 2vh);
     }
 }
@@ -157,18 +157,18 @@
     /*-------------------------------------------------------------
     # Seccion Contacto General
     --------------------------------------------------------------*/
-    .section-product .container-product .info-product .image-product {
+    .section-services .container-services .info-services .image-services {
         height: 120px;
         width: 120px;
     }
-    .section-product .container-product .info-product .image-product picture img{
+    .section-services .container-services .info-services .image-services picture img{
         width: 80px;
     }
-    .section-product .container-product .info-product .name-product {
+    .section-services .container-services .info-services .name-services {
         height: 100px;
         width: max(180px, 200px);
     }
-    .section-product .container-product .info-product .name-product h1{
+    .section-services .container-services .info-services .name-services h1{
         font-size: calc(0.9rem + 1vh);
     }
 }
@@ -176,31 +176,31 @@
     /*-------------------------------------------------------------
     # Seccion Contacto General
     --------------------------------------------------------------*/
-    .section-product .container-product .info-product{
+    .section-services .container-services .info-services{
         padding: 2rem 1rem 0rem;
         gap: 1rem;
         justify-content: space-around;
     }
-    .section-product .container-product .info-product .image-product {
+    .section-services .container-services .info-services .image-services {
         height: 110px;
         width: 110px;
     }
-    .section-product .container-product .info-product .image-product picture img{
+    .section-services .container-services .info-services .image-services picture img{
         width: 70px;
     }
-    .section-product .container-product .info-product .name-product {
+    .section-services .container-services .info-services .name-services {
         height: 80px;
         width: 200px;
     }
-    .section-product .container-product .info-product .name-product h1{
+    .section-services .container-services .info-services .name-services h1{
         font-size: calc(1rem + 1vh);
     }
-    .section-product .container-sinopsis-product .sinopsis {
+    .section-services .container-sinopsis-services .sinopsis {
         padding: 2rem;
         height: auto;
         max-height: 100%;
     }
-    .section-product .container-sinopsis-product{
+    .section-services .container-sinopsis-services{
         padding: 2rem 1rem 0rem;
         height: auto;
     }
@@ -215,23 +215,23 @@
     /*-------------------------------------------------------------
     # Seccion Contacto General
     --------------------------------------------------------------*/
-    .section-product .container-product .info-product {
+    .section-services .container-services .info-services {
         min-height: 300px;
     }
-    .section-product .container-product .info-product .image-product {
+    .section-services .container-services .info-services .image-services {
         height: 100px;
         width: 100px;    
         bottom: -3rem;
     }
-    .section-product .container-product .info-product .image-product picture img{
+    .section-services .container-services .info-services .image-services picture img{
         width: 50px;
     }
-    .section-product .container-product .info-product .name-product {
+    .section-services .container-services .info-services .name-services {
         height: 85px;
         width: 155px;
         bottom: -2.5rem;
     }
-    .section-product .container-product .info-product .name-product h1{
+    .section-services .container-services .info-services .name-services h1{
         font-size: calc(0.8rem + 1vh);
     }
 }
