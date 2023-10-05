@@ -5,23 +5,27 @@
                 <h2>Titulo Productos Servicios</h2>
             </div>
             <div class="categories-products">
-                <lu class="list-categories">
-                    <li class="active">
-                        <p>Mostrar todo</p>
-                    </li>
-                    <li>
-                        <p>Mecánica</p>
-                    </li>
-                    <li>
-                        <p>Electricidad</p>
-                    </li>
-                    <li>
-                        <p>Farmacia</p>
-                    </li>
-                </lu>
+                <div class="list-categories">
+                    <div id="categorie_all" class="item-categorie active" 
+                         @click="filterProducts">
+                        <p data-categorie="all">Mostrar todo</p>
+                    </div>
+                    <div id="categorie_mecanica" class="item-categorie" data-categorie="mecanica"
+                         @click="filterProducts">
+                        <p data-categorie="mecanica">Mecánica</p>
+                    </div>
+                    <div id="categorie_electricidad" class="item-categorie" data-categorie="electricidad"
+                         @click="filterProducts">
+                        <p data-categorie="electricidad">Electricidad</p>
+                    </div>
+                    <div id="categorie_farmacia" class="item-categorie" data-categorie="farmacia"
+                         @click="filterProducts">
+                        <p data-categorie="farmacia">Farmacia</p>
+                    </div>
+                </div>
             </div>
             <div class="content-items-products-services d-flex w-100">
-                <nuxt-link to="./productos/1" class="items-products-services d-flex first" aria-label="Redirección">
+                <nuxt-link to="./productos/1" class="items-products-services d-flex product-mecanica" aria-label="Redirección">
                     <div class="visuals-products-services">
                         <NuxtPicture
                             src="images/img-600x400-3.jpg"
@@ -65,7 +69,7 @@
                         </p>    
                     </div>   
                 </nuxt-link>
-                <nuxt-link to="./productos/2" class="items-products-services d-flex second" aria-label="Redirección">
+                <nuxt-link to="./productos/2" class="items-products-services d-flex product-electricidad" aria-label="Redirección">
                     <div class="visuals-products-services">
                         <NuxtPicture
                             src="images/img-600x400-4.jpg"
@@ -109,7 +113,7 @@
                         </p>    
                     </div>    
                 </nuxt-link>
-                <nuxt-link to="./productos/3" class="items-products-services d-flex three" aria-label="Redirección">
+                <nuxt-link to="./productos/3" class="items-products-services d-flex product-farmacia" aria-label="Redirección">
                     <div class="visuals-products-services">
                         <NuxtPicture
                             src="images/img-600x400-5.jpg"
@@ -166,16 +170,23 @@
     // 
     const DataGlobal = dataGlobal();   
     // 
-    const { getElement, scrollSection } = DataGlobal; 
-    const initializationIsotope = () => {
-        let container = getElement('.portfolio-container');
-        var portfolioIsotope = container.isotope({
-                itemSelector: '.portfolio-item',
-                layoutMode: 'fitRows'
-            });
+    const { getElement, getAllElement, addAllClass, removeClass, removeAllClass, addClassElement } = DataGlobal; 
+    // 
+    const hiddenProducts = (elements, typeClassElements, categorie) => {
+        addAllClass(elements, typeClassElements)
+        removeClass(getElement('.product-'+categorie), typeClassElements);
+    }
+    const filterProducts = (e) => {
+        let categorie = e.target.dataset.categorie;
+        removeAllClass(getAllElement('.item-categorie'), 'active');
+        addClassElement(getElement('#categorie_'+categorie), 'active');
+        if(categorie == 'all'){
+            removeAllClass(getAllElement('.items-products-services'), 'd-none')
+        }else{
+            hiddenProducts(getAllElement('.items-products-services'), 'd-none', categorie)
+        }
     }
     onMounted(() => {
-        // initializationIsotope();
     });
 </script>
 

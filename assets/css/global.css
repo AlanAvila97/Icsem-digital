@@ -800,8 +800,7 @@
     box-shadow: 0px 4px 10px 2px rgb(0 0 0 / 53%);
     flex-direction: column;
     height: 100%;
-    width: max(300px, 90%);
-    /* max-width: 400px; */
+    width: max(300px, 30%);
 }
 .section-products-services .container-products-services .content-items-products-services .items-products-services:hover .info-products-services .image-item{
     background: var(--green-logo-color);
@@ -905,24 +904,25 @@
     width: auto;
     gap: 2rem;
 }
-.section-products-services .container-products-services .categories-products .list-categories li{
+.section-products-services .container-products-services .categories-products .list-categories .item-categorie{
     cursor: pointer;
 }
-.section-products-services .container-products-services .categories-products .list-categories li:hover{
+.section-products-services .container-products-services .categories-products .list-categories .item-categorie:hover{
     text-decoration: underline;
 }
-.section-products-services .container-products-services .categories-products .list-categories li p{
+.section-products-services .container-products-services .categories-products .list-categories .item-categorie p{
     color: var(--Outer-color);
     font-size: calc(0.6rem + 1vh);
     text-transform: capitalize;
     margin: 0;
 }
-.section-products-services .container-products-services .categories-products .list-categories li.active{
+.section-products-services .container-products-services .categories-products .list-categories .item-categorie.active{
     color: var(--green-logo-color);
 }
-.section-products-services .container-products-services .categories-products .list-categories li.active p{
+.section-products-services .container-products-services .categories-products .list-categories .item-categorie.active p{
     color: var(--green-logo-color);
 }
+    
 /*-------------------------------------------------------------
 # Seccion Experiencia
 --------------------------------------------------------------*/

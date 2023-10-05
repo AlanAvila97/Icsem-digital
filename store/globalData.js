@@ -1,9 +1,27 @@
 import {defineStore} from 'pinia'
 // 
 export const dataGlobal = defineStore('dataGlobal', () => {
-    // data reactiva
     function getElement(element) {
         return document.querySelector(element);
+    }    
+    function getAllElement(element) {
+        return document.querySelectorAll(element);
+    }
+    const addClassElement = (element, typeClass) => {
+        element.classList.add(typeClass);
+    }
+    const addAllClass = (elements, typeClass) => {
+        elements.forEach(div => {
+            div.classList.add(typeClass);
+        });
+    }
+    const removeClass = (element, typeClass) => {
+        element.classList.remove(typeClass);
+    }
+    const removeAllClass = (elements, typeClass) => {
+        elements.forEach(div => {
+            div.classList.remove(typeClass);
+        });
     }
     /**
      * @description Función para hace un scroll a una seccion del index (Blog, Podcast)
@@ -45,7 +63,12 @@ export const dataGlobal = defineStore('dataGlobal', () => {
     }
     return{
         getElement,
+        addAllClass,
+        removeClass,
         scrollSection,
+        getAllElement,
+        removeAllClass,
+        addClassElement,    
         eliminarCaracteres,
     }
 });
