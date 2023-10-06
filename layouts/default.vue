@@ -5,6 +5,7 @@
         <NavbarView></NavbarView>
         <slot/>        
         <FooterView></FooterView>
+        <ButtonUp></ButtonUp>
     </div>
 </template>
 <script setup>

@@ -7,19 +7,19 @@
             <div class="categories-products">
                 <div class="list-categories">
                     <div id="categorie_all" class="item-categorie active" 
-                         @click="filterProducts">
+                         @click="filterServices">
                         <p data-categorie="all">Mostrar todo</p>
                     </div>
                     <div id="categorie_mecanica" class="item-categorie" data-categorie="mecanica"
-                         @click="filterProducts">
+                         @click="filterServices">
                         <p data-categorie="mecanica">Mecánica</p>
                     </div>
                     <div id="categorie_electricidad" class="item-categorie" data-categorie="electricidad"
-                         @click="filterProducts">
+                         @click="filterServices">
                         <p data-categorie="electricidad">Electricidad</p>
                     </div>
                     <div id="categorie_farmacia" class="item-categorie" data-categorie="farmacia"
-                         @click="filterProducts">
+                         @click="filterServices">
                         <p data-categorie="farmacia">Farmacia</p>
                     </div>
                 </div>
@@ -177,8 +177,8 @@
     // 
     const { getElement, getAllElement, addAllClass, removeClass, removeAllClass, addClassElement } = DataGlobal; 
     /**
-     * @description Función 
-    */ 
+    * @description Funcion que reinicia el preloader al cambiar de vista
+    */   
     const actionLink = () => {
         document.body.scrollTop = 0; 
         document.documentElement.scrollTop = 0;
@@ -186,19 +186,27 @@
         const divPreload =  document.querySelector('.preloader');
         hiddenPreoload(divPreload, 'preloader');
     }
-    // 
-    const hiddenProducts = (elements, typeClassElements, categorie) => {
+    /**
+    * @description Funcion que oculta los servicios por categoria
+    * @param elements Contiene todos los elementos html 
+    * @param typeClassElements Contiene la clase para ocultar los servicios
+    * @param categorie Contiene la categoria seleccionada
+    */ 
+    const hiddenServices = (elements, typeClassElements, categorie) => {
         addAllClass(elements, typeClassElements)
         removeClass(getElement('.services-'+categorie), typeClassElements);
     }
-    const filterProducts = (e) => {
+    /**
+    * @description Funcion de click para obtener los servicios por categoria 
+    */  
+    const filterServices = (e) => {
         let categorie = e.target.dataset.categorie;
         removeAllClass(getAllElement('.item-categorie'), 'active');
         addClassElement(getElement('#categorie_'+categorie), 'active');
         if(categorie == 'all'){
             removeAllClass(getAllElement('.items-products-services'), 'd-none')
         }else{
-            hiddenProducts(getAllElement('.items-products-services'), 'd-none', categorie)
+            hiddenServices(getAllElement('.items-products-services'), 'd-none', categorie)
         }
     }
 </script>

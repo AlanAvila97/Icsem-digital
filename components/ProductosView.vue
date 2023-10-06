@@ -177,8 +177,8 @@
     // 
     const { getElement, getAllElement, addAllClass, removeClass, removeAllClass, addClassElement } = DataGlobal; 
     /**
-     * @description Función 
-    */ 
+    * @description Funcion que reinicia el preloader al cambiar de vista
+    */   
     const actionLink = () => {
         document.body.scrollTop = 0; 
         document.documentElement.scrollTop = 0;
@@ -186,11 +186,19 @@
         const divPreload =  document.querySelector('.preloader');
         hiddenPreoload(divPreload, 'preloader');
     }
-    // 
+    /**
+    * @description Funcion que oculta los productos por categoria
+    * @param elements Contiene todos los elementos html 
+    * @param typeClassElements Contiene la clase para ocultar los productos
+    * @param categorie Contiene la categoria seleccionada
+    */  
     const hiddenProducts = (elements, typeClassElements, categorie) => {
         addAllClass(elements, typeClassElements)
         removeClass(getElement('.product-'+categorie), typeClassElements);
     }
+    /**
+    * @description Funcion de click para obtener los productos por categoria 
+    */  
     const filterProducts = (e) => {
         let categorie = e.target.dataset.categorie;
         removeAllClass(getAllElement('.item-categorie'), 'active');

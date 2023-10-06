@@ -46,12 +46,14 @@
                         </nuxt-link>
                     </li>
                     <li>   
-                        <div class="scroll-element scroll-contactanos" data-element="Contactanos" @click="clickScrollElementsIndex" aria-label="Scroll a Sección Contactanos">
+                        <div class="scroll-element scroll-contactanos" data-element="Contactanos" 
+                            @click="clickScrollElementsIndex" aria-label="Scroll a Sección Contactanos">
                             Contactanos
                         </div>
                     </li>
                     <li>   
-                        <div class="scroll-element scroll-experiencia" data-element="Experiencias" @click="clickScrollElementsIndex" aria-label="Scroll a Sección Inicio">
+                        <div class="scroll-element scroll-experiencia" data-element="Experiencias" 
+                            @click="clickScrollElementsIndex" aria-label="Scroll a Sección Inicio">
                             Experiencia
                         </div>
                     </li>
@@ -70,13 +72,13 @@
                     Servicios
                 </nuxt-link>
                 <p                 
-                    @click.prevent="actionScroll()" @click="clickScrollElementsIndex" 
+                    @click="clickScrollElementsIndex"  
                     id="MenuProductor" class="items Seccion-Menu" data-element="Contactanos"
                     aria-label="Scroll a Sección Contactanos">
                     Contactanos
                 </p>
                 <p 
-                    @click.prevent="actionScroll()" @click="clickScrollElementsIndex" 
+                    @click="clickScrollElementsIndex"
                     id="MenuProductor" class="items Seccion-Menu" data-element="Experiencias"
                     aria-label="Scroll a Sección Inicio">
                     Experiencia
@@ -112,6 +114,9 @@
             document.querySelector('.header').classList.remove('top-0');
         }
     }
+    /**
+    * @description Funcion que detecta el tamaño de la pantalla para ocultar el menu de hamburguesa en desktop
+    */
     function reportWindowSize() {
         let status = getElement('#check').checked;
         if(window.innerWidth >= '780'){
@@ -121,17 +126,26 @@
         }
     }
     /**
-        * @description Funcion que hace un scroll al dar click a un elemento del nabvar (blog, podcast)
+        * @description Funcion que hace un scroll al dar click a un elemento del nabvar (Contacatnos, Experiencias)
     */
     const clickScrollElementsIndex = (e) => {
+        getElement('#check').click();
+
         let element = e.target.dataset.element;
         let page = document.querySelector('main.index');
-        if(page == null){                        
+        if(page == null){     
+            document.body.scrollTop = 0; 
+            document.documentElement.scrollTop = 0;
+            const divPreload =  document.querySelector('.preloader');
+            hiddenPreoload(divPreload, 'preloader');
             router.push("/#"+element);
         }else{
             scrollSection(getElement('#'+element), 70);
         }
     }
+    /**
+    * @description Funcion que reinicia el preloader al cambiar de vista
+    */    
     const actionLink = () => {
         document.body.scrollTop = 0; 
         document.documentElement.scrollTop = 0;
@@ -139,9 +153,9 @@
         const divPreload =  document.querySelector('.preloader');
         hiddenPreoload(divPreload, 'preloader');
     }
-    const actionScroll = () => {
-        getElement('#check').click();
-    }
+    /**
+    * @description Funcion que abre el menu de hamburguesa
+    */  
     const openMenu = (e) => {
         let status = e.target.checked;
         let element = getElement('#sidebarMenu');
@@ -154,7 +168,6 @@
             element.classList.remove('active');    
         }
     }
-
     onMounted(() => {
         window.onscroll = function() { scrollFunction(); };
         window.onresize = function() { reportWindowSize(); };

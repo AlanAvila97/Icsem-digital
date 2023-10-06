@@ -605,13 +605,15 @@
     const { getElement, scrollSection } = DataGlobal; 
     // 
     const modules = [Navigation, Pagination, Mousewheel, Autoplay];
-    // 
+    /**
+    * @description Funcion que obtiene la informacion del tipo de correo que se enviara
+    */   
     function getInfoMail(e) {
         let id = e.target.dataset.id;
         let title = getElement('#'+id+' .card-title');
         let desc = getElement('#'+id+' .card-description');
         let mail = getElement('#'+id+' .mail');
-            // form.addC
+            // 
             clickScroll();
             // 
             getElement("#EmailIcsem").value = mail.innerText;
@@ -619,6 +621,9 @@
             setInfoForm(getElement('#contactGeneral .message'), desc.innerText);
             setInfoForm(getElement('#contactGeneral .mail'), mail.innerText);
     }
+    /**
+    * @description Funcion reescribe la informacion del formulario
+    */  
     function setInfoForm(element, text) {
         element.innerText = text;
     }
@@ -634,8 +639,7 @@
             console.log('sa');
         }
     }
-    onMounted(() => {     
-    }); 
+
 </script>
 
 <style scoped>

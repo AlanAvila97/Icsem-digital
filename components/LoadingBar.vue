@@ -21,7 +21,9 @@
     import 'assets/css/loader.css'
     // 
     const loading = ref(true);
-    // 
+    /**
+    * @description Funcion muestra el preloader y desaparece cuando este cargada la pagina 
+    */   
     const preload = () => {
         setTimeout(function(){
             document.querySelector('body').classList.add('overflow-auto');
@@ -29,8 +31,6 @@
         }, 500);    
     }
     onMounted(() => {
-        // setCubesItems()
-
         preload();
     }); 
 </script>
