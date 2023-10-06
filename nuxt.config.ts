@@ -56,8 +56,8 @@ export default defineNuxtConfig({
         noscript: [
         ]
     },
-    pageTransition: { name: 'page', mode: 'out-in' },
-    layoutTransition: { name: 'layout', mode: 'out-in' }
+    // pageTransition: { name: 'page', mode: 'out-in' },
+    // layoutTransition: { name: 'layout', mode: 'out-in' }
   },
   ssr: true,
   css:[
