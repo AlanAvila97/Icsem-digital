@@ -15,6 +15,12 @@
                 <Icon name="fa-brands:instagram"/>                
             </nuxt-link>
         </div>
+        <!-- <div class="change-mode">
+            <label for="check-mode">
+                <input id="check-mode" class="check-mode" type="checkbox">
+                <span class="item-check"></span>
+            </label>
+        </div> -->
     </div>
 </template>
 <script setup>
