@@ -168,10 +168,7 @@
     // 
     import { onMounted } from "vue";
     // Global Data (Pinia)
-    import {dataGlobal} from '@/store/globalData'
-    // Composables
-    const preload = actionPreload();
-    const { hiddenPreoload } = preload;    
+    import {dataGlobal} from '@/store/globalData' 
     // 
     const DataGlobal = dataGlobal();
     // 
@@ -180,11 +177,11 @@
     * @description Funcion que reinicia el preloader al cambiar de vista
     */   
     const actionLink = () => {
-        document.body.scrollTop = 0; 
-        document.documentElement.scrollTop = 0;
-        getElement('#check').click();
-        const divPreload =  document.querySelector('.preloader');
-        hiddenPreoload(divPreload, 'preloader');
+        // document.body.scrollTop = 0; 
+        // document.documentElement.scrollTop = 0;
+        // getElement('#check').click();
+        // const divPreload =  document.querySelector('.preloader');
+        // hiddenPreoload(divPreload, 'preloader');
     }
     /**
     * @description Funcion que oculta los servicios por categoria

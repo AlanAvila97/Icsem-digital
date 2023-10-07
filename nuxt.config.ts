@@ -51,13 +51,13 @@ export default defineNuxtConfig({
         ],              
         script: [
           { src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js', tagPosition: 'bodyClose' },
-          // { src: '', tagPosition: 'bodyClose' },
+          { src: 'https://once.fabricaapps.com/js/wow/wow.min.js', tagPosition: 'bodyClose' },
         ],
         noscript: [
         ]
     },
-    // pageTransition: { name: 'page', mode: 'out-in' },
-    // layoutTransition: { name: 'layout', mode: 'out-in' }
+    pageTransition: { name: 'page', mode: 'out-in' },
+    layoutTransition: { name: 'layout', mode: 'out-in' }
   },
   ssr: true,
   css:[

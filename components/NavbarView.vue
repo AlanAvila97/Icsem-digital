@@ -7,7 +7,6 @@
                     <span class="top"></span>
                     <span class="mid"></span>
                     <span class="bot"></span>
-  
                 </label> 
             </div><!-- End div content menu hamburguer -->
             <div class="logo h-100">
@@ -31,29 +30,29 @@
             <div class="sections-nav">
                 <ul class="elements-nav">
                     <li>
-                        <nuxt-link to="/" @click.prevent="actionLink()" aria-label="Redirección Inicio">
+                        <nuxt-link to="/" aria-label="Redirección Inicio">
                             Inicio
                         </nuxt-link>
                     </li>
                     <li>   
-                        <nuxt-link to="/productos" @click.prevent="actionLink()" aria-label="Redirección a Productos">
+                        <nuxt-link to="/productos" aria-label="Redirección a Productos">
                             Productos
                         </nuxt-link>
                     </li>
                     <li>   
-                        <nuxt-link to="/servicios" @click.prevent="actionLink()" aria-label="Redirección a Servicios">
+                        <nuxt-link to="/servicios" aria-label="Redirección a Servicios">
                             Servicios
                         </nuxt-link>
                     </li>
                     <li>   
                         <div class="scroll-element scroll-contactanos" data-element="Contactanos" 
-                            @click="clickScrollElementsIndex" aria-label="Scroll a Sección Contactanos">
+                        aria-label="Scroll a Sección Contactanos">
                             Contactanos
                         </div>
                     </li>
                     <li>   
                         <div class="scroll-element scroll-experiencia" data-element="Experiencias" 
-                            @click="clickScrollElementsIndex" aria-label="Scroll a Sección Inicio">
+                        aria-label="Scroll a Sección Inicio">
                             Experiencia
                         </div>
                     </li>
@@ -62,23 +61,21 @@
         </div>
         <div id="sidebarMenu">
             <div class="container-menu scroll-menu">
-                <nuxt-link @click.prevent="actionLink()" id="MenuInicio" to="/" class="items Seccion-Menu" aria-label="Redirección Inicio">
+                <nuxt-link id="MenuInicio" to="/" class="items Seccion-Menu" aria-label="Redirección Inicio">
                     Inicio
                 </nuxt-link>
-                <nuxt-link @click.prevent="actionLink()" id="MenuProductor" to="/productos" class="items Seccion-Menu" aria-label="Redirección a Productos">
+                <nuxt-link id="MenuProductor" to="/productos" class="items Seccion-Menu" aria-label="Redirección a Productos">
                     Productos
                 </nuxt-link>
-                <nuxt-link @click.prevent="actionLink()" id="MenuProductor" to="/servicios" class="items Seccion-Menu" aria-label="Redirección a Servicios">
+                <nuxt-link id="MenuProductor" to="/servicios" class="items Seccion-Menu" aria-label="Redirección a Servicios">
                     Servicios
                 </nuxt-link>
-                <p                 
-                    @click="clickScrollElementsIndex"  
+                <p                                      
                     id="MenuProductor" class="items Seccion-Menu" data-element="Contactanos"
                     aria-label="Scroll a Sección Contactanos">
-                    Contactanos
+                    Contáctanos
                 </p>
-                <p 
-                    @click="clickScrollElementsIndex"
+                <p                    
                     id="MenuProductor" class="items Seccion-Menu" data-element="Experiencias"
                     aria-label="Scroll a Sección Inicio">
                     Experiencia
@@ -96,8 +93,6 @@
     // Global Data (Pinia)
     import {dataGlobal} from '@/store/globalData'
     // Composables
-    const preload = actionPreload();
-    const { hiddenPreoload } = preload; 
     // 
     const DataGlobal = dataGlobal();   
     const router = useRouter();
@@ -136,22 +131,10 @@
         if(page == null){     
             document.body.scrollTop = 0; 
             document.documentElement.scrollTop = 0;
-            const divPreload =  document.querySelector('.preloader');
-            hiddenPreoload(divPreload, 'preloader');
             router.push("/#"+element);
         }else{
             scrollSection(getElement('#'+element), 70);
         }
-    }
-    /**
-    * @description Funcion que reinicia el preloader al cambiar de vista
-    */    
-    const actionLink = () => {
-        document.body.scrollTop = 0; 
-        document.documentElement.scrollTop = 0;
-        getElement('#check').click();
-        const divPreload =  document.querySelector('.preloader');
-        hiddenPreoload(divPreload, 'preloader');
     }
     /**
     * @description Funcion que abre el menu de hamburguesa

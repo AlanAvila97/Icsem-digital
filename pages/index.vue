@@ -8,7 +8,10 @@
                      :spaceBetween="30"
                      :rewind="true"
                      :grabCursor="true"  
-            
+                     :autoplay="{
+                        delay: 2500,
+                        disableOnInteraction: false,
+                     }"     
                      :pagination='{
                          clickable: true,
                          dynamicBullets: true,
@@ -113,7 +116,7 @@
                 <h2>Nuestros Valores</h2>
             </div>
             <div class="container-values d-flex">
-                <div class="item-values d-flex">
+                <div class="item-values d-flex animate__animated animate__fadeIn">
                     <div class="title-values d-flex">                        
                         <div class="icon-values">
                             <Icon name="material-symbols:award-star" size='1.5rem'/>
@@ -127,7 +130,7 @@
                         </p> 
                     </div>
                 </div>
-                <div class="item-values d-flex">
+                <div class="item-values d-flex animate__animated animate__fadeIn">
                     <div class="title-values d-flex">                        
                         <div class="icon-values">
                             <Icon name="material-symbols:award-star" size='1.5rem'/>
@@ -141,7 +144,7 @@
                         </p> 
                     </div>
                 </div>
-                <div class="item-values d-flex">
+                <div class="item-values d-flex animate__animated animate__fadeIn">
                     <div class="title-values d-flex">                        
                         <div class="icon-values">
                             <Icon name="material-symbols:award-star" size='1.5rem'/>
@@ -155,7 +158,7 @@
                         </p> 
                     </div>
                 </div>
-                <div class="item-values d-flex">
+                <div class="item-values d-flex animate__animated animate__fadeIn">
                     <div class="title-values d-flex">                        
                         <div class="icon-values">
                             <Icon name="material-symbols:award-star" size='1.5rem'/>
@@ -208,7 +211,7 @@
                     <h2>Titulo Productos Servicios</h2>
                 </div>
                 <div class="content-items-products-services d-flex w-100">
-                    <nuxt-link to="./productos/1" class="items-products-services d-flex first" aria-label="Redirección">
+                    <nuxt-link to="./productos/1" class="items-products-services d-flex first" aria-label="Redirección" >
                         <div class="visuals-products-services">
                             <NuxtPicture
                                 src="images/img-600x400-3.jpg"
@@ -252,7 +255,7 @@
                             </p>    
                         </div>   
                     </nuxt-link>
-                    <nuxt-link to="./productos/2" class="items-products-services d-flex second" aria-label="Redirección">
+                    <nuxt-link to="./productos/2" class="items-products-services d-flex second" aria-label="Redirección" >
                         <div class="visuals-products-services">
                             <NuxtPicture
                                 src="images/img-600x400-4.jpg"
@@ -296,7 +299,7 @@
                             </p>    
                         </div>    
                     </nuxt-link>
-                    <nuxt-link to="./productos/3" class="items-products-services d-flex three" aria-label="Redirección">
+                    <nuxt-link to="./productos/3" class="items-products-services d-flex three" aria-label="Redirección" >
                         <div class="visuals-products-services">
                             <NuxtPicture
                                 src="images/img-600x400-5.jpg"
@@ -491,7 +494,7 @@
                     <h2 id="Experiencias">Titulo de Experiencia</h2>                    
                 </div>
                 <div class="content-items-experience">
-                    <nuxt-link to="/productos/1" class="items-experience d-flex" arial-label="">                        
+                    <nuxt-link to="/productos/1" class="items-experience d-flex" arial-label="" >                        
                         <div class="visual-experience">
                             <NuxtPicture
                                 src="images/img-600x400-3.jpg"
@@ -521,7 +524,7 @@
                             </p>  
                         </div>
                     </nuxt-link>
-                    <nuxt-link to="/productos/1" class="items-experience d-flex">
+                    <nuxt-link to="/productos/1" class="items-experience d-flex" >
                         <div class="visual-experience">
                             <NuxtPicture
                                 src="images/img-600x400-4.jpg"
@@ -551,7 +554,7 @@
                             </p>  
                         </div>
                     </nuxt-link>
-                    <nuxt-link to="/productos/1" class="items-experience d-flex">
+                    <nuxt-link to="/productos/1" class="items-experience d-flex" >
                         <div class="visual-experience">
                             <NuxtPicture
                                 src="images/img-600x400-5.jpg"
@@ -639,7 +642,6 @@
             console.log('sa');
         }
     }
-
 </script>
 
 <style scoped>

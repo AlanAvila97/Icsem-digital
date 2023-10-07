@@ -10,7 +10,7 @@
   }
   .page-enter-from,
   .page-leave-to {
-    opacity: 0;
+    opacity: .5;
     filter: blur(1rem);
   }
   .layout-enter-active,
@@ -19,9 +19,11 @@
   }
   .layout-enter-from,
   .layout-leave-to {
-    opacity: 0;
+    opacity: 0.5;
     filter: blur(1rem);
   }
+  /*
+  **/
   .router-link-active {
     
   }
