@@ -13,6 +13,8 @@
 <script setup>
     // Vue
     import { onMounted } from "vue";
+    // css
+    import 'assets/css/experiencias.css'
     // 
     onMounted(() => {
     });
