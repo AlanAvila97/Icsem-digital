@@ -41,6 +41,24 @@
     display: flex;
     align-items: center;
 }
+.content-social-networks .company-phone{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 1rem;
+    height: auto;
+    width: auto;
+    gap: 0.5rem;
+}
+.content-social-networks .company-phone h2{
+    color: var(--catskill-color);
+    font-size: calc(0.8rem + 0.5vh);    
+    margin: 0;
+}
+.content-social-networks .company-phone svg{
+    color: var(--catskill-color);
+    font-size: 1rem;
+}
 /*-------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
