@@ -55,6 +55,7 @@ yarn build
 # bun
 bun run build
 ```
+npx nuxi generate
 
 Locally preview production build:
 
