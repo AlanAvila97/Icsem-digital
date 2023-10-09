@@ -2,9 +2,10 @@
     <section class="section-products-services">
         <div class="container-products-services d-flex">
             <div class="title-products-services w-100 d-flex">
-                <h2>Titulo Productos Servicios</h2>
+                <h2 class="wow animate__animated animate__fadeInDown"
+                    data-wow-delay="0.3s" data-wow-offset="10">Titulo Productos Servicios</h2>
             </div>
-            <div class="categories-products">
+            <div class="categories-products wow animate__animated animate__fadeInDown" data-wow-delay="0.4s" data-wow-offset="10">
                 <div class="list-categories">
                     <div id="categorie_all" class="item-categorie active" 
                          @click="filterProducts">
@@ -25,8 +26,8 @@
                 </div>
             </div>
             <div class="content-items-products-services d-flex w-100">
-                <nuxt-link to="/productos/1" class="items-products-services d-flex product-mecanica"
-                           @click.prevent="actionLink()" aria-label="Redirección">
+                <nuxt-link to="/productos/1" class="items-products-services d-flex product-mecanica wow animate__animated animate__fadeInUp"
+                           data-wow-delay="0.1s" data-wow-offset="10" aria-label="Redirección">
                     <div class="visuals-products-services">
                         <NuxtPicture
                             src="images/img-600x400-3.jpg"
@@ -70,8 +71,8 @@
                         </p>    
                     </div>   
                 </nuxt-link>
-                <nuxt-link to="/productos/2" class="items-products-services d-flex product-electricidad" 
-                          @click.prevent="actionLink()" aria-label="Redirección">
+                <nuxt-link to="/productos/2" class="items-products-services d-flex product-electricidad wow animate__animated animate__fadeInUp" 
+                           data-wow-delay="0.3s" data-wow-offset="10" aria-label="Redirección">
                     <div class="visuals-products-services">
                         <NuxtPicture
                             src="images/img-600x400-4.jpg"
@@ -115,8 +116,8 @@
                         </p>    
                     </div>    
                 </nuxt-link>
-                <nuxt-link to="/productos/3" class="items-products-services d-flex product-farmacia" 
-                           @click.prevent="actionLink()" aria-label="Redirección">
+                <nuxt-link to="/productos/3" class="items-products-services d-flex product-farmacia wow animate__animated animate__fadeInUp" 
+                           data-wow-delay="0.5s" data-wow-offset="10" aria-label="Redirección">
                     <div class="visuals-products-services">
                         <NuxtPicture
                             src="images/img-600x400-5.jpg"
@@ -172,7 +173,7 @@
     // 
     const DataGlobal = dataGlobal();
     // 
-    const { getElement, getAllElement, addAllClass, removeClass, removeAllClass, addClassElement } = DataGlobal; 
+    const { getElement, getAllElement, addAllClass, removeClass, removeAllClass, addClassElement, initializationWow } = DataGlobal; 
     /**
     * @description Funcion que oculta los productos por categoria
     * @param elements Contiene todos los elementos html 
@@ -196,6 +197,9 @@
             hiddenProducts(getAllElement('.items-products-services'), 'd-none', categorie)
         }
     }
+    onMounted(() => {
+        initializationWow();
+    });
 </script>
 
 <style scoped>

@@ -45,7 +45,7 @@
                         </nuxt-link>
                     </li>
                     <li>   
-                        <nuxt-link to="/experiencias" class="scroll-element scroll-experiencia" 
+                        <nuxt-link to="/experiencia" class="scroll-element scroll-experiencia" 
                             aria-label="Scroll a Sección Inicio">
                             Experiencia
                         </nuxt-link>
@@ -71,14 +71,14 @@
                     Servicios
                 </nuxt-link>
                 <nuxt-link                                      
-                    id="MenuProductor" to="/experiencias" class="items Seccion-Menu" 
+                    id="MenuProductor" to="/experiencia" class="items Seccion-Menu" 
                     aria-label="Scroll a Sección Contactanos">
-                    Contáctanos
+                    Experiencia
                 </nuxt-link>
                 <p                    
-                    id="MenuProductor" class="items Seccion-Menu" data-element="Experiencias"
+                    id="MenuProductor" class="items Seccion-Menu" data-element="Contactanos"
                     @click="clickScrollElementsIndex" aria-label="Scroll a Sección Inicio">
-                    Experiencia
+                    Contáctanos
                 </p>
             </div>
         </div> 
@@ -154,7 +154,17 @@
             element.classList.remove('active');    
         }
     }
+    const comprobationTopNavbar = () =>{
+        let element = getElement('header');
+        console.log(element.offsetTop);
+        console.log(document.body.scrollTop);
+        console.log(document.documentElement.scrollTo);
+        if (document.body.scrollTop > 39 || document.documentElement.scrollTop > 39) {
+            document.querySelector('.header').classList.add('top-0'); 
+        }
+    }
     onMounted(() => {
+        comprobationTopNavbar();
         window.onscroll = function() { scrollFunction(); };
         window.onresize = function() { reportWindowSize(); };
     });

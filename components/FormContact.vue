@@ -1,5 +1,6 @@
 <template>
-    <form id="contactGeneral" class="form-contact" >
+    <form id="contactGeneral" class="form-contact wow animate__animated animate__fadeInDown" 
+          data-wow-delay="0.1s" data-wow-offset="10">
         <p class="title">Contacto 1 </p>
         <div class="d-flex text-desc">
             <p class="message">
