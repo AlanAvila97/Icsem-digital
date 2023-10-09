@@ -18,25 +18,25 @@ export default defineNuxtConfig({
             { name: 'keywords', content: '' },
             { name: 'author', content: 'Instrumentación Controles y Servicios EM' },
             { name: 'twitter:card', content: 'summary_large_imag' },
-            // { name: 'twitter:site', content: '@CanalOnceTV' },
+            // { name: 'twitter:site', content: '' },
             { name: 'msapplication-TileColor', content: '#ffffff' },
             { name: 'msapplication-TileImage', content: '/ms-icon-144x144.png' },
             { name: 'theme-color', content: '#ffffff' },
             { property: 'og:locale', content: 'es_MX' },
             { property: 'og:type', content: 'website' },
             { property: 'og:title', content: 'Instrumentación Controles y Servicios EM' },
-            // { property: 'og:description', content: 'Canal Once inició sus transmisiones el 2 de marzo 1959, lo que la convierte en la primera televisora pública, educativa y cultural en México, y pionera en América Latina. A lo largo de su historia es reconocida por sus contenidos, que aportan conocimiento, información, cultura y entretenimiento.' },
-            // { property: 'og:url', content: 'https://canalonce.mx' },
+            // { property: 'og:description', content: '' },
+            // { property: 'og:url', content: 'www.icsem.mx' },
             { property: 'og:site_name', content: 'Instrumentación Controles y Servicios EM' },
-            // { property: 'og:image', content: 'https://canaloncetv.s3.us-east-1.amazonaws.com/REST/data/images/screeen_logo_once.jpg' },
+            // { property: 'og:image', content: '' },
             { property: 'og:image:width', content: '1346' },
             { property: 'og:image:height', content: '1346' },
             { property: 'og:image:type', content: 'image/jpeg' },
             { property: 'og:image:type', content: 'image/jpeg' },
         ],
         link: [
-            // { rel: 'shortlink', href: 'https://canalonce.mx/'},
-            // { rel: 'canonical', href: 'https://canalonce.mx'},
+            // { rel: 'shortlink', href: 'www.icsem.mx/'},
+            // { rel: 'canonical', href: 'www.icsem.mx'},
             { rel: 'dns-prefetch', href: '//www.google-analytics.com'},
             // { rel: 'apple-touch-icon', sizes: '57x57', href: 'https://canaloncetv.s3.us-east-1.amazonaws.com/REST/data/docs/octubre/android-icon-57x57.png'},
             // { rel: 'apple-touch-icon', sizes: '60x60', href: 'https://canaloncetv.s3.us-east-1.amazonaws.com/REST/data/docs/octubre/android-icon-60x60.png'},
@@ -135,4 +135,5 @@ export default defineNuxtConfig({
   googleFonts: {
     // Options 
   },
+  buildDir: 'nuxt-build'
 })
