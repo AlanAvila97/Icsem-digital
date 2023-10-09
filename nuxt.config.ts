@@ -61,6 +61,7 @@ export default defineNuxtConfig({
   },
   ssr: true,
   css:[
+    'animate.css/animate.css',
     'bootstrap/dist/css/bootstrap.min.css',
     '@/assets/css/main.css',
     '@/assets/css/navbar.css',
@@ -71,7 +72,8 @@ export default defineNuxtConfig({
     'swiper/css/navigation',
     'swiper/css/pagination',
   ],
-  modules: ['nuxt-gtag', 
+  modules: [
+            'nuxt-gtag', 
             'nuxt-icon', 
             'nuxt-link-checker', 
             'nuxt-delay-hydration', 
