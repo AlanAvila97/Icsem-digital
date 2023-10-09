@@ -38,10 +38,10 @@
                                  alt: 'Image',                                
                                  title: 'Imagen',
                                  'data-my-data': 'my-value'}"/>
-                         <div class="container-info">
+                         <div class="container-info wow animate__animated animate__fadeInDown" data-wow-delay="0.1s">
                              <h1>Titulo</h1>
                              <p>Subtitilo</p>
-                             <nuxt-link class="button" to="/productos/1">
+                             <nuxt-link class="button " to="/productos/1">
                                  <span class="button-icon-wrapper">
                                      <Icon name="ri:home-office-line" class="follow" />
                                      <Icon name="ri:home-office-line" class="follow-hover" />
@@ -113,10 +113,12 @@
         </section>
         <section class="section-values">
             <div class="title-value d-flex">
-                <h2>Nuestros Valores</h2>
+                <h2 class="wow animate__animated animate__fadeInDown" 
+                    data-wow-delay="0.1s" data-wow-offset="10">Nuestros Valores</h2>
             </div>
             <div class="container-values d-flex">
-                <div class="item-values d-flex" >
+                <div class="item-values d-flex wow animate__animated animate__fadeInUp"
+                     data-wow-delay="0.1s" data-wow-offset="10">
                     <div class="title-values d-flex">                        
                         <div class="icon-values">
                             <Icon name="material-symbols:award-star" size='1.5rem'/>
@@ -129,7 +131,8 @@
                         </p> 
                     </div>
                 </div>
-                <div class="item-values d-flex" >
+                <div class="item-values d-flex wow animate__animated animate__fadeInUp" 
+                     data-wow-delay="0.3s" data-wow-offset="10">
                     <div class="title-values d-flex">                        
                         <div class="icon-values">
                             <Icon name="material-symbols:award-star" size='1.5rem'/>
@@ -143,7 +146,8 @@
                         </p> 
                     </div>
                 </div>
-                <div class="item-values d-flex" >
+                <div class="item-values d-flex wow animate__animated animate__fadeInUp" 
+                     data-wow-delay="0.5s" data-wow-offset="10">
                     <div class="title-values d-flex">                        
                         <div class="icon-values">
                             <Icon name="material-symbols:award-star" size='1.5rem'/>
@@ -157,7 +161,8 @@
                         </p> 
                     </div>
                 </div>
-                <div class="item-values d-flex" >
+                <div class="item-values d-flex wow animate__animated animate__fadeInUp" 
+                     data-wow-delay="0.7s" data-wow-offset="10">
                     <div class="title-values d-flex">                        
                         <div class="icon-values">
                             <Icon name="material-symbols:award-star" size='1.5rem'/>
@@ -192,7 +197,7 @@
                             title: 'Imagen',
                             'data-my-data': 'my-value'}"/>
                 </div>
-                <div class="info-us d-flex">
+                <div class="info-us d-flex wow animate__animated animate__fadeInUp" data-wow-delay="0.4s" data-wow-offset="10">
                     <small>¿Quiénes Somos?</small>
                     <h2>Más de 25 años de experiencia dando servicios</h2>
                     <p>
@@ -207,10 +212,12 @@
         <section class="section-products-services">
             <div class="container-products-services d-flex">
                 <div class="title-products-services w-100 d-flex">
-                    <h2>Titulo Productos Servicios</h2>
+                    <h2 class="wow animate__animated animate__fadeInDown" 
+                        data-wow-delay="0.1s" data-wow-offset="10">Titulo Productos Servicios</h2>
                 </div>
                 <div class="content-items-products-services d-flex w-100">
-                    <nuxt-link to="./productos/1" class="items-products-services d-flex first" aria-label="Redirección" >
+                    <nuxt-link to="./productos/1" class="items-products-services d-flex first wow animate__animated animate__fadeInUp" 
+                               data-wow-delay="0.1s" data-wow-offset="10" aria-label="Redirección" >
                         <div class="visuals-products-services">
                             <NuxtPicture
                                 src="images/img-600x400-3.jpg"
@@ -254,7 +261,8 @@
                             </p>    
                         </div>   
                     </nuxt-link>
-                    <nuxt-link to="./productos/2" class="items-products-services d-flex second" aria-label="Redirección" >
+                    <nuxt-link to="./productos/2" class="items-products-services d-flex second wow animate__animated animate__fadeInUp" 
+                               data-wow-delay="0.3s" data-wow-offset="10" aria-label="Redirección" >
                         <div class="visuals-products-services">
                             <NuxtPicture
                                 src="images/img-600x400-4.jpg"
@@ -298,7 +306,8 @@
                             </p>    
                         </div>    
                     </nuxt-link>
-                    <nuxt-link to="./productos/3" class="items-products-services d-flex three" aria-label="Redirección" >
+                    <nuxt-link to="./productos/3" class="items-products-services d-flex three wow animate__animated animate__fadeInUp" 
+                               data-wow-delay="0.5s" data-wow-offset="10" aria-label="Redirección" >
                         <div class="visuals-products-services">
                             <NuxtPicture
                                 src="images/img-600x400-5.jpg"
@@ -347,7 +356,8 @@
         </section>
         <section class="section-post-sell">
             <div class="container-post-sell">
-                <div class="info-post-sell d-flex">
+                <div class="info-post-sell d-flex wow animate__animated animate__fadeInUp"
+                     data-wow-delay="0.4s" data-wow-offset="10">
                     <small>Servicios Post Venta</small>
                     <h2 class="title-post-sell">Más de 25 años de experiencia dando servicios</h2>
                     <p>
@@ -356,19 +366,19 @@
                         pero si era un sitio web o una clita eran solo dos cosas.
                     </p>
                     <div class="items-post-sell d-flex">
-                        <div class="item">
+                        <div class="item wow animate__animated animate__fadeInLeft" data-wow-delay="0.5s" data-wow-offset="10">
                             <Icon name="uil:github" size="3rem"/>
                             <h2 class="title-item">Primer Post</h2>
                         </div>
-                        <div class="item">
+                        <div class="item wow animate__animated animate__fadeInRight" data-wow-delay="0.5s" data-wow-offset="10">
                             <Icon name="uil:github" size="3rem"/>
                             <h2 class="title-item">Segunda Post</h2>
                         </div>
-                        <div class="item">
+                        <div class="item wow animate__animated animate__fadeInLeft" data-wow-delay="0.5s" data-wow-offset="10">
                             <Icon name="uil:github" size="3rem"/>
                             <h2 class="title-item">Tercer Post</h2>
                         </div>
-                        <div class="item">
+                        <div class="item wow animate__animated animate__fadeInRight" data-wow-delay="0.5s" data-wow-offset="10">
                             <Icon name="uil:github" size="3rem"/>
                             <h2 class="title-item">Cuarto Post</h2>
                         </div>
@@ -394,10 +404,12 @@
         </section>
         <section  class="section-emails">        
             <div class="title-emails w-100 d-flex">
-                <h2 id="Contactanos" >Contactanos</h2>
+                <h2 id="Contactanos" class="wow animate__animated animate__fadeInDown" 
+                    data-wow-delay="0.1s" data-wow-offset="10">Contactanos</h2>
             </div>
             <div class="container-emails d-flex">
-                <div id="infoMail1" class="card-emails">
+                <div id="infoMail1" class="card-emails wow animate__animated animate__fadeInUp" 
+                     data-wow-delay="0.1s" data-wow-offset="10">
                     <div class="card-content">
                         <div class="card-title">Contacto 1</div>
                         <p class="card-description">This is a cool card design.</p>
@@ -419,7 +431,8 @@
                         </span>
                     </div>
                 </div>
-                <div id="infoMail2" class="card-emails">
+                <div id="infoMail2" class="card-emails wow animate__animated animate__fadeInUp"
+                     data-wow-delay="0.3s" data-wow-offset="10">
                     <div class="card-content">
                         <div class="card-title">Contacto 2</div>
                         <p class="card-description">This is a cool card design.</p>
@@ -441,7 +454,8 @@
                         </span>
                     </div>
                 </div>
-                <div id="infoMail3" class="card-emails">
+                <div id="infoMail3" class="card-emails wow animate__animated animate__fadeInUp"
+                     data-wow-delay="0.5s" data-wow-offset="10">
                     <div class="card-content">
                         <div class="card-title">Contacto 3</div>
                         <p class="card-description">This is a cool card design.</p>
@@ -490,10 +504,12 @@
         <section class="section-experience">
             <div class="container-experience d-flex">
                 <div class="title-experience d-flex">
-                    <h2 id="Experiencias">Titulo de Experiencia</h2>                    
+                    <h2 id="Experiencias" class="wow animate__animated animate__fadeInDown" 
+                        data-wow-delay="0.1s" data-wow-offset="10">Titulo de Experiencia</h2>                    
                 </div>
                 <div class="content-items-experience">
-                    <nuxt-link to="/productos/1" class="items-experience d-flex" arial-label="" >                        
+                    <nuxt-link to="/experiencia/1" class="items-experience d-flex wow animate__animated animate__fadeInUp" 
+                               data-wow-delay="0.1s" data-wow-offset="10" arial-label="">                        
                         <div class="visual-experience">
                             <NuxtPicture
                                 src="images/img-600x400-3.jpg"
@@ -523,7 +539,8 @@
                             </p>  
                         </div>
                     </nuxt-link>
-                    <nuxt-link to="/productos/1" class="items-experience d-flex" >
+                    <nuxt-link to="/experiencia/2" class="items-experience d-flex wow animate__animated animate__fadeInUp" 
+                               data-wow-delay="0.3s" data-wow-offset="10" arial-label="">
                         <div class="visual-experience">
                             <NuxtPicture
                                 src="images/img-600x400-4.jpg"
@@ -553,7 +570,8 @@
                             </p>  
                         </div>
                     </nuxt-link>
-                    <nuxt-link to="/productos/1" class="items-experience d-flex" >
+                    <nuxt-link to="/experiencia/3" class="items-experience d-flex wow animate__animated animate__fadeInUp" 
+                               data-wow-delay="0.5s" data-wow-offset="10" arial-label="">
                         <div class="visual-experience">
                             <NuxtPicture
                                 src="images/img-600x400-5.jpg"
@@ -603,7 +621,7 @@
     const route = useRoute();
     const router = useRouter();
     // 
-    const { getElement, scrollSection } = DataGlobal; 
+    const { getElement, scrollSection, initializationWow } = DataGlobal; 
     // 
     const modules = [Navigation, Pagination, Mousewheel, Autoplay];
     /**
@@ -640,8 +658,10 @@
             console.log('sa');
         }
     }
+    onMounted(() => {
+        initializationWow();
+    });
 </script>
-
 <style scoped>
 
     #Contactanos {
