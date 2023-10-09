@@ -45,15 +45,15 @@
                         </nuxt-link>
                     </li>
                     <li>   
-                        <div class="scroll-element scroll-contactanos" data-element="Contactanos" 
-                        aria-label="Scroll a Sección Contactanos">
-                            Contactanos
-                        </div>
+                        <nuxt-link to="/experiencias" class="scroll-element scroll-experiencia" 
+                            aria-label="Scroll a Sección Inicio">
+                            Experiencia
+                        </nuxt-link>
                     </li>
                     <li>   
-                        <div class="scroll-element scroll-experiencia" data-element="Experiencias" 
-                        aria-label="Scroll a Sección Inicio">
-                            Experiencia
+                        <div class="scroll-element scroll-contactanos" data-element="Contactanos" 
+                             @click="clickScrollElementsIndex" aria-label="Scroll a Sección Contactanos">
+                            Contactanos
                         </div>
                     </li>
                 </ul>
@@ -70,14 +70,14 @@
                 <nuxt-link id="MenuProductor" to="/servicios" class="items Seccion-Menu" aria-label="Redirección a Servicios">
                     Servicios
                 </nuxt-link>
-                <p                                      
-                    id="MenuProductor" class="items Seccion-Menu" data-element="Contactanos"
+                <nuxt-link                                      
+                    id="MenuProductor" to="/experiencias" class="items Seccion-Menu" 
                     aria-label="Scroll a Sección Contactanos">
                     Contáctanos
-                </p>
+                </nuxt-link>
                 <p                    
                     id="MenuProductor" class="items Seccion-Menu" data-element="Experiencias"
-                    aria-label="Scroll a Sección Inicio">
+                    @click="clickScrollElementsIndex" aria-label="Scroll a Sección Inicio">
                     Experiencia
                 </p>
             </div>
@@ -124,8 +124,11 @@
         * @description Funcion que hace un scroll al dar click a un elemento del nabvar (Contacatnos, Experiencias)
     */
     const clickScrollElementsIndex = (e) => {
-        getElement('#check').click();
-
+        // 
+        if(getElement('#check').checked){
+            getElement('#check').click();
+        }
+        // 
         let element = e.target.dataset.element;
         let page = document.querySelector('main.index');
         if(page == null){     

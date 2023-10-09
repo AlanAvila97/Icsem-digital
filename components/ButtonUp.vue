@@ -25,7 +25,7 @@
 <style scoped>
     .container-btn-up{
         position: relative;
-        padding: 1rem;
+        /*padding: 1rem;*/
     }
     .container-btn-up .btn-up{
         width: 60px;

@@ -5,6 +5,10 @@
             <h2>Ubicacion</h2>
         </div>
         <div class="aditionals-social-networks">
+            <div class="company-phone">
+                <Icon name="ic:baseline-local-phone" size="1.5rem" />
+                <h2>55-55-55-55-55</h2>
+            </div>
             <div class="social-networks d-flex">
                 <nuxt-link to="/" target="_blank" rel="Redireccion Facebook" aria-label="Redireccion Facebook">
                     <Icon name="fa-brands:facebook-f"/>
@@ -27,8 +31,6 @@
                     <div class="circle"></div>
                     </div>
                 </label>              
-                <!-- <button @click="onClick" value="light">Light</button>
-                <button @click="onClick" value="dark">Dark</button> -->
             </div>
         </div>
     </div>

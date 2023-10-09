@@ -25,10 +25,8 @@
     * @description Funcion muestra el preloader y desaparece cuando este cargada la pagina 
     */   
     const preload = () => {
-        setTimeout(function(){
-            document.querySelector('body').classList.add('overflow-auto');
-            loading.value = false;
-        }, 500);    
+        document.querySelector('body').classList.add('overflow-auto');
+        loading.value = false;
     }
     onMounted(() => {
         preload();
