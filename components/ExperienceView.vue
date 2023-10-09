@@ -118,6 +118,14 @@
     });
 </script>
 
-<style lang="scss" scoped>
-
+<style  scoped>
+.section-experience  hr{
+    background: #2a3a41;
+    border-radius: 15px;
+    border: 1px solid #0d8184;
+    box-shadow: 0 0 30px #0d8184;
+    height: 1px;
+    width: 100%;
+    opacity: 1;
+}
 </style>

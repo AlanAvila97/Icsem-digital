@@ -21,9 +21,9 @@
                 </div>
             </div>
         </section>
-        <ExperienceView></ExperienceView>
         <MailView></MailView>     
         <ContactView></ContactView>   
+        <ExperienceView></ExperienceView>
     </main>
 </template>
 
