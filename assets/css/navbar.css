@@ -31,10 +31,11 @@
     margin: 0;
 }
 .content-social-networks .social-networks{
-    padding: 10px 1rem;
+    align-items: center;
     height: auto;
-    width: auto;
     gap: var(--ch-rem);
+    padding: 10px 1rem;
+    width: auto;
 }
 .change-mode{
     height: auto;
@@ -304,5 +305,13 @@
     }
     #sidebarMenu {
         display: flex;
+    }
+}
+@media(max-width: 550px){
+    .content-social-networks .info{
+        padding-right: 0rem;
+    }
+    .content-social-networks .company-phone{
+        display: none;
     }
 }

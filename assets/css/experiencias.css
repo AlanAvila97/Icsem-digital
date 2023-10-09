@@ -1,3 +1,237 @@
 /*-------------------------------------------------------------
 # Seccion Experiencias
 --------------------------------------------------------------*/
+.section-experience-global .container-experience-global{
+    width: 100%;
+    height: 100%;
+    padding-bottom: 4rem;
+}
+.section-experience-global .container-experience-global .info-experience-global{
+    gap: 3rem;
+    padding: 3rem 3rem 0rem;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    background-image: url('public/images/carousel-1.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    height: auto;
+    width: 100%;
+    min-height: 500px;
+}
+.section-experience-global .container-experience-global .info-experience-global .image-experience-global{
+    background-color: var(--green-logo-color);
+    bottom: -5rem;
+    border: 1px solid var(--white-icon-color);
+    box-shadow: 0px 4px 10px 2px var(--Outer-color);
+    border-radius: 6rem;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 180px;
+    width: 180px;
+    -webkit-border-radius: 6rem;
+    -moz-border-radius: 6rem;
+    -ms-border-radius: 6rem;
+    -o-border-radius: 6rem;
+}
+.section-experience-global .container-experience-global .info-experience-global .image-experience-global picture{
+    height: auto;
+    width: auto;
+}
+.section-experience-global .container-experience-global .info-experience-global .image-experience-global picture img{
+    width: 180px;
+    max-height: 140px;
+    filter: brightness(2) drop-shadow(2px 4px 6px #2a3a41);
+    -webkit-filter: brightness(2) drop-shadow(2px 4px 6px #2a3a41);
+}
+.section-experience-global .container-experience-global .info-experience-global .name-experience-global{
+    background-color: var(--green-logo-color);
+    bottom: -4rem;
+    border: 1px solid var(--white-icon-color);
+    border-radius: 0.5rem;
+    box-shadow: 0px 4px 10px 2px var(--Outer-color);
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 130px;
+    width: max(300px, 320px);
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+}
+.section-experience-global .container-experience-global .info-experience-global .name-experience-global h1{
+    font-size: calc(1.5rem + 2vh);
+    font-weight: bold;
+    color: var(--white-icon-color);
+}
+.section-experience-global .container-sinopsis-experience-global{
+    padding: 4rem 3rem 0rem;
+    width: 100%;
+    height: 100%;
+}
+.section-experience-global .container-sinopsis-experience-global .sinopsis{
+    max-height: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    background: var(--iron-color);
+    padding: 3rem;
+    box-shadow: 0px 0px 4px 1px #0000004a;
+}
+.section-experience-global .container-sinopsis-experience-global h2{
+    font-size: calc(1.2rem + 1vh);
+    font-weight: bold;
+    color: var(--green-logo-color);
+}
+.section-experience-global .container-sinopsis-experience-global p{
+    font-size: calc(0.7rem + 1vh);
+    color: var(--Outer-color);
+}
+.section-experience-global .container-sinopsis-experience-global hr{
+    background: #2a3a41;
+    border-radius: 15px;
+    border: 1px solid #0d8184;
+    box-shadow: 0 0 30px #0d8184;
+    height: 1px;
+    width: 100%;
+    opacity: 1;
+}
+/*-------------------------------------------------------------
+# Responsive
+--------------------------------------------------------------*/
+@media(max-width: 991px){
+    .section-experience-global .container-sinopsis-experience-global .sinopsis{
+        max-height: 100%;
+        height: auto;
+    }
+}
+@media(max-width: 720px){
+    /*-------------------------------------------------------------
+    # Seccion Contacto General
+    --------------------------------------------------------------*/
+    .section-experience-global .container-experience-global .info-experience-global .image-experience-global {
+        height: 150px;
+        width: 150px;
+    }
+    .section-experience-global .container-experience-global .info-experience-global .image-experience-global picture img{
+        width: 120px;
+    }
+    .section-experience-global .container-experience-global .info-experience-global .name-experience-global{
+        height: 120px;
+        width: max(200px, 280px);
+    }
+
+    .section-experience-global .container-sinopsis-experience-global .sinopsis{
+        padding: 2rem;
+        height: auto;
+    }
+    .section-experience-global .container-sinopsis-experience-global p{
+        font-size: calc(0.7rem + 0.7vh);
+    }
+}
+@media(max-width: 600px){
+    /*-------------------------------------------------------------
+    # Seccion Contacto General
+    --------------------------------------------------------------*/
+    .section-experience-global .container-experience-global .info-experience-global{
+        min-height: 350px;
+    }
+    .section-experience-global .container-experience-global .info-experience-global .image-experience-global {
+        height: 120px;
+        width: 120px;
+    }
+    .section-experience-global .container-experience-global .info-experience-global .image-experience-global picture img{
+        width: 80px;
+    }
+    .section-experience-global .container-experience-global .info-experience-global .name-experience-global {
+        height: 100px;
+        width: max(200px, 220px);
+    }
+    .section-experience-global .container-experience-global .info-experience-global .name-experience-global h1{
+        font-size: calc(1rem + 2vh);
+    }
+}
+@media(max-width: 500px){
+    /*-------------------------------------------------------------
+    # Seccion Contacto General
+    --------------------------------------------------------------*/
+    .section-experience-global .container-experience-global .info-experience-global .image-experience-global {
+        height: 120px;
+        width: 120px;
+    }
+    .section-experience-global .container-experience-global .info-experience-global .image-experience-global picture img{
+        width: 80px;
+    }
+    .section-experience-global .container-experience-global .info-experience-global .name-experience-global {
+        height: 100px;
+        width: max(180px, 200px);
+    }
+    .section-experience-global .container-experience-global .info-experience-global .name-experience-global h1{
+        font-size: calc(0.9rem + 1vh);
+    }
+}
+@media(max-width: 480px){
+    /*-------------------------------------------------------------
+    # Seccion Contacto General
+    --------------------------------------------------------------*/
+    .section-experience-global .container-experience-global .info-experience-global{
+        padding: 2rem 1rem 0rem;
+        gap: 1rem;
+        justify-content: space-around;
+    }
+    .section-experience-global .container-experience-global .info-experience-global .image-experience-global {
+        height: 110px;
+        width: 110px;
+    }
+    .section-experience-global .container-experience-global .info-experience-global .image-experience-global picture img{
+        width: 70px;
+    }
+    .section-experience-global .container-experience-global .info-experience-global .name-experience-global {
+        height: 80px;
+        width: 200px;
+    }
+    .section-experience-global .container-experience-global .info-experience-global .name-experience-global h1{
+        font-size: calc(1rem + 1vh);
+    }
+    .section-experience-global .container-sinopsis-experience-global .sinopsis {
+        padding: 2rem;
+        height: auto;
+        max-height: 100%;
+    }
+    .section-experience-global .container-sinopsis-experience-global{
+        padding: 2rem 1rem 0rem;
+        height: auto;
+    }
+    .section-experience-globals-services .container-experience-globals-services .categories-experience-globals .list-categories{
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+}
+@media(max-width: 380px){
+    /*-------------------------------------------------------------
+    # Seccion Contacto General
+    --------------------------------------------------------------*/
+    .section-experience-global .container-experience-global .info-experience-global {
+        min-height: 300px;
+    }
+    .section-experience-global .container-experience-global .info-experience-global .image-experience-global {
+        height: 100px;
+        width: 100px;    
+        bottom: -3rem;
+    }
+    .section-experience-global .container-experience-global .info-experience-global .image-experience-global picture img{
+        width: 50px;
+    }
+    .section-experience-global .container-experience-global .info-experience-global .name-experience-global {
+        height: 85px;
+        width: 155px;
+        bottom: -2.5rem;
+    }
+    .section-experience-global .container-experience-global .info-experience-global .name-experience-global h1{
+        font-size: calc(0.8rem + 1vh);
+    }
+}
