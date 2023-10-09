@@ -135,5 +135,5 @@ export default defineNuxtConfig({
   googleFonts: {
     // Options 
   },
-  buildDir: 'nuxt-build'
+  // buildDir: 'nuxt-build'
 })
