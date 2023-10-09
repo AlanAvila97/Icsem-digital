@@ -116,7 +116,7 @@
                 <h2>Nuestros Valores</h2>
             </div>
             <div class="container-values d-flex">
-                <div class="item-values d-flex animate__animated animate__fadeIn">
+                <div class="item-values d-flex" >
                     <div class="title-values d-flex">                        
                         <div class="icon-values">
                             <Icon name="material-symbols:award-star" size='1.5rem'/>
@@ -125,12 +125,11 @@
                     </div>
                     <div class="info-values">
                         <p>
-
                             Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit
                         </p> 
                     </div>
                 </div>
-                <div class="item-values d-flex animate__animated animate__fadeIn">
+                <div class="item-values d-flex" >
                     <div class="title-values d-flex">                        
                         <div class="icon-values">
                             <Icon name="material-symbols:award-star" size='1.5rem'/>
@@ -144,7 +143,7 @@
                         </p> 
                     </div>
                 </div>
-                <div class="item-values d-flex animate__animated animate__fadeIn">
+                <div class="item-values d-flex" >
                     <div class="title-values d-flex">                        
                         <div class="icon-values">
                             <Icon name="material-symbols:award-star" size='1.5rem'/>
@@ -158,7 +157,7 @@
                         </p> 
                     </div>
                 </div>
-                <div class="item-values d-flex animate__animated animate__fadeIn">
+                <div class="item-values d-flex" >
                     <div class="title-values d-flex">                        
                         <div class="icon-values">
                             <Icon name="material-symbols:award-star" size='1.5rem'/>
@@ -589,7 +588,6 @@
         </section>
     </main>
 </template>
-
 <script setup>
     // Vue
     import { onMounted } from "vue";

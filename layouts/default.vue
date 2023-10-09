@@ -4,8 +4,8 @@
         <RedesSociales></RedesSociales>
         <NavbarView></NavbarView>
         <slot/>        
-        <!-- <FooterView></FooterView> -->
-        <!-- <ButtonUp></ButtonUp> -->
+        <FooterView></FooterView>
+        <ButtonUp></ButtonUp>
     </div>
 </template>
 <script setup>
