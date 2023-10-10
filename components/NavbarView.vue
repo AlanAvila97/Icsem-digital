@@ -20,6 +20,8 @@
                         fit="cover" 
                         preload
                         loading="lazy"
+                        width="121"
+                        height="60"
                         :imgAttrs="{
                             id:'Logo', 
                             class:'', 
