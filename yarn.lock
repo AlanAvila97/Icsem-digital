@@ -1058,6 +1058,14 @@
     serve-static "^1.15.0"
     ufo "^1.0.1"
 
+"@nuxtjs/robots@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/robots/-/robots-3.0.0.tgz#057f0a68d847f22c36b4e574b456173e3f3d80b0"
+  integrity sha512-qsHGW1KXBvV5Kq7u3huPnFCUTbHS4Fk8Za2mNPgmUXcwLgp3exvhPtdZfIdjrCF/aZk3A8OZONNmGghs6CecBA==
+  dependencies:
+    "@nuxt/kit" "^3.0.0"
+    h3 "^1.0.1"
+
 "@nuxtjs/web-vitals@^0.2.6":
   version "0.2.6"
   resolved "https://registry.npmjs.org/@nuxtjs/web-vitals/-/web-vitals-0.2.6.tgz"
@@ -3332,7 +3340,7 @@ gzip-size@^7.0.0:
   dependencies:
     duplexer "^0.1.2"
 
-h3@^1.7.1, h3@^1.8.1, h3@^1.8.2:
+h3@^1.0.1, h3@^1.7.1, h3@^1.8.1, h3@^1.8.2:
   version "1.8.2"
   resolved "https://registry.npmjs.org/h3/-/h3-1.8.2.tgz"
   integrity sha512-1Ca0orJJlCaiFY68BvzQtP2lKLk46kcLAxVM8JgYbtm2cUg6IY7pjpYgWMwUvDO9QI30N5JAukOKoT8KD3Q0PQ==

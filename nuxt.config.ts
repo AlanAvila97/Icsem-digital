@@ -80,6 +80,7 @@ export default defineNuxtConfig({
             '@nuxt/image', 
             '@pinia/nuxt', 
             '@unlazy/nuxt', 
+            '@nuxtjs/robots',
             '@nuxtjs/web-vitals', 
             '@nuxtjs/color-mode', 
             '@nuxtjs/google-fonts', 
@@ -135,4 +136,9 @@ export default defineNuxtConfig({
   googleFonts: {
     // Options 
   },
+  robots: {
+    UserAgent: '*',
+    Allow: '*',
+    Sitemap: (req) => `https://${req.headers.host}/sitemap.xml`
+  }
 })
