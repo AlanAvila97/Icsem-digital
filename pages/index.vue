@@ -25,7 +25,7 @@
                      class="swiper-head">
                      <swiper-slide>
                          <NuxtPicture
-                             src="images/carousel-1.jpg"
+                             src="images/carousel-1.webp"
                              densities="x1 x2"
                              preset="blog" 
                              format="webp" 
@@ -55,7 +55,7 @@
                      </swiper-slide>
                      <swiper-slide>
                          <NuxtPicture
-                             src="images/carousel-2.jpg"
+                             src="images/carousel-2.webp"
                              densities="x1 x2"
                              preset="blog" 
                              format="webp" 
@@ -89,7 +89,7 @@
                      </swiper-slide>
                      <swiper-slide>
                          <NuxtPicture
-                             src="images/carousel-3.jpg"
+                             src="images/carousel-3.webp"
                              densities="x1 x2"
                              preset="blog" 
                              format="webp" 
@@ -191,7 +191,7 @@
             <div class="content-us">
                 <div class="container-img-us">
                     <NuxtPicture
-                        src="images/about-2.jpg"
+                        src="images/about-2.webp"
                         densities="x1 x2"
                         preset="blog" 
                         format="webp" 
@@ -232,7 +232,7 @@
                                data-wow-delay="0.1s" data-wow-offset="10" aria-label="Redirección" >
                         <div class="visuals-products-services">
                             <NuxtPicture
-                                src="images/img-600x400-3.jpg"
+                                src="images/img-600x400-3.webp"
                                 densities="x1 x2"
                                 preset="blog" 
                                 format="webp" 
@@ -283,7 +283,7 @@
                                data-wow-delay="0.3s" data-wow-offset="10" aria-label="Redirección" >
                         <div class="visuals-products-services">
                             <NuxtPicture
-                                src="images/img-600x400-4.jpg"
+                                src="images/img-600x400-4.webp"
                                 densities="x1 x2"
                                 preset="blog" 
                                 format="webp" 
@@ -334,7 +334,7 @@
                                data-wow-delay="0.5s" data-wow-offset="10" aria-label="Redirección" >
                         <div class="visuals-products-services">
                             <NuxtPicture
-                                src="images/img-600x400-5.jpg"
+                                src="images/img-600x400-5.webp"
                                 densities="x1 x2"
                                 preset="blog" 
                                 format="webp" 
@@ -416,7 +416,7 @@
                 </div>
                 <div class="container-img-post-sell">
                     <NuxtPicture
-                        src="images/Vision_G.jpg"
+                        src="images/Vision_G.webp"
                         densities="x1 x2"
                         preset="blog" 
                         format="webp" 
@@ -514,7 +514,7 @@
             <div class="container-contact-general d-flex">
                 <div class="image-contact">
                     <NuxtPicture
-                        src="images/conctanos.jpg"
+                        src="images/conctanos.webp"
                         densities="x1 x2"
                         preset="blog" 
                         format="webp" 
@@ -548,7 +548,7 @@
                                data-wow-delay="0.1s" data-wow-offset="10" arial-label="">                        
                         <div class="visual-experience">
                             <NuxtPicture
-                                src="images/img-600x400-3.jpg"
+                                src="images/img-600x400-3.webp"
                                 densities="x1 x2"
                                 preset="blog" 
                                 format="webp" 
@@ -582,7 +582,7 @@
                                data-wow-delay="0.3s" data-wow-offset="10" arial-label="">
                         <div class="visual-experience">
                             <NuxtPicture
-                                src="images/img-600x400-4.jpg"
+                                src="images/img-600x400-4.webp"
                                 densities="x1 x2"
                                 preset="blog" 
                                 format="webp" 
@@ -616,7 +616,7 @@
                                data-wow-delay="0.5s" data-wow-offset="10" arial-label="">
                         <div class="visual-experience">
                             <NuxtPicture
-                                src="images/img-600x400-5.jpg"
+                                src="images/img-600x400-5.webp"
                                 densities="x1 x2"
                                 preset="blog" 
                                 format="webp" 

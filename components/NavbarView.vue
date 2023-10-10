@@ -12,7 +12,7 @@
             <div class="logo h-100">
                 <nuxt-link to="/">                    
                     <NuxtPicture
-                        src="images/logo_icsem.png"
+                        src="images/logo_icsem.webp"
                         densities="x1 x2"
                         preset="blog" 
                         format="webp" 
@@ -31,23 +31,23 @@
             <div class="sections-nav">
                 <ul class="elements-nav">
                     <li>
-                        <nuxt-link to="/" aria-label="Redirección Inicio">
+                        <nuxt-link to="/" alt="Redirección Inicio" title="Redirección Inicio" aria-label="Redirección Inicio">
                             Inicio
                         </nuxt-link>
                     </li>
                     <li>   
-                        <nuxt-link to="/productos" aria-label="Redirección a Productos">
+                        <nuxt-link to="/productos" alt="Redirección a Productos" title="Redirección a Productos" aria-label="Redirección a Productos">
                             Productos
                         </nuxt-link>
                     </li>
                     <li>   
-                        <nuxt-link to="/servicios" aria-label="Redirección a Servicios">
+                        <nuxt-link to="/servicios" alt="Redirección a Servicios" title="Redirección a Servicios" aria-label="Redirección a Servicios">
                             Servicios
                         </nuxt-link>
                     </li>
                     <li>   
-                        <nuxt-link to="/experiencia" class="scroll-element scroll-experiencia" 
-                            aria-label="Scroll a Sección Inicio">
+                        <nuxt-link to="/experiencia" alt="Redirección a Experiencia" title="Redirección a Experiencia" class="scroll-element scroll-experiencia" 
+                            aria-label="Redirección a Experiencia">
                             Experiencia
                         </nuxt-link>
                     </li>
@@ -62,10 +62,12 @@
         </div>
         <div id="sidebarMenu">
             <div class="container-menu scroll-menu">
-                <nuxt-link id="MenuInicio" to="/" class="items Seccion-Menu" aria-label="Redirección Inicio">
+                <nuxt-link id="MenuInicio" to="/" class="items Seccion-Menu" alt="Redirección Inicio" title="Redirección Inicio" 
+                    aria-label="Redirección Inicio">
                     Inicio
                 </nuxt-link>
-                <nuxt-link id="MenuProductow" to="/productos" class="items Seccion-Menu" aria-label="Redirección a Productos">
+                <nuxt-link id="MenuProductow" to="/productos" class="items Seccion-Menu" alt="Redirección a Productos" title="Redirección a Productos" 
+                    aria-label="Redirección a Productos">
                     Productos
                 </nuxt-link>
                 <nuxt-link id="MenuServicios" to="/servicios" class="items Seccion-Menu" aria-label="Redirección a Servicios">
@@ -73,7 +75,7 @@
                 </nuxt-link>
                 <nuxt-link                                      
                     id="MenuExperiencias" to="/experiencia" class="items Seccion-Menu" 
-                    aria-label="Scroll a Sección Contactanos">
+                    alt="Redirección a Experiencia" title="Redirección a Experiencia" aria-label="Redirección a Experiencia">
                     Experiencia
                 </nuxt-link>
                 <p                    

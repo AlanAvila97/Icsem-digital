@@ -10,7 +10,7 @@
                            data-wow-delay="0.1s" data-wow-offset="10" aria-label="Redirección">                        
                     <div class="visual-experience">
                         <NuxtPicture
-                            src="images/img-600x400-3.jpg"
+                            src="images/img-600x400-3.webp"
                             densities="x1 x2"
                             preset="blog" 
                             format="webp" 
@@ -44,7 +44,7 @@
                            data-wow-delay="0.3s" data-wow-offset="10" aria-label="Redirección">
                     <div class="visual-experience">
                         <NuxtPicture
-                            src="images/img-600x400-4.jpg"
+                            src="images/img-600x400-4.webp"
                             densities="x1 x2"
                             preset="blog" 
                             format="webp" 
@@ -78,7 +78,7 @@
                            data-wow-delay="0.5s" data-wow-offset="10" aria-label="Redirección">
                     <div class="visual-experience">
                         <NuxtPicture
-                            src="images/img-600x400-5.jpg"
+                            src="images/img-600x400-5.webp"
                             densities="x1 x2"
                             preset="blog" 
                             format="webp" 

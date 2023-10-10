@@ -10,7 +10,7 @@
   }
   .page-enter-from,
   .page-leave-to {
-    opacity: .5;
+    opacity: .4;
     filter: blur(1rem);
   }
   .layout-enter-active,
@@ -19,7 +19,7 @@
   }
   .layout-enter-from,
   .layout-leave-to {
-    opacity: 0.5;
+    opacity: 0.4;
     filter: blur(1rem);
   }
   /*
@@ -29,9 +29,11 @@
   }
   .router-link-active:hover {
       color: var(--green-logo-color)  ;    
+      color: var(--green-dark-color)  ;    
   }
   .router-link-exact-active{
     color: var(--green-logo-color)!important;
+    color: var(--green-dark-color)!important;
     font-weight: bold;
   }
 </style>
