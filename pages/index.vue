@@ -523,7 +523,7 @@
                         preload
                         loading="lazy"
                         width="760"
-                        height="480" 
+                        height="600" 
                         :imgAttrs="{
                             id:'img-contactanos', 
                             class:'img-fluid ', 

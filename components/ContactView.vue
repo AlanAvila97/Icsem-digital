@@ -11,8 +11,8 @@
                     fit="cover" 
                     preload
                     loading="lazy"
-                    width="425"
-                    height="270" 
+                    width="760"
+                    height="600" 
                     :imgAttrs="{
                         id:'img-contactanos', 
                         class:'img-fluid ', 
