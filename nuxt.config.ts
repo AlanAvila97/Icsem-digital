@@ -35,8 +35,8 @@ export default defineNuxtConfig({
             { property: 'og:image:type', content: 'image/jpeg' },
         ],
         link: [
-            { rel: 'shortlink', href: 'www.icsem.mx/'},
-            { rel: 'canonical', href: 'www.icsem.mx'},
+            // { rel: 'shortlink', href: 'www.icsem.mx/'},
+            // { rel: 'canonical', href: 'www.icsem.mx'},
             { rel: 'dns-prefetch', href: '//www.google-analytics.com'},
             // { rel: 'apple-touch-icon', sizes: '57x57', href: 'https://canaloncetv.s3.us-east-1.amazonaws.com/REST/data/docs/octubre/android-icon-57x57.png'},
             // { rel: 'apple-touch-icon', sizes: '60x60', href: 'https://canaloncetv.s3.us-east-1.amazonaws.com/REST/data/docs/octubre/android-icon-60x60.png'},
