@@ -50,7 +50,6 @@ export default defineNuxtConfig({
             // { rel: 'icon', sizes: '192x192', href: 'https://canaloncetv.s3.us-east-1.amazonaws.com/REST/data/docs/octubre/android-icon-192x192.png'},
         ],              
         script: [
-          // { src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js', tagPosition: 'bodyClose' },
           { src: 'https://once.fabricaapps.com/js/wow/wow.min.js', tagPosition: 'bodyClose' },
         ],
         noscript: [
@@ -100,8 +99,10 @@ export default defineNuxtConfig({
   },
   image: {
     // domains: ['https://canaloncetv.s3.us-east-1.amazonaws.com'],
+    quality: 90,
+    format: ['webp'],
     screens: {
-        xs: 320,
+        xs: 640,
         sm: 640,
         md: 768,
         lg: 1024,
@@ -138,7 +139,7 @@ export default defineNuxtConfig({
   },
   robots: {
     UserAgent: '*',
-    Allow: '*',
+    Allow: '/',
     Sitemap: (req) => `https://${req.headers.host}/sitemap.xml`
   }
 })

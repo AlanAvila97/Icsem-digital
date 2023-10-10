@@ -1067,6 +1067,15 @@
 --------------------------------------------------------------*/
 @media(max-width: 991px){
     /*-------------------------------------------------------------
+    # Seccion Slider Principal
+    --------------------------------------------------------------*/
+    .section-slider-head .container-slider-head{
+        height: max(320px, 360px);
+    }
+    .section-slider-head .container-slider-head .swiper-slide img{
+        object-fit: cover;
+    }
+    /*-------------------------------------------------------------
     # Seccion Valores
     --------------------------------------------------------------*/
     .section-values .container-values{
@@ -1327,11 +1336,8 @@
     /*-------------------------------------------------------------
     # Seccion Slider Principal
     --------------------------------------------------------------*/
-    .section-slider-head{
-        padding-top: 0;
-    }
     .section-slider-head .container-slider-head{
-        height: max(320px, 440px);
+        height: max(320px, 360px);
     }
     .section-slider-head .container-slider-head .container-info{
         height: max(300px, 100%);

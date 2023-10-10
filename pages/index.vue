@@ -8,10 +8,7 @@
                      :spaceBetween="30"
                      :rewind="true"
                      :grabCursor="true"  
-                     :autoplay="{
-                        delay: 2500,
-                        disableOnInteraction: false,
-                     }"     
+   
                      :pagination='{
                          clickable: true,
                          dynamicBullets: true,
@@ -527,7 +524,6 @@
                         :imgAttrs="{
                             id:'img-contactanos', 
                             class:'img-fluid ', 
-                            style:'display:block', 
                             alt: 'Image',                                
                             title: 'Imagen',
                             'data-my-data': 'my-value'}"/>
