@@ -10,6 +10,9 @@
                     quality="90" 
                     fit="cover" 
                     preload
+                    loading="lazy"
+                    width="425"
+                    height="270" 
                     :imgAttrs="{
                         id:'img-contactanos', 
                         class:'img-fluid ', 

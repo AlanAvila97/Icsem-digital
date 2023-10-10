@@ -19,6 +19,7 @@
                         quality="90" 
                         fit="cover" 
                         preload
+                        loading="lazy"
                         :imgAttrs="{
                             id:'Logo', 
                             class:'', 
@@ -64,19 +65,19 @@
                 <nuxt-link id="MenuInicio" to="/" class="items Seccion-Menu" aria-label="Redirección Inicio">
                     Inicio
                 </nuxt-link>
-                <nuxt-link id="MenuProductor" to="/productos" class="items Seccion-Menu" aria-label="Redirección a Productos">
+                <nuxt-link id="MenuProductow" to="/productos" class="items Seccion-Menu" aria-label="Redirección a Productos">
                     Productos
                 </nuxt-link>
-                <nuxt-link id="MenuProductor" to="/servicios" class="items Seccion-Menu" aria-label="Redirección a Servicios">
+                <nuxt-link id="MenuServicios" to="/servicios" class="items Seccion-Menu" aria-label="Redirección a Servicios">
                     Servicios
                 </nuxt-link>
                 <nuxt-link                                      
-                    id="MenuProductor" to="/experiencia" class="items Seccion-Menu" 
+                    id="MenuExperiencias" to="/experiencia" class="items Seccion-Menu" 
                     aria-label="Scroll a Sección Contactanos">
                     Experiencia
                 </nuxt-link>
                 <p                    
-                    id="MenuProductor" class="items Seccion-Menu" data-element="Contactanos"
+                    id="MenuContactanos" class="items Seccion-Menu" data-element="Contactanos"
                     @click="clickScrollElementsIndex" aria-label="Scroll a Sección Inicio">
                     Contáctanos
                 </p>

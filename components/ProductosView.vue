@@ -37,6 +37,9 @@
                             quality="90" 
                             fit="cover" 
                             preload
+                            loading="lazy"
+                            width="425"
+                            height="270"                            
                             :imgAttrs="{
                                 id:'img-us-1', 
                                 class:'img-fluid bg-products-services', 
@@ -82,6 +85,9 @@
                             quality="90" 
                             fit="cover" 
                             preload
+                            loading="lazy"
+                            width="425"
+                            height="270"                            
                             :imgAttrs="{
                                 id:'img-us-3', 
                                 class:'img-fluid bg-products-services', 
@@ -127,6 +133,9 @@
                             quality="90" 
                             fit="cover" 
                             preload
+                            loading="lazy"
+                            width="425"
+                            height="270"
                             :imgAttrs="{
                                 id:'img-us-5', 
                                 class:'img-fluid bg-products-services', 

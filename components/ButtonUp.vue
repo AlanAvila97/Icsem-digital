@@ -2,7 +2,9 @@
     <div class="container-btn-up">
         <button type="button" class="btn-up" 
                 @click="scrollTop"
-                alt="Botón para regresar al top de la pagina">
+                alt="Botón top"
+                title="Botón para regresar al top de la pagina"
+                aria-label="Botón para regresar al top de la pagina">
             <Icon name="material-symbols:fitbit-arrow-upward"/>
         </button>
     </div>

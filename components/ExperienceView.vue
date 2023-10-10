@@ -17,6 +17,9 @@
                             quality="90" 
                             fit="cover" 
                             preload
+                            loading="lazy"
+                            width="425"
+                            height="270" 
                             :imgAttrs="{
                                 id:'img-experience-1', 
                                 class:'img-fluid ', 
@@ -48,6 +51,9 @@
                             quality="90" 
                             fit="cover" 
                             preload
+                            loading="lazy"
+                            width="425"
+                            height="270" 
                             :imgAttrs="{
                                 id:'img-experience-2', 
                                 class:'img-fluid ', 
@@ -79,6 +85,9 @@
                             quality="90" 
                             fit="cover" 
                             preload
+                            loading="lazy"
+                            width="425"
+                            height="270" 
                             :imgAttrs="{
                                 id:'img-experience-3', 
                                 class:'img-fluid ', 
