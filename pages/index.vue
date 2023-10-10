@@ -32,6 +32,9 @@
                              quality="90" 
                              fit="cover" 
                              preload
+                             loading="lazy"
+                             width="1519"
+                             height="550" 
                              :imgAttrs="{
                                  id:'img-1', 
                                  class:'img-fluid', 
@@ -59,6 +62,9 @@
                              quality="90" 
                              fit="cover" 
                              preload
+                             loading="lazy"
+                             width="1519"
+                             height="550" 
                              :imgAttrs="{
                                  id:'img-1', 
                                  class:'img-fluid', 
@@ -90,6 +96,9 @@
                              quality="90" 
                              fit="cover" 
                              preload
+                             loading="lazy"
+                             width="1519"
+                             height="550"                              
                              :imgAttrs="{
                                  id:'img-1', 
                                  class:'img-fluid', 
@@ -189,6 +198,9 @@
                         quality="90" 
                         fit="cover" 
                         preload
+                        loading="lazy"
+                        width="760"
+                        height="480" 
                         :imgAttrs="{
                             id:'img-us', 
                             class:'img-fluid ', 
@@ -227,6 +239,9 @@
                                 quality="90" 
                                 fit="cover" 
                                 preload
+                                loading="lazy"
+                                width="425"
+                                height="270" 
                                 :imgAttrs="{
                                     id:'img-us-1', 
                                     class:'img-fluid bg-products-services', 
@@ -244,6 +259,9 @@
                                 quality="90" 
                                 fit="cover" 
                                 preload
+                                loading="lazy"
+                                width="80"
+                                height="80" 
                                 :imgAttrs="{
                                     id:'img-us-2', 
                                     class:'img-fluid bg-products-services', 
@@ -272,6 +290,9 @@
                                 quality="90" 
                                 fit="cover" 
                                 preload
+                                loading="lazy"
+                                width="425"
+                                height="270" 
                                 :imgAttrs="{
                                     id:'img-us-3', 
                                     class:'img-fluid bg-products-services', 
@@ -289,6 +310,9 @@
                                 quality="90" 
                                 fit="cover" 
                                 preload
+                                loading="lazy"
+                                width="80"
+                                height="80"                                 
                                 :imgAttrs="{
                                     id:'img-us-4', 
                                     class:'img-fluid bg-products-services', 
@@ -317,6 +341,9 @@
                                 quality="90" 
                                 fit="cover" 
                                 preload
+                                loading="lazy"
+                                width="425"
+                                height="270" 
                                 :imgAttrs="{
                                     id:'img-us-5', 
                                     class:'img-fluid bg-products-services', 
@@ -334,6 +361,9 @@
                                 quality="90" 
                                 fit="cover" 
                                 preload
+                                loading="lazy"
+                                width="80"
+                                height="80" 
                                 :imgAttrs="{
                                     id:'img-us-6', 
                                     class:'img-fluid bg-products-services', 
@@ -393,6 +423,9 @@
                         quality="90" 
                         fit="cover" 
                         preload
+                        loading="lazy"
+                        width="760"
+                        height="480" 
                         :imgAttrs="{
                             id:'my-id', 
                             class:'img-fluid ', 
@@ -488,6 +521,9 @@
                         quality="90" 
                         fit="cover" 
                         preload
+                        loading="lazy"
+                        width="760"
+                        height="480" 
                         :imgAttrs="{
                             id:'img-contactanos', 
                             class:'img-fluid ', 
@@ -519,6 +555,9 @@
                                 quality="90" 
                                 fit="cover" 
                                 preload
+                                loading="lazy"
+                                width="425"
+                                height="270" 
                                 :imgAttrs="{
                                     id:'img-experience-1', 
                                     class:'img-fluid ', 
@@ -550,6 +589,9 @@
                                 quality="90" 
                                 fit="cover" 
                                 preload
+                                loading="lazy"
+                                width="425"
+                                height="270" 
                                 :imgAttrs="{
                                     id:'img-experience-2', 
                                     class:'img-fluid ', 
@@ -581,6 +623,9 @@
                                 quality="90" 
                                 fit="cover" 
                                 preload
+                                loading="lazy"
+                                width="425"
+                                height="270" 
                                 :imgAttrs="{
                                     id:'img-experience-3', 
                                     class:'img-fluid ', 
