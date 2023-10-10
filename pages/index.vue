@@ -8,7 +8,10 @@
                      :spaceBetween="30"
                      :rewind="true"
                      :grabCursor="true"  
-   
+                     :autoplay="{
+                        delay: 2500,
+                        disableOnInteraction: false,
+                     }"     
                      :pagination='{
                          clickable: true,
                          dynamicBullets: true,
