@@ -14,8 +14,8 @@ export default defineNuxtConfig({
         title: 'Instrumentación Controles y Servicios EM',
         meta: [
             { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-            { name: 'description', content: '' },
-            { name: 'keywords', content: '' },
+            { name: 'description', content: 'Instrumentación Controles y Servicios EM descripcion' },
+            { name: 'keywords', content: 'Finanzas' },
             { name: 'author', content: 'Instrumentación Controles y Servicios EM' },
             { name: 'twitter:card', content: 'summary_large_imag' },
             // { name: 'twitter:site', content: '' },
@@ -25,8 +25,8 @@ export default defineNuxtConfig({
             { property: 'og:locale', content: 'es_MX' },
             { property: 'og:type', content: 'website' },
             { property: 'og:title', content: 'Instrumentación Controles y Servicios EM' },
-            // { property: 'og:description', content: '' },
-            // { property: 'og:url', content: 'www.icsem.mx' },
+            { property: 'og:description', content: 'Instrumentación Controles y Servicios EM descripcion' },
+            { property: 'og:url', content: 'www.icsem.mx' },
             { property: 'og:site_name', content: 'Instrumentación Controles y Servicios EM' },
             // { property: 'og:image', content: '' },
             { property: 'og:image:width', content: '1346' },
@@ -35,8 +35,8 @@ export default defineNuxtConfig({
             { property: 'og:image:type', content: 'image/jpeg' },
         ],
         link: [
-            // { rel: 'shortlink', href: 'www.icsem.mx/'},
-            // { rel: 'canonical', href: 'www.icsem.mx'},
+            { rel: 'shortlink', href: 'www.icsem.mx/'},
+            { rel: 'canonical', href: 'www.icsem.mx'},
             { rel: 'dns-prefetch', href: '//www.google-analytics.com'},
             // { rel: 'apple-touch-icon', sizes: '57x57', href: 'https://canaloncetv.s3.us-east-1.amazonaws.com/REST/data/docs/octubre/android-icon-57x57.png'},
             // { rel: 'apple-touch-icon', sizes: '60x60', href: 'https://canaloncetv.s3.us-east-1.amazonaws.com/REST/data/docs/octubre/android-icon-60x60.png'},
@@ -50,7 +50,7 @@ export default defineNuxtConfig({
             // { rel: 'icon', sizes: '192x192', href: 'https://canaloncetv.s3.us-east-1.amazonaws.com/REST/data/docs/octubre/android-icon-192x192.png'},
         ],              
         script: [
-          { src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js', tagPosition: 'bodyClose' },
+          // { src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js', tagPosition: 'bodyClose' },
           { src: 'https://once.fabricaapps.com/js/wow/wow.min.js', tagPosition: 'bodyClose' },
         ],
         noscript: [
