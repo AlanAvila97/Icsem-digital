@@ -788,8 +788,8 @@
 }
 .section-products-services .container-products-services .content-items-products-services{
     justify-content: space-between;
-    flex-wrap: nowrap;
-    gap: 3rem;
+    flex-wrap: wrap;
+    gap: 1.5rem;
     text-decoration: none;
     width: 100%;
     height: 100%;
@@ -952,6 +952,7 @@
 }
 .section-experience .container-experience .content-items-experience{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     gap: 2rem;
     width: 100%;
@@ -964,7 +965,7 @@
     border-radius: 0.5rem;
     box-shadow: 0px 4px 10px 2px rgb(0 0 0 / 53%);
     text-decoration: none;
-    width: 33%;
+    width: 30%;
     height: max(300px, 480px);
 }
 .section-experience .container-experience .content-items-experience .items-experience .visual-experience{
