@@ -1,6 +1,17 @@
 .img-loader {
     width: max(250px, 350px);
 }
+
+.preloader picture{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+.preloader .bg-preloader{
+    height: auto; 
+    width: auto; 
+}
 .triangles {
     transform: translate(-50%, -50%);
     height   : auto;
