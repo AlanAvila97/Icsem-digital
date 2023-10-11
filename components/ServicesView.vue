@@ -488,7 +488,8 @@
     // 
     const DataGlobal = dataGlobal();
     // 
-    const { getElement, getAllElement, addAllClass, removeClass, removeAllClass, addClassElement, initializationWow } = DataGlobal; 
+    const { getElement, getAllElement, addAllClass, removeClass, scrollSection,
+            removeAllClass, addClassElement, initializationWow } = DataGlobal; 
     /**
     * @description Funcion que oculta los servicios por categoria
     * @param elements Contiene todos los elementos html 
@@ -497,7 +498,7 @@
     */ 
     const hiddenServices = (elements, typeClassElements, categorie) => {
         addAllClass(elements, typeClassElements)
-        removeClass(getElement('.services-'+categorie), typeClassElements);
+        removeAllClass(getAllElement('.services-'+categorie), typeClassElements);
     }
     /**
     * @description Funcion de click para obtener los servicios por categoria 
@@ -506,6 +507,7 @@
         let categorie = e.target.dataset.categorie;
         removeAllClass(getAllElement('.item-categorie'), 'active');
         addClassElement(getElement('#categorie_'+categorie), 'active');
+        scrollSection(getElement('.content-items-products-services'), 80);
         if(categorie == 'all'){
             removeAllClass(getAllElement('.items-products-services'), 'd-none')
         }else{
@@ -518,6 +520,7 @@
         let nextCount = newCount + 1;
             container.dataset.contador = newCount;
         let items = getElement('.content-items-products-services .page-'+newCount);
+        removeAllClass(getAllElement('.items-products-services'), 'd-none')
         if(items != null){
             let MaxHeight = 550 * newCount;
             let nextItems = getElement('.content-items-products-services .page-'+nextCount);     
