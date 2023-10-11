@@ -11,8 +11,8 @@
             </div><!-- End div content menu hamburguer -->
             <div class="logo h-100">
                 <nuxt-link to="/">                    
-                    <NuxtPicture
-                        src="images/logo_icsem.webp"
+                    <NuxtPicture                        
+                        src="images/logo_icsem_ch.webp"
                         densities="x1 x2"
                         preset="blog" 
                         format="webp" 
@@ -24,7 +24,24 @@
                         height="60"
                         :imgAttrs="{
                             id:'Logo', 
-                            class:'', 
+                            class:'logo-light-mode', 
+                            style:'', 
+                            alt: 'Logo Icsem',                                
+                            title: 'Logo Icsem'}"/>
+                    <NuxtPicture
+                        src="images/LOGOTIPO_ICSEM_BLANCO_CH.webp"
+                        densities="x1 x2"
+                        preset="blog" 
+                        format="webp" 
+                        quality="90" 
+                        fit="cover" 
+                        preload
+                        loading="lazy"
+                        width="121"
+                        height="60"
+                        :imgAttrs="{
+                            id:'Logo', 
+                            class:'logo-dark-mode', 
                             style:'', 
                             alt: 'Logo Icsem',                                
                             title: 'Logo Icsem'}"/>
@@ -161,9 +178,6 @@
     }
     const comprobationTopNavbar = () =>{
         let element = getElement('header');
-        console.log(element.offsetTop);
-        console.log(document.body.scrollTop);
-        console.log(document.documentElement.scrollTo);
         if (document.body.scrollTop > 39 || document.documentElement.scrollTop > 39) {
             document.querySelector('.header').classList.add('top-0'); 
         }
