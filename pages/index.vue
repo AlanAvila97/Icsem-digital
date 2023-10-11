@@ -191,7 +191,7 @@
             <div class="content-us">
                 <div class="container-img-us">
                     <NuxtPicture
-                        src="images/about-2.webp"
+                        src="images/about-2-760x760.webp"
                         densities="x1 x2"
                         preset="blog" 
                         format="webp" 
@@ -201,6 +201,7 @@
                         loading="lazy"
                         width="760"
                         height="480" 
+                        sizes="100vw sm:50vw md:400px"
                         :imgAttrs="{
                             id:'img-us', 
                             class:'img-fluid ', 
@@ -416,7 +417,7 @@
                 </div>
                 <div class="container-img-post-sell">
                     <NuxtPicture
-                        src="images/Vision_G.webp"
+                        src="images/Vision_G760x760.webp"
                         densities="x1 x2"
                         preset="blog" 
                         format="webp" 
@@ -425,7 +426,8 @@
                         preload
                         loading="lazy"
                         width="760"
-                        height="480" 
+                        height="480"
+                        sizes="100vw sm:50vw md:400px"
                         :imgAttrs="{
                             id:'my-id', 
                             class:'img-fluid ', 
@@ -514,7 +516,7 @@
             <div class="container-contact-general d-flex">
                 <div class="image-contact">
                     <NuxtPicture
-                        src="images/conctanos.webp"
+                        src="images/conctanos_800x800.webp"
                         densities="x1 x2"
                         preset="blog" 
                         format="webp" 
@@ -523,7 +525,8 @@
                         preload
                         loading="lazy"
                         width="760"
-                        height="600" 
+                        height="600"
+                        sizes="100vw sm:50vw md:400px"
                         :imgAttrs="{
                             id:'img-contactanos', 
                             class:'img-fluid ', 
