@@ -25,8 +25,9 @@
                     </div>
                 </div>
             </div>
-            <div class="content-items-products-services d-flex w-100">
-                <nuxt-link to="/productos/1" class="items-products-services d-flex product-mecanica wow animate__animated animate__fadeInUp"
+            <div class="content-items-products-services d-flex w-100" data-contador="1">
+                <nuxt-link to="/productos/1" 
+                           class="items-products-services page-1 d-flex product-mecanica wow animate__animated animate__fadeInUp"
                            data-wow-delay="0.1s" data-wow-offset="10" aria-label="Redirección">
                     <div class="visuals-products-services">
                         <NuxtPicture
@@ -74,7 +75,8 @@
                         </p>    
                     </div>   
                 </nuxt-link>
-                <nuxt-link to="/productos/2" class="items-products-services d-flex product-electricidad wow animate__animated animate__fadeInUp" 
+                <nuxt-link to="/productos/2" 
+                           class="items-products-services page-1 d-flex product-electricidad wow animate__animated animate__fadeInUp" 
                            data-wow-delay="0.3s" data-wow-offset="10" aria-label="Redirección">
                     <div class="visuals-products-services">
                         <NuxtPicture
@@ -122,7 +124,302 @@
                         </p>    
                     </div>    
                 </nuxt-link>
-                <nuxt-link to="/productos/3" class="items-products-services d-flex product-farmacia wow animate__animated animate__fadeInUp" 
+                <nuxt-link to="/productos/3" 
+                           class="items-products-services page-1 d-flex product-farmacia wow animate__animated animate__fadeInUp" 
+                           data-wow-delay="0.5s" data-wow-offset="10" aria-label="Redirección">
+                    <div class="visuals-products-services">
+                        <NuxtPicture
+                            src="images/img-600x400-5.webp"
+                            densities="x1 x2"
+                            preset="blog" 
+                            format="webp" 
+                            quality="90" 
+                            fit="cover" 
+                            preload
+                            loading="lazy"
+                            width="425"
+                            height="270"
+                            :imgAttrs="{
+                                id:'img-us-5', 
+                                class:'img-fluid bg-products-services', 
+                                alt: 'Image',                                
+                                title: 'Imagen',
+                                'data-my-data': 'my-value'}"/>                                       
+                    </div>    
+                    <div class="info-products-services">
+                        <div class="image-item">
+                            <NuxtPicture
+                            src="https://api.iconify.design/ri:aliens-line.svg?color=%23888888"
+                            densities="x1 x2"
+                            preset="blog" 
+                            format="webp" 
+                            quality="90" 
+                            fit="cover" 
+                            preload
+                            :imgAttrs="{
+                                id:'img-us-6', 
+                                class:'img-fluid bg-products-services', 
+                                style:'display:block', 
+                                alt: 'Image',                                
+                                title: 'Imagen',
+                                'data-my-data': 'my-value'}"/>  
+                        </div>
+                        <h2>Producto 3</h2>
+                        <p class="sinopsis">
+                            Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.
+                        </p>
+                        <p class="redirect"> 
+                            Da click para para saber más <Icon name="ri:arrow-right-line" />
+                        </p>                            
+                    </div>  
+                </nuxt-link>
+                <nuxt-link to="/productos/4" 
+                           class="items-products-services page-2 d-flex product-mecanica wow animate__animated animate__fadeInUp"
+                           data-wow-delay="0.1s" data-wow-offset="10" aria-label="Redirección">
+                    <div class="visuals-products-services">
+                        <NuxtPicture
+                            src="images/img-600x400-3.webp"
+                            densities="x1 x2"
+                            preset="blog" 
+                            format="webp" 
+                            quality="90" 
+                            fit="cover" 
+                            preload
+                            loading="lazy"
+                            width="425"
+                            height="270"                            
+                            :imgAttrs="{
+                                id:'img-us-1', 
+                                class:'img-fluid bg-products-services', 
+                                alt: 'Image',                                
+                                title: 'Imagen',
+                                'data-my-data': 'my-value'}"/>  
+                    </div> 
+                    <div class="info-products-services">
+                        <div class="image-item">
+                            <NuxtPicture
+                            src="https://api.iconify.design/ri:aliens-line.svg?color=%23888888"
+                            densities="x1 x2"
+                            preset="blog" 
+                            format="webp" 
+                            quality="90" 
+                            fit="cover" 
+                            preload
+                            :imgAttrs="{
+                                id:'img-us-2', 
+                                class:'img-fluid bg-products-services', 
+                                style:'display:block', 
+                                alt: 'Image',                                
+                                title: 'Imagen',
+                                'data-my-data': 'my-value'}"/>  
+                        </div>
+                        <h2>Producto 1</h2>
+                        <p class="sinopsis">
+                            Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.
+                        </p>
+                        <p class="redirect"> 
+                            Da click para para saber más <Icon name="ri:arrow-right-line" />
+                        </p>    
+                    </div>   
+                </nuxt-link>
+                <nuxt-link to="/productos/5"
+                           class="items-products-services page-2 d-flex product-electricidad wow animate__animated animate__fadeInUp" 
+                           data-wow-delay="0.3s" data-wow-offset="10" aria-label="Redirección">
+                    <div class="visuals-products-services">
+                        <NuxtPicture
+                            src="images/img-600x400-4.webp"
+                            densities="x1 x2"
+                            preset="blog" 
+                            format="webp" 
+                            quality="90" 
+                            fit="cover" 
+                            preload
+                            loading="lazy"
+                            width="425"
+                            height="270"                            
+                            :imgAttrs="{
+                                id:'img-us-3', 
+                                class:'img-fluid bg-products-services', 
+                                alt: 'Image',                                
+                                title: 'Imagen',
+                                'data-my-data': 'my-value'}"/>
+                    </div>    
+                    <div class="info-products-services">
+                        <div class="image-item">
+                            <NuxtPicture
+                            src="https://api.iconify.design/ri:aliens-line.svg?color=%23888888"
+                            densities="x1 x2"
+                            preset="blog" 
+                            format="webp" 
+                            quality="90" 
+                            fit="cover" 
+                            preload
+                            :imgAttrs="{
+                                id:'img-us-4', 
+                                class:'img-fluid bg-products-services', 
+                                style:'display:block', 
+                                alt: 'Image',                                
+                                title: 'Imagen',
+                                'data-my-data': 'my-value'}"/>  
+                        </div>
+                        <h2>Producto 2</h2>
+                        <p class="sinopsis">
+                            Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.
+                        </p>
+                        <p class="redirect"> 
+                            Da click para para saber más <Icon name="ri:arrow-right-line" />
+                        </p>    
+                    </div>    
+                </nuxt-link>
+                <nuxt-link to="/productos/6" 
+                           class="items-products-services page-2 d-flex product-farmacia wow animate__animated animate__fadeInUp" 
+                           data-wow-delay="0.5s" data-wow-offset="10" aria-label="Redirección">
+                    <div class="visuals-products-services">
+                        <NuxtPicture
+                            src="images/img-600x400-5.webp"
+                            densities="x1 x2"
+                            preset="blog" 
+                            format="webp" 
+                            quality="90" 
+                            fit="cover" 
+                            preload
+                            loading="lazy"
+                            width="425"
+                            height="270"
+                            :imgAttrs="{
+                                id:'img-us-5', 
+                                class:'img-fluid bg-products-services', 
+                                alt: 'Image',                                
+                                title: 'Imagen',
+                                'data-my-data': 'my-value'}"/>                                       
+                    </div>    
+                    <div class="info-products-services">
+                        <div class="image-item">
+                            <NuxtPicture
+                            src="https://api.iconify.design/ri:aliens-line.svg?color=%23888888"
+                            densities="x1 x2"
+                            preset="blog" 
+                            format="webp" 
+                            quality="90" 
+                            fit="cover" 
+                            preload
+                            :imgAttrs="{
+                                id:'img-us-6', 
+                                class:'img-fluid bg-products-services', 
+                                style:'display:block', 
+                                alt: 'Image',                                
+                                title: 'Imagen',
+                                'data-my-data': 'my-value'}"/>  
+                        </div>
+                        <h2>Producto 3</h2>
+                        <p class="sinopsis">
+                            Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.
+                        </p>
+                        <p class="redirect"> 
+                            Da click para para saber más <Icon name="ri:arrow-right-line" />
+                        </p>                            
+                    </div>  
+                </nuxt-link>
+                <nuxt-link to="/productos/7" 
+                           class="items-products-services page-3 d-flex product-mecanica wow animate__animated animate__fadeInUp"
+                           data-wow-delay="0.1s" data-wow-offset="10" aria-label="Redirección">
+                    <div class="visuals-products-services">
+                        <NuxtPicture
+                            src="images/img-600x400-3.webp"
+                            densities="x1 x2"
+                            preset="blog" 
+                            format="webp" 
+                            quality="90" 
+                            fit="cover" 
+                            preload
+                            loading="lazy"
+                            width="425"
+                            height="270"                            
+                            :imgAttrs="{
+                                id:'img-us-1', 
+                                class:'img-fluid bg-products-services', 
+                                alt: 'Image',                                
+                                title: 'Imagen',
+                                'data-my-data': 'my-value'}"/>  
+                    </div> 
+                    <div class="info-products-services">
+                        <div class="image-item">
+                            <NuxtPicture
+                            src="https://api.iconify.design/ri:aliens-line.svg?color=%23888888"
+                            densities="x1 x2"
+                            preset="blog" 
+                            format="webp" 
+                            quality="90" 
+                            fit="cover" 
+                            preload
+                            :imgAttrs="{
+                                id:'img-us-2', 
+                                class:'img-fluid bg-products-services', 
+                                style:'display:block', 
+                                alt: 'Image',                                
+                                title: 'Imagen',
+                                'data-my-data': 'my-value'}"/>  
+                        </div>
+                        <h2>Producto 1</h2>
+                        <p class="sinopsis">
+                            Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.
+                        </p>
+                        <p class="redirect"> 
+                            Da click para para saber más <Icon name="ri:arrow-right-line" />
+                        </p>    
+                    </div>   
+                </nuxt-link>
+                <nuxt-link to="/productos/8"
+                           class="items-products-services page-3 d-flex product-electricidad wow animate__animated animate__fadeInUp" 
+                           data-wow-delay="0.3s" data-wow-offset="10" aria-label="Redirección">
+                    <div class="visuals-products-services">
+                        <NuxtPicture
+                            src="images/img-600x400-4.webp"
+                            densities="x1 x2"
+                            preset="blog" 
+                            format="webp" 
+                            quality="90" 
+                            fit="cover" 
+                            preload
+                            loading="lazy"
+                            width="425"
+                            height="270"                            
+                            :imgAttrs="{
+                                id:'img-us-3', 
+                                class:'img-fluid bg-products-services', 
+                                alt: 'Image',                                
+                                title: 'Imagen',
+                                'data-my-data': 'my-value'}"/>
+                    </div>    
+                    <div class="info-products-services">
+                        <div class="image-item">
+                            <NuxtPicture
+                            src="https://api.iconify.design/ri:aliens-line.svg?color=%23888888"
+                            densities="x1 x2"
+                            preset="blog" 
+                            format="webp" 
+                            quality="90" 
+                            fit="cover" 
+                            preload
+                            :imgAttrs="{
+                                id:'img-us-4', 
+                                class:'img-fluid bg-products-services', 
+                                style:'display:block', 
+                                alt: 'Image',                                
+                                title: 'Imagen',
+                                'data-my-data': 'my-value'}"/>  
+                        </div>
+                        <h2>Producto 2</h2>
+                        <p class="sinopsis">
+                            Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.
+                        </p>
+                        <p class="redirect"> 
+                            Da click para para saber más <Icon name="ri:arrow-right-line" />
+                        </p>    
+                    </div>    
+                </nuxt-link>
+                <nuxt-link to="/productos/9" 
+                           class="items-products-services page-3 d-flex product-farmacia wow animate__animated animate__fadeInUp" 
                            data-wow-delay="0.5s" data-wow-offset="10" aria-label="Redirección">
                     <div class="visuals-products-services">
                         <NuxtPicture
@@ -171,6 +468,15 @@
                     </div>  
                 </nuxt-link>
             </div>
+            <div class="content-show-more d-flex">
+                <hr>
+                <button class="" @click="showMore">
+                    <span class="box">
+                        Mostrar más                        
+                        <Icon name="ri:arrow-down-s-line" size="1.5rem"/>
+                    </span>
+                </button>
+            </div>
         </div>
     </section>
 </template>
@@ -181,6 +487,7 @@
     import {dataGlobal} from '@/store/globalData'
     // 
     const DataGlobal = dataGlobal();
+    const num = ref(0);
     // 
     const { getElement, getAllElement, addAllClass, removeClass, removeAllClass, addClassElement, initializationWow } = DataGlobal; 
     /**
@@ -206,6 +513,21 @@
             hiddenProducts(getAllElement('.items-products-services'), 'd-none', categorie)
         }
     }
+    const showMore = (e) => {
+        let container = getElement('.content-items-products-services');
+        let newCount = parseInt(container.dataset.contador) + 1;
+        let nextCount = newCount + 1;
+            container.dataset.contador = newCount;
+        let items = getElement('.content-items-products-services .page-'+newCount);
+        if(items != null){
+            let MaxHeight = 550 * newCount;
+            let nextItems = getElement('.content-items-products-services .page-'+nextCount);     
+                container.style = "max-height: "+MaxHeight+"px;";
+            if(nextItems == null){
+                getElement('.content-show-more').classList.add('d-none')
+            }      
+        }
+    }
     onMounted(() => {
         initializationWow();
     });
@@ -214,5 +536,15 @@
 <style scoped>
     .title-products-services{
         padding-bottom: 1rem!important;
+    }
+    .section-products-services .container-products-services .content-items-products-services{
+        /*max-height: var(--height-max-more);*/
+        max-height: 530px;
+        overflow: hidden;
+        padding: 0 1rem 1rem;
+        gap: 2rem;
+    }
+    .section-products-services .container-products-services .content-items-products-services .items-products-services{
+        box-shadow: 0px 4px 7px 2px rgb(0 0 0 / 53%);
     }
 </style>
