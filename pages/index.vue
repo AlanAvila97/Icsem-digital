@@ -12,6 +12,7 @@
                         delay: 2500,
                         disableOnInteraction: false,
                      }"     
+                     
                      :pagination='{
                          clickable: true,
                          dynamicBullets: true,
@@ -35,6 +36,8 @@
                              loading="lazy"
                              width="1519"
                              height="550" 
+                             provider="icsem"
+                             sizes="xxl:1540px xl:1180px lg:1020px md:500px sm:320px"
                              :imgAttrs="{
                                  id:'img-1', 
                                  class:'img-fluid', 
@@ -65,6 +68,7 @@
                              loading="lazy"
                              width="1519"
                              height="550" 
+                             sizes="xxl:1540px xl:1180px lg:1020px md:500px sm:320px"
                              :imgAttrs="{
                                  id:'img-1', 
                                  class:'img-fluid', 
@@ -98,7 +102,8 @@
                              preload
                              loading="lazy"
                              width="1519"
-                             height="550"                              
+                             height="550"
+                             sizes="xxl:1540px xl:1180px lg:1020px md:500px sm:320px"                              
                              :imgAttrs="{
                                  id:'img-1', 
                                  class:'img-fluid', 
@@ -191,7 +196,7 @@
             <div class="content-us">
                 <div class="container-img-us">
                     <NuxtPicture
-                        src="images/about-2-760x760.webp"
+                        src="images/about-2-xxl.webp"
                         densities="x1 x2"
                         preset="blog" 
                         format="webp" 
@@ -200,8 +205,8 @@
                         preload
                         loading="lazy"
                         width="760"
-                        height="480" 
-                        sizes="100vw sm:50vw md:400px"
+                        height="500" 
+                        sizes="xxl:1540px xl:1180px lg:1020px md:500px sm:320px"
                         :imgAttrs="{
                             id:'img-us', 
                             class:'img-fluid ', 
@@ -243,6 +248,7 @@
                                 loading="lazy"
                                 width="425"
                                 height="270" 
+                                sizes="xxl:1540px xl:1180px lg:1020px md:500px sm:320px"
                                 :imgAttrs="{
                                     id:'img-us-1', 
                                     class:'img-fluid bg-products-services', 
@@ -274,6 +280,8 @@
                             <h2>Producto 1</h2>
                             <p class="sinopsis">
                                 Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.
+                                Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.
+                                Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.
                             </p>
                             <p class="redirect"> 
                                 Da click para para saber más <Icon name="ri:arrow-right-line" />
@@ -294,6 +302,7 @@
                                 loading="lazy"
                                 width="425"
                                 height="270" 
+                                sizes="xxl:1540px xl:1180px lg:800px md:500px sm:320px"
                                 :imgAttrs="{
                                     id:'img-us-3', 
                                     class:'img-fluid bg-products-services', 
@@ -345,6 +354,7 @@
                                 loading="lazy"
                                 width="425"
                                 height="270" 
+                                sizes="xxl:1540px xl:1180px lg:1020px md:500px sm:320px"
                                 :imgAttrs="{
                                     id:'img-us-5', 
                                     class:'img-fluid bg-products-services', 
@@ -417,7 +427,7 @@
                 </div>
                 <div class="container-img-post-sell">
                     <NuxtPicture
-                        src="images/Vision_G760x760.webp"
+                        src="images/Vision_G_xxl.webp"
                         densities="x1 x2"
                         preset="blog" 
                         format="webp" 
@@ -426,8 +436,8 @@
                         preload
                         loading="lazy"
                         width="760"
-                        height="480"
-                        sizes="100vw sm:50vw md:400px"
+                        height="550"
+                        sizes="xxl:1540px xl:1180px lg:1020px md:500px sm:320px"
                         :imgAttrs="{
                             id:'my-id', 
                             class:'img-fluid ', 
@@ -447,8 +457,14 @@
                      data-wow-delay="0.1s" data-wow-offset="10">
                     <div class="card-content">
                         <div class="card-title">Contacto 1</div>
-                        <p class="card-description">This is a cool card design.</p>
-                        <p class="mail">demo@prueba.com</p>
+                        <p class="card-description">Resuelve tus dudas.</p>
+                        <p class="mail">                            
+                            <Icon name="material-symbols:mail" size="1rem" />demo@prueba.com
+                        </p>
+                        <p class="phone">
+                            <Icon name="ic:baseline-local-phone" size="1rem" />
+                            55-55-50-55-55
+                        </p>
                         <button id="btn1"
                                 class="card-button" type="button" 
                                 @click="getInfoMail" 
@@ -471,7 +487,13 @@
                     <div class="card-content">
                         <div class="card-title">Contacto 2</div>
                         <p class="card-description">This is a cool card design.</p>
-                        <p class="mail">demo1@prueba.com</p>
+                        <p class="mail">
+                            <Icon name="material-symbols:mail" size="1rem" />demo1@prueba.com
+                        </p>
+                        <p class="phone">
+                            <Icon name="ic:baseline-local-phone" size="1rem" />
+                            55-55-51-55-55
+                        </p>
                         <button id="btn2"
                                 class="card-button" type="button" 
                                 @click="getInfoMail" 
@@ -494,7 +516,13 @@
                     <div class="card-content">
                         <div class="card-title">Contacto 3</div>
                         <p class="card-description">This is a cool card design.</p>
-                        <p class="mail">demo2@prueba.com</p>
+                        <p class="mail">
+                            <Icon name="material-symbols:mail" size="1rem" />demo2@prueba.com
+                        </p>
+                        <p class="phone">
+                            <Icon name="ic:baseline-local-phone" size="1rem" />
+                            55-55-53-55-55
+                        </p>
                         <button id="btn3"
                                 class="card-button" type="button" 
                                 @click="getInfoMail"  
@@ -516,7 +544,7 @@
             <div class="container-contact-general d-flex">
                 <div class="image-contact">
                     <NuxtPicture
-                        src="images/conctanos_800x800.webp"
+                        src="images/conctanos_xxl.webp"
                         densities="x1 x2"
                         preset="blog" 
                         format="webp" 
@@ -525,8 +553,8 @@
                         preload
                         loading="lazy"
                         width="760"
-                        height="600"
-                        sizes="100vw sm:50vw md:400px"
+                        height="650"
+                        sizes="xxl:1540px xl:1180px lg:1020px md:500px sm:320px"
                         :imgAttrs="{
                             id:'img-contactanos', 
                             class:'img-fluid ', 
@@ -679,13 +707,16 @@
         let title = getElement('#'+id+' .card-title');
         let desc = getElement('#'+id+' .card-description');
         let mail = getElement('#'+id+' .mail');
+        let phone = getElement('#'+id+' .phone');
             // 
             clickScroll();
             // 
             getElement("#EmailIcsem").value = mail.innerText;
             setInfoForm(getElement('#contactGeneral .title'), title.innerText);
-            setInfoForm(getElement('#contactGeneral .message'), desc.innerText);
+            setInfoForm(getElement('#contactGeneral .sinopsis'), desc.innerText);
+            setInfoForm(getElement('#contactGeneral .message'), 'Estas por contactarnos al correo ');
             setInfoForm(getElement('#contactGeneral .mail'), mail.innerText);
+            setInfoForm(getElement('#contactGeneral .phone'), phone.innerText);
     }
     /**
     * @description Funcion reescribe la informacion del formulario

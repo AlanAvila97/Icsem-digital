@@ -104,10 +104,10 @@ export default defineNuxtConfig({
       'xs': 320,
       'sm': 640,
       'md': 768,
-      'lg': 1024,
-      'xl': 1280,
+      'lg': 1200,
+      'xl': 1480,
       'xxl': 1536,
-      '2xl': 1536   
+      '2xl': 1836   
     },
     presets: {
         cover: {
@@ -126,7 +126,17 @@ export default defineNuxtConfig({
             }
         },
     },
-    
+    domains: ['https://delicate-maamoul-70641c.netlify.app'],
+    providers: {
+      customProvider: {
+        name: 'icsem', // optional value to overrider provider name
+        provider: './composables/IcsemImageProvider.js', // Path to custom provider
+        options: {
+          // ... provider options
+        }
+      }
+    }
+    // 
   },
   webVitals: {
     // provider: '', // auto detectd
@@ -139,6 +149,6 @@ export default defineNuxtConfig({
   robots: {
     UserAgent: '*',
     Allow: '/',
-    Sitemap: (req) => `https://${req.headers.host}/sitemap.xml`
+    Sitemap: (req) => `https://${req.headers.host}/sitemap.xml`,
   }
 })
