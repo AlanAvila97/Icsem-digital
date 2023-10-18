@@ -1,6 +1,14 @@
 import {defineStore} from 'pinia'
 // 
 export const dataGlobal = defineStore('dataGlobal', () => {
+    const fetchInfoIcsem = async (type) => {
+        let json = '';
+        switch (type) {
+            case 'Estados':
+                return '/api/estados/estados';
+                break;
+        }
+    }
     /**
     * @description Funcion que obtiene un elemento html
     */   
@@ -118,6 +126,7 @@ export const dataGlobal = defineStore('dataGlobal', () => {
         scrollSection,
         getAllElement,
         removeAllClass,
+        fetchInfoIcsem,
         addClassElement,    
         initializationWow,
         eliminarCaracteres,

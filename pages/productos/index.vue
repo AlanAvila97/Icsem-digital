@@ -23,19 +23,44 @@
                     </div>
                     <div class="name-product d-flex wow animate__animated animate__fadeInDown" 
                          data-wow-delay="0.1s" data-wow-offset="10">
-                        <h1>Productos</h1>
+                        <h2>Productos</h2>
                     </div>
                 </div>
             </div>
             <div class="container-sinopsis-product">
                 <div class="sinopsis wow animate__animated animate__fadeInUp"
                      data-wow-delay="0.2s" data-wow-offset="10">
-                    <h2>Subtitulo</h2>
+                    <h1>Subtitulo</h1>
                     <hr>
                     <p>
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo eligendi nulla quidem labore possimus cumque corporis explicabo, 
                         necessitatibus libero nam. Nihil earum corrupti nam possimus laboriosam perferendis quaerat quasi quas.
                     </p>
+                    <div class="content-additional-product">
+                        <div class="img-product">
+                            <NuxtPicture
+                                src="/images/img-600x400-3.jpg"
+                                densities="x1 x2"
+                                preset="blog" 
+                                format="webp" 
+                                quality="90" 
+                                fit="cover" 
+                                preload
+                                :imgAttrs="{
+                                    id:'img-us-2', 
+                                    class:'img-fluid bg-products-services', 
+                                    style:'display:block', 
+                                    alt: 'Image',                                
+                                    title: 'Imagen',
+                                    'data-my-data': 'my-value'}"/>  
+                        </div>
+                        <div class="info-product">
+                            <h3>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit soluta unde culpa ab, dicta vitae enim deleniti, 
+                                pariatur ipsa, cumque eveniet maiores veniam tempore reprehenderit iste dolores animi non! Provident!
+                            </h3>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
