@@ -225,7 +225,7 @@
 .section-us .content-us .container-img-us picture img{
     height: auto;
     width: 100%;
-    max-height: 480px;
+    max-height: 500px;
 }
 .section-us .content-us .info-us{
     width: 50%;
@@ -415,8 +415,19 @@
 .section-emails .container-emails .card-emails .mail{
     font-size: 1rem;
     color: var(--white-icon-color);
-    padding-bottom: 2rem;
+    display: flex;
+    gap: 1px;
+    align-items: center;
 }   
+.section-emails .container-emails .card-emails .phone{
+    font-size: 1rem;
+    color: var(--white-icon-color);
+    padding-bottom: 1rem;
+}   
+.section-emails .container-emails .card-emails .mail svg,
+.section-emails .container-emails .card-emails .phone svg{
+    color: var(--white-icon-color)
+}
 .section-emails .container-emails .card-emails .card-button {
     padding: 10px 20px;
     background-color: var(--green-logo-color);
@@ -801,7 +812,7 @@
     border-radius: 0.5rem;
     box-shadow: 0px 4px 10px 2px rgb(0 0 0 / 53%);
     flex-direction: column;
-    height: 100%;
+    height: auto;
     width: max(300px, 30%);
 }
 .section-products-services .container-products-services .content-items-products-services .items-products-services:hover .info-products-services .image-item{
@@ -924,7 +935,33 @@
 .section-products-services .container-products-services .categories-products .list-categories .item-categorie.active p{
     color: var(--green-logo-color);
 }
-    
+.container-sinopsis-product .content-additional-product{
+    display: flex;
+    width: 100%;
+    height: auto;
+    gap: 1rem;
+    border-top: 1px solid #9d9d9d85;
+    padding-top: 1rem;
+}
+.container-sinopsis-product .content-additional-product .img-product{
+    width: 40%;
+}
+.container-sinopsis-product .content-additional-product .img-product picture{
+    height: auto;
+    width: auto;
+}
+.container-sinopsis-product .content-additional-product .img-product picture img{
+    width: auto;
+    height: auto;
+    max-height: 100%;
+}
+.container-sinopsis-product .content-additional-product .info-product{
+    width: -webkit-fill-available;
+}
+.container-sinopsis-product .content-additional-product .info-product h3{
+    font-size: calc(0.8rem + 0.7vh);
+    color: var(--Outer-color);
+}
 /*-------------------------------------------------------------
 # Seccion Experiencia
 --------------------------------------------------------------*/
