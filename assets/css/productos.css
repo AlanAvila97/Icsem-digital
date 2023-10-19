@@ -364,10 +364,13 @@
     }
     .section-product .container-product .info-product .name-product {
         height: 85px;
-        width: 155px;
+        width: 144px;
         bottom: -2.5rem;
     }
     .section-product .container-product .info-product .name-product h1{
+        font-size: calc(0.8rem + 1vh);
+    }
+    .section-product .container-product .info-product .name-product h2{
         font-size: calc(0.8rem + 1vh);
     }
 }
