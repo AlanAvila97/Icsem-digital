@@ -35,8 +35,8 @@ export default defineNuxtConfig({
             { property: 'og:image:type', content: 'image/jpeg' },
         ],
         link: [
-            // { rel: 'shortlink', href: 'www.icsem.mx/'},
-            // { rel: 'canonical', href: 'www.icsem.mx'},
+            { rel: 'shortlink', href: 'https://icsem.mx/'},
+            { rel: 'canonical', href: 'https://icsem.mx'},
             { rel: 'dns-prefetch', href: '//www.google-analytics.com'},
             { rel: 'apple-touch-icon', sizes: '57x57', href: 'https://delicate-maamoul-70641c.netlify.app/images/logo_icsem57x57.webp'},
             { rel: 'apple-touch-icon', sizes: '60x60', href: 'https://delicate-maamoul-70641c.netlify.app/images/logo_icsem60x60.webp'},
@@ -50,6 +50,7 @@ export default defineNuxtConfig({
             { rel: 'icon', sizes: '192x192', href: 'https://delicate-maamoul-70641c.netlify.app/_ipx/f_webp&fit_cover&q_90&s_1280x634/images/logo_icsem_ch.webp'},
         ],              
         script: [
+          { async: true, src: 'https://www.googletagmanager.com/gtag/js?id=G-L19R8RP6KH' },
           { src: 'https://once.fabricaapps.com/js/wow/wow.min.js', tagPosition: 'bodyClose' },
         ],
         noscript: [
@@ -89,9 +90,19 @@ export default defineNuxtConfig({
     enabled: true 
   },
   gtag: {
-    // id: 'G-XXXXXXXXXX',
-    // initialConsent: false
+    id: 'G-L19R8RP6KH',
+    config: {
+      page_title: 'Instrumentación Controles y Servicios EM'
+    }
   },
+  runtimeConfig: {
+    public: {
+      gtagId: 'G-L19R8RP6KH',
+    }
+  },
+  plugins: [
+    '~/plugins/gtag.client.js'
+  ],
   delayHydration: {
     debug: process.env.NODE_ENV === 'development',
     mode: 'init',
@@ -126,7 +137,7 @@ export default defineNuxtConfig({
             }
         },
     },
-    domains: ['https://delicate-maamoul-70641c.netlify.app'],
+    domains: ['https://www.icsem.mx/'],
     providers: {
       customProvider: {
         name: 'icsem', // optional value to overrider provider name

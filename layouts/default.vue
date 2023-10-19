@@ -10,7 +10,20 @@
     </div>
 </template>
 <script setup>
+    import { onMounted } from 'vue';
+    const { gtag, grantConsent, revokeConsent } = useGtag()
+    function acceptTracking() {
+        grantConsent('G-L19R8RP6KH')
+    }
 
+    onMounted(() => {
+      acceptTracking();
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-L19R8RP6KH');
+    })
 </script>
 <style scoped>
   .page-enter-active,
