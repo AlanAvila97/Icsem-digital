@@ -81,18 +81,21 @@
         </div>
         <div id="sidebarMenu">
             <div class="container-menu scroll-menu">
-                <nuxt-link id="MenuInicio" to="/" class="items Seccion-Menu" alt="Redirección Inicio" title="Redirección Inicio" 
+                <nuxt-link @click.prevent="actionLink()"
+                    id="MenuInicio" to="/" class="items Seccion-Menu" alt="Redirección Inicio" title="Redirección Inicio" 
                     aria-label="Redirección Inicio">
                     Inicio
                 </nuxt-link>
-                <nuxt-link id="MenuProductow" to="/productos" class="items Seccion-Menu" alt="Redirección a Productos" title="Redirección a Productos" 
+                <nuxt-link @click.prevent="actionLink()"
+                    id="MenuProductow" to="/productos" class="items Seccion-Menu" alt="Redirección a Productos" title="Redirección a Productos" 
                     aria-label="Redirección a Productos">
                     Productos
                 </nuxt-link>
-                <nuxt-link id="MenuServicios" to="/servicios" class="items Seccion-Menu" aria-label="Redirección a Servicios">
+                <nuxt-link @click.prevent="actionLink()"
+                    id="MenuServicios" to="/servicios" class="items Seccion-Menu" aria-label="Redirección a Servicios">
                     Servicios
                 </nuxt-link>
-                <nuxt-link                                      
+                <nuxt-link @click.prevent="actionLink()"                                      
                     id="MenuExperiencias" to="/experiencia" class="items Seccion-Menu" 
                     alt="Redirección a Experiencia" title="Redirección a Experiencia" aria-label="Redirección a Experiencia">
                     Experiencia
@@ -140,6 +143,13 @@
             if(status){
                 getElement('#check').click();
             }
+        }
+    }
+    const actionLink = () => {
+        document.body.scrollTop = 0; 
+        document.documentElement.scrollTop = 0;
+        if(getElement('#check').checked){
+            getElement('#check').click();
         }
     }
     /**
