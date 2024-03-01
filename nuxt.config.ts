@@ -38,20 +38,24 @@ export default defineNuxtConfig({
             { rel: 'shortlink', href: 'https://icsem.mx/'},
             { rel: 'canonical', href: 'https://icsem.mx'},
             { rel: 'dns-prefetch', href: '//www.google-analytics.com'},
-            { rel: 'apple-touch-icon', sizes: '57x57', href: 'https://delicate-maamoul-70641c.netlify.app/images/logo_icsem57x57.webp'},
-            { rel: 'apple-touch-icon', sizes: '60x60', href: 'https://delicate-maamoul-70641c.netlify.app/images/logo_icsem60x60.webp'},
-            { rel: 'apple-touch-icon', sizes: '72x72', href: 'https://delicate-maamoul-70641c.netlify.app/images/logo_icsem72x72.webp'},
-            { rel: 'apple-touch-icon', sizes: '76x76', href: 'https://delicate-maamoul-70641c.netlify.app/images/logo_icsem76x76.webp'},
-            { rel: 'apple-touch-icon', sizes: '114x144', href: 'https://delicate-maamoul-70641c.netlify.app/images/logo_icsem114x114.webp'},
-            { rel: 'apple-touch-icon', sizes: '120x120', href: 'https://delicate-maamoul-70641c.netlify.app/images/logo_icsem120x120.webp'},
-            { rel: 'apple-touch-icon', sizes: '144x144', href: 'https://delicate-maamoul-70641c.netlify.app/images/logo_icsem144x144.webp'},
-            { rel: 'apple-touch-icon', sizes: '152x152', href: 'https://delicate-maamoul-70641c.netlify.app/images/logo_icsem152x152.webp'},
-            { rel: 'apple-touch-icon', sizes: '180x180', href: 'https://delicate-maamoul-70641c.netlify.app/images/logo_icsem180x180.webp'},
-            { rel: 'icon', sizes: '192x192', href: 'https://delicate-maamoul-70641c.netlify.app/_ipx/f_webp&fit_cover&q_90&s_1280x634/images/logo_icsem_ch.webp'},
+            { rel: 'apple-touch-icon', sizes: '57x57', href: 'https://icsem.mx/images/logo_icsem57x57.webp'},
+            { rel: 'apple-touch-icon', sizes: '60x60', href: 'https://icsem.mx/images/logo_icsem60x60.webp'},
+            { rel: 'apple-touch-icon', sizes: '72x72', href: 'https://icsem.mx/images/logo_icsem72x72.webp'},
+            { rel: 'apple-touch-icon', sizes: '76x76', href: 'https://icsem.mx/images/logo_icsem76x76.webp'},
+            { rel: 'apple-touch-icon', sizes: '114x144', href: 'https://icsem.mx/images/logo_icsem114x114.webp'},
+            { rel: 'apple-touch-icon', sizes: '120x120', href: 'https://icsem.mx/images/logo_icsem120x120.webp'},
+            { rel: 'apple-touch-icon', sizes: '144x144', href: 'https://icsem.mx/images/logo_icsem144x144.webp'},
+            { rel: 'apple-touch-icon', sizes: '152x152', href: 'https://icsem.mx/images/logo_icsem152x152.webp'},
+            { rel: 'apple-touch-icon', sizes: '180x180', href: 'https://icsem.mx/images/logo_icsem180x180.webp'},
+            { rel: 'icon', sizes: '192x192', href: 'https://icsem.mx/images/logo_icsem_ch.webp'},
+            { rel: 'stylesheet', href: 'https://icsem.mx/Admin/admin/assets/vendor/alertifyjs/css/alertify.min.css'},
+            { rel: 'stylesheet', href: 'https://icsem.mx/Admin/admin/assets/vendor/alertifyjs/css/default.min.css'},
         ],              
         script: [
-          { async: true, src: 'https://www.googletagmanager.com/gtag/js?id=G-L19R8RP6KH' },
-          { src: 'https://once.fabricaapps.com/js/wow/wow.min.js', tagPosition: 'bodyClose' },
+          // { async: true, src: 'https://www.googletagmanager.com/gtag/js?id=G-L19R8RP6KH' },
+          // { src: 'https://once.fabricaapps.com/js/wow/wow.min.js', tagPosition: 'bodyClose' },
+          { src: 'https://icsem.mx/Admin/admin/assets/js/wow/wow.min.js', tagPosition: 'bodyClose' },
+          { src: 'https://icsem.mx/Admin/admin/assets/vendor/alertifyjs/alertify.min.js', tagPosition: 'bodyClose' },
         ],
         noscript: [
         ]
@@ -100,9 +104,9 @@ export default defineNuxtConfig({
       gtagId: 'G-L19R8RP6KH',
     }
   },
-  plugins: [
-    '~/plugins/gtag.client.js'
-  ],
+  // plugins: [
+  //   '~/plugins/gtag.client.js'
+  // ],
   delayHydration: {
     debug: process.env.NODE_ENV === 'development',
     mode: 'init',
@@ -161,5 +165,11 @@ export default defineNuxtConfig({
     UserAgent: '*',
     Allow: '/',
     Sitemap: (req) => `https://${req.headers.host}/sitemap.xml`,
+  },
+  nitro: {
+    compressPublicAssets: true,
+  },
+  experimental: {
+    payloadExtraction: false
   }
 })
