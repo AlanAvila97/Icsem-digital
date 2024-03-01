@@ -43,8 +43,8 @@
 .section-experience-global .container-experience-global .info-experience-global .image-experience-global picture img{
     width: 180px;
     max-height: 140px;
-    filter: brightness(2) drop-shadow(2px 4px 6px #2a3a41);
-    -webkit-filter: brightness(2) drop-shadow(2px 4px 6px #2a3a41);
+    filter: drop-shadow(2px 4px 6px #2a3a41);
+    -webkit-filter: drop-shadow(2px 4px 6px #2a3a41);
 }
 .section-experience-global .container-experience-global .info-experience-global .name-experience-global{
     background-color: var(--green-logo-color);
@@ -55,14 +55,21 @@
     position: relative;
     justify-content: center;
     align-items: center;
+    padding: 0.5rem;
+    text-align: center;
     height: 130px;
-    width: max(300px, 320px);
+    width: max(300px, 520px);
     -webkit-border-radius: 0.5rem;
     -moz-border-radius: 0.5rem;
     -ms-border-radius: 0.5rem;
     -o-border-radius: 0.5rem;
 }
 .section-experience-global .container-experience-global .info-experience-global .name-experience-global h1{
+    font-size: calc(1.3rem + 2vh);
+    font-weight: bold;
+    color: var(--white-icon-color);
+}
+.section-experience-global .container-experience-global .info-experience-global .name-experience-global h2{
     font-size: calc(1.5rem + 2vh);
     font-weight: bold;
     color: var(--white-icon-color);
@@ -79,6 +86,11 @@
     background: var(--iron-color);
     padding: 3rem;
     box-shadow: 0px 0px 4px 1px #0000004a;
+}
+.section-experience-global .container-sinopsis-experience-global h1{
+    font-size: calc(1.2rem + 1vh);
+    font-weight: bold;
+    color: var(--green-logo-color);
 }
 .section-experience-global .container-sinopsis-experience-global h2{
     font-size: calc(1.2rem + 1vh);
@@ -247,7 +259,7 @@
     }
     .section-experience-global .container-experience-global .info-experience-global .name-experience-global{
         height: 120px;
-        width: max(200px, 280px);
+        width: max(200px, 100%);
     }
 
     .section-experience-global .container-sinopsis-experience-global .sinopsis{
@@ -274,7 +286,7 @@
     }
     .section-experience-global .container-experience-global .info-experience-global .name-experience-global {
         height: 100px;
-        width: max(200px, 220px);
+        width: max(200px, 100%);
     }
     .section-experience-global .container-experience-global .info-experience-global .name-experience-global h1{
         font-size: calc(1rem + 2vh);
@@ -293,7 +305,7 @@
     }
     .section-experience-global .container-experience-global .info-experience-global .name-experience-global {
         height: 100px;
-        width: max(180px, 200px);
+        width: max(180px, 100%);
     }
     .section-experience-global .container-experience-global .info-experience-global .name-experience-global h1{
         font-size: calc(0.9rem + 1vh);
@@ -317,7 +329,7 @@
     }
     .section-experience-global .container-experience-global .info-experience-global .name-experience-global {
         height: 80px;
-        width: 200px;
+        width: 100%;
     }
     .section-experience-global .container-experience-global .info-experience-global .name-experience-global h1{
         font-size: calc(1rem + 1vh);
@@ -355,7 +367,7 @@
     }
     .section-experience-global .container-experience-global .info-experience-global .name-experience-global {
         height: 85px;
-        width: 155px;
+        width: 100%;
         bottom: -2.5rem;
     }
     .section-experience-global .container-experience-global .info-experience-global .name-experience-global h1{

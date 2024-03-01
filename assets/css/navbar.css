@@ -27,7 +27,7 @@
     gap: var(--ch-rem);
 }
 .content-social-networks .info h2{
-    font-size: calc(1rem + 0.5vh);
+    font-size: calc(0.8rem + 0.5vh);
     margin: 0;
 }
 .content-social-networks .social-networks{

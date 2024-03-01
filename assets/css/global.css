@@ -155,6 +155,7 @@
     width: 100%;
     padding: 0rem 3rem 3rem 3rem;
     gap: 2rem;
+    justify-content: space-between;
 }
 .section-values .title-value{
     width: 100%;
@@ -181,6 +182,7 @@
     -moz-border-radius: 0.5rem;
     -ms-border-radius: 0.5rem;
     -o-border-radius: 0.5rem;
+    max-width: 30%;
 }
 .section-values .container-values .item-values .title-values{
     align-items: center;
@@ -204,6 +206,11 @@
     color: var(--scorpio-color);
     font-size: calc(0.8rem + 0.5vh);
     margin: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 /*-------------------------------------------------------------
 # Seccion Quienes Somos
@@ -399,6 +406,10 @@
 .section-emails .container-emails .card-emails .card-content {
     padding: 1rem;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
 } 
 .section-emails .container-emails .card-emails .card-title {
     font-size: 2rem;
@@ -416,8 +427,9 @@
     font-size: 1rem;
     color: var(--white-icon-color);
     display: flex;
-    gap: 1px;
+    gap: 3px;
     align-items: center;
+    justify-content: center;
 }   
 .section-emails .container-emails .card-emails .phone{
     font-size: 1rem;
@@ -652,6 +664,7 @@
     padding: 1rem;
     border-radius: 20px;
     position: relative;
+    margin: 1rem 0;
 }
 .section-contact-general .container-contact-general .form-contact .title {
     font-size: 2rem;
@@ -812,8 +825,8 @@
     border-radius: 0.5rem;
     box-shadow: 0px 4px 10px 2px rgb(0 0 0 / 53%);
     flex-direction: column;
-    height: auto;
-    width: max(300px, 30%);
+    width: 30%;
+    height: max(300px, 560px);
 }
 .section-products-services .container-products-services .content-items-products-services .items-products-services:hover .info-products-services .image-item{
     background: var(--green-logo-color);
@@ -824,7 +837,7 @@
     filter: brightness(2) drop-shadow(2px 4px 6px #2a3a41);
 }
 .section-products-services .container-products-services .content-items-products-services .items-products-services .visuals-products-services{
-    height: auto;
+    height: 250px;
     width: 100%;
     position: relative;    
     overflow: hidden;
@@ -857,7 +870,7 @@
 }
 .section-products-services .container-products-services .content-items-products-services .items-products-services 
 .visuals-products-services .bg-products-services{
-    height: auto;
+    height: 100%;
     width: 100%;
     max-height: 270px;
     border-radius: 0.5rem 0.5rem 0rem 0rem;    
@@ -894,12 +907,30 @@
 }
 .section-products-services .container-products-services .info-products-services h2{
     color: var(--Outer-color);
+    
     font-size: calc(1rem + 1vh);
     font-weight: bold;
+}
+.section-products-services .container-products-services .info-products-services h3{
+    color: var(--green-logo-color);
+    font-size: calc(1rem + 0.5vh);
+    align-self: baseline;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    margin: 1px;
 }
 .section-products-services .container-products-services .info-products-services .sinopsis{
     color: var(--Outer-color);
     font-size: calc(0.5rem + 1vh);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 .section-products-services .container-products-services .info-products-services .redirect{
     color: var(--green-logo-color);
@@ -1003,10 +1034,10 @@
     box-shadow: 0px 4px 10px 2px rgb(0 0 0 / 53%);
     text-decoration: none;
     width: 30%;
-    height: max(300px, 480px);
+    height: max(300px, 560px);
 }
 .section-experience .container-experience .content-items-experience .items-experience .visual-experience{
-    height: auto;
+    height: 250px;
     width: 100%;
     position: relative;    
     overflow: hidden;
@@ -1043,6 +1074,7 @@
 }
 .section-experience .container-experience .content-items-experience .items-experience .visual-experience picture img{
     width: 100%;
+    height: 100%;
     max-height: 270px;
     border-radius: 0.5rem 0.5rem 0rem 0rem;
     -webkit-border-radius: 0.5rem 0.5rem 0rem 0rem;
@@ -1057,7 +1089,7 @@
     padding: 1rem;
     position: relative;
     margin: -49px 0 1rem 0;
-    width: 150px;
+    width: auto;
     height: auto;
     display: flex;
     justify-content: center;
@@ -1091,10 +1123,21 @@
     font-size: calc(1rem + 0.5vh);
     align-self: baseline;
     font-weight: bold;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    margin: 1px;
 }
 .section-experience .container-experience .content-items-experience .items-experience .info-experience .sinopsis{
     color: var(--Outer-color);
     font-size: calc(0.5rem + 1vh);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 .section-experience .container-experience .content-items-experience .items-experience .info-experience .redirect{
     color: var(--green-logo-color);
@@ -1251,11 +1294,15 @@
     /*-------------------------------------------------------------
     # Seccion Productos Servicios   
     --------------------------------------------------------------*/    
+    .section-product .container-product .info-product .name-product h2{
+        font-size: calc(1rem + 1.5vh)!important;
+    }
     .section-products-services .container-products-services .content-items-products-services{
         flex-wrap: wrap;
     }
     .section-products-services .container-products-services .content-items-products-services .items-products-services{
         width: max(300px, 100%);
+        width: max(250px, 35%);
         max-height: 540px;
     }
     .section-products-services .container-products-services .content-items-products-services .items-products-services .visuals-products-services .bg-products-services{
@@ -1306,6 +1353,18 @@
         object-fit: cover;
     }
 }
+@media(max-width: 680px){
+    /*-------------------------------------------------------------
+    # Seccion Productos Servicios   
+    --------------------------------------------------------------*/
+    .section-products-services .container-products-services .content-items-products-services{
+        max-height: 1590px;
+    }
+    .section-products-services .container-products-services .content-items-products-services .items-products-services{
+        width: max(300px, 100%);
+        max-height: 540px;
+    }
+}
 @media(max-width: 650px){
     /*-------------------------------------------------------------
     # Seccion Quienes Somos
@@ -1326,6 +1385,10 @@
     .section-products-services .container-products-services .title-products-services h2{
         font-size: calc(1.8rem + 1vh);
         text-align: center;
+    }
+    .section-products-services .container-products-services .content-items-products-services .items-products-services{
+        width: max(300px, 100%);
+        max-height: 540px;
     }
     /*-------------------------------------------------------------
     # Seccion Post Ventas

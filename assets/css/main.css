@@ -131,6 +131,20 @@ a{
 .visibility-hidden{
     visibility: hidden;
 }
+.aa{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+.title-elipsis{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
 /*-------------------------------------------------------------
 # Modos de vista
 --------------------------------------------------------------*/

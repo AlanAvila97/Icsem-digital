@@ -43,8 +43,8 @@
 .section-product .container-product .info-product .image-product picture img{
     width: 180px;
     max-height: 140px;
-    filter: brightness(2) drop-shadow(2px 4px 6px #2a3a41);
-    -webkit-filter: brightness(2) drop-shadow(2px 4px 6px #2a3a41);
+    filter: drop-shadow(2px 4px 6px #2a3a41);
+    -webkit-filter: drop-shadow(2px 4px 6px #2a3a41);
 }
 .section-product .container-product .info-product .name-product{
     background-color: var(--green-logo-color);
@@ -55,17 +55,20 @@
     position: relative;
     justify-content: center;
     align-items: center;
+    padding: 0.5rem;
+    text-align: center;
     height: 130px;
-    width: max(300px, 320px);
+    width: max(300px, 520px);
     -webkit-border-radius: 0.5rem;
     -moz-border-radius: 0.5rem;
     -ms-border-radius: 0.5rem;
     -o-border-radius: 0.5rem;
 }
 .section-product .container-product .info-product .name-product h1{
-    font-size: calc(1.5rem + 2vh);
+    font-size: calc(1.3rem + 2vh);
     font-weight: bold;
     color: var(--white-icon-color);
+    
 }
 .section-product .container-product .info-product .name-product h2{
     font-size: calc(1.5rem + 2vh);
@@ -267,6 +270,7 @@
         font-size: calc(0.7rem + 0.7vh);
     }
 }
+
 @media(max-width: 600px){
     /*-------------------------------------------------------------
     # Seccion Contacto General
