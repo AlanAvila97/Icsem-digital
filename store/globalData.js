@@ -7,6 +7,18 @@ export const dataGlobal = defineStore('dataGlobal', () => {
             case 'Estados':
                 return '/api/estados/estados';
                 break;
+            case 'Api':
+                return '/api/json/api';
+                break;
+            case 'Productos':
+                return '/api/json/api_productos';
+                break;
+            case 'Servicios':
+                return '/api/json/api_servicios';
+                break;
+            case 'Experiencias':
+                return '/api/json/api_experiencias';
+                break;
         }
     }
     /**
@@ -93,7 +105,7 @@ export const dataGlobal = defineStore('dataGlobal', () => {
      * @return {textParser} Retorna la cadena parseada
     */ 
     const eliminarCaracteres = (cadena) => {
-        var outString = cadena.replace(/[`~!¡@#$%^&*()_|+\=¿?;:'",.<>\{\}\[\]\\\/]/gi, '');
+        var outString = cadena.replace(/[`~!¡´@#$%^&*()_|+\=¿?;:'",.<>\{\}\[\]\\\/]/gi, '');
         return outString;
     }
     /**
@@ -118,16 +130,27 @@ export const dataGlobal = defineStore('dataGlobal', () => {
             }
         );
         wow.init();
-   }    
+    }  
+    const filterItems = (info, idProduct) => {
+        let data = []
+        info.forEach((ele, index) => {
+            if(parseoTexto(ele.titulo) != idProduct){
+                data.push(ele);
+            }
+        });
+        return (data.length === 0 ) ? 'd-none': 'd-flex';
+    }  
     return{
         getElement,
         addAllClass,
         removeClass,
+        parseoTexto,
+        filterItems,
         scrollSection,
         getAllElement,
         removeAllClass,
+        addClassElement,
         fetchInfoIcsem,
-        addClassElement,    
         initializationWow,
         eliminarCaracteres,
     }
