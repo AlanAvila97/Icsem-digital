@@ -1,49 +1,51 @@
 <template>
     <section class="section-experience">
-        <div class="container-experience d-flex">
+        <div class="container-experience" :class="filterItems( props?.info, props?.id)">
             <div class="title-experience d-flex">
                 <h2 id="Experiencias" class="wow animate__animated animate__fadeInDown"
                     data-wow-delay="0.3s" data-wow-offset="10">{{ props?.title.titulo }}</h2>                    
             </div>
             <div class="content-items-experience" data-contador="3" data-limite="1">
-                <nuxt-link v-for="(item, index) in props?.info" :key="index?.id"
-                           :class="paginationItems(index + 1, props?.info?.length)"
-                           :to="parserURL('/experiencia/', item?.empresa)" 
-                           class="items-experience page-1 d-flex wow animate__animated animate__fadeInUp"
-                           data-wow-delay="0.1s" data-wow-offset="10" aria-label="Redirección">                        
-                    <div class="visual-experience">
-                        <NuxtPicture
-                            :src="( item?.imagenw != null ) 
-                                ? props?.url+item?.imagenw 
-                                : props?.url+item?.imagen"
-                            densities="x1 x2"
-                            preset="blog" 
-                            format="webp" 
-                            quality="90" 
-                            fit="cover" 
-                            preload
-                            loading="lazy"
-                            width="425"
-                            height="270" 
-                            :imgAttrs="{
-                                id:'img-experience-1', 
-                                class:'img-fluid ', 
-                                alt: 'Image',                                
-                                title: 'Imagen',
-                                'data-my-data': 'my-value'}"/>  
-                    </div>                        
-                    <div class="info-experience">
-                        <div class="content-title">
-                            <h2>{{ item?.empresa }}</h2>
-                        </div>  
-                        <p class="sinopsis"> {{ item?.subtitulo }} </p>
-                        <p class="redirect"> 
-                            Da click para para saber más <Icon name="ri:arrow-right-line" />
-                        </p>  
-                    </div>
-                </nuxt-link>
+                <template v-for="(item, index) in props?.info" :key="index?.id">
+                    <nuxt-link :class="paginationItems(index + 1, props?.info?.length)"
+                                :to="parserURL('/experiencia/', item?.empresa)" 
+                                v-if="parseoTexto(item.empresa) != String(props?.id)"
+                                class="items-experience d-flex wow animate__animated animate__fadeInUp"
+                                data-wow-delay="0.1s" data-wow-offset="10" aria-label="Redirección">                        
+                        <div class="visual-experience">
+                            <NuxtPicture
+                                :src="( item?.imagenw != null ) 
+                                    ? props?.url+item?.imagenw 
+                                    : props?.url+item?.imagen"
+                                densities="x1 x2"
+                                preset="blog" 
+                                format="webp" 
+                                quality="90" 
+                                fit="cover" 
+                                preload
+                                loading="lazy"
+                                width="425"
+                                height="270" 
+                                :imgAttrs="{
+                                    id:'img-experience-1', 
+                                    class:'img-fluid ', 
+                                    alt: 'Image',                                
+                                    title: 'Imagen',
+                                    'data-my-data': 'my-value'}"/>  
+                        </div>                        
+                        <div class="info-experience">
+                            <div class="content-title">
+                                <h2>{{ item?.empresa }}</h2>
+                            </div>  
+                            <p class="sinopsis"> {{ item?.subtitulo }} </p>
+                            <p class="redirect"> 
+                                Da click para para saber más <Icon name="ri:arrow-right-line" />
+                            </p>  
+                        </div>
+                    </nuxt-link>
+                </template>
             </div>
-            <div class="content-show-more" :class="(props?.info.length <= 3  ) ? 'd-none': 'd-flex'">
+            <div class="content-show-more" :class="filterItemProducts( props?.info, props?.id)">
                 <hr>
                 <button class="" @click="showMore">
                     <span class="box">
@@ -67,7 +69,7 @@
     // 
     let num = 3;
     // 
-    const props = defineProps({ info: Array, url: String, title: Object });
+    const props = defineProps({ info: Array, url: String, id: String, title: Object });
     const paginationItems = (index, sizeProducts) => {        
         let classItem = '';
         if(index <= num){
@@ -100,6 +102,24 @@
     }
     const parserURL = (direccion, titulo) => {
         return `${direccion + parseoTexto(titulo)}`;
+    }
+    const filterItemProducts = (info, idProduct) => {
+        let data = []
+        info.forEach((ele, index) => {
+            if(parseoTexto(ele.titulo) != idProduct){
+                data.push(ele);
+            }
+        });
+        return (data.length <= 3 ) ? 'd-none': 'd-flex';
+    }
+    const filterItems = (info, idProduct) => {
+        let data = []
+        info.forEach((ele, index) => {
+            if(parseoTexto(ele.titulo) != idProduct){
+                data.push(ele);
+            }
+        });
+        return (data.length == 0 ) ? 'd-none': 'd-flex';
     }
     onMounted(() => {
         initializationWow();

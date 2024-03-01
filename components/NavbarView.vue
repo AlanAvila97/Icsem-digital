@@ -12,7 +12,7 @@
             <div class="logo h-100">
                 <nuxt-link to="/">                    
                     <NuxtPicture                        
-                        src="images/logo_icsem_ch.webp"
+                        src="https://icsem.mx/images/logo_icsem_ch.webp"
                         densities="x1 x2"
                         preset="blog" 
                         format="webp" 
@@ -29,7 +29,7 @@
                             alt: 'Logo Icsem',                                
                             title: 'Logo Icsem'}"/>
                     <NuxtPicture
-                        src="images/LOGOTIPO_ICSEM_BLANCO_CH.webp"
+                        src="https://icsem.mx/images/LOGOTIPO_ICSEM_BLANCO_CH.webp"
                         densities="x1 x2"
                         preset="blog" 
                         format="webp" 

@@ -2,68 +2,32 @@
     <section class="section-emails">        
         <div class="title-emails w-100 d-flex">
             <h2 id="Contactanos" class="wow animate__animated animate__fadeInDown"
-                data-wow-delay="0.1s" data-wow-offset="10">Contactanos</h2>
+                data-wow-delay="0.1s" data-wow-offset="10"> {{ props?.title[0].titulo }} </h2>
         </div>
         <div class="container-emails d-flex">
-            <div id="infoMail1" class="card-emails wow animate__animated animate__fadeInUp"
+            <div v-for="(item, index) in props.info" :key="index?.id"
+                 :id="`infoMail${index+1}`" class="card-emails wow animate__animated animate__fadeInUp"
                  data-wow-delay="0.5s" data-wow-offset="10">
                 <div class="card-content">
-                    <div class="card-title">Contacto 1</div>
-                    <p class="card-description">This is a cool card design.</p>
-                    <p class="mail">demo@prueba.com</p>
-                    <button id="btn1"
+                    <div class="card-title">{{ item?.nombre }}</div>
+                    <p class="card-description">{{ item?.puesto }}</p>
+                    <p class="mail">                            
+                        <Icon name="material-symbols:mail" size="1rem" />
+                        {{ item?.correo }}
+                    </p>
+                    <p class="phone">
+                        <Icon name="ic:baseline-local-phone" size="1rem" />
+                        {{ item?.numero }}
+                    </p>
+                    <button :id="`btn${index+1}`"
                             class="card-button" type="button" 
                             @click="getInfoMail" 
+                            :data-id="`infoMail${index+1}`"
                             data-bs-toggle="collapse" 
                             data-bs-target="#ContainerForm" 
-                            data-id="infoMail1"
                             aria-expanded="false" 
                             aria-controls="ContainerForm">
-                            Click Me
-                    </button>
-                </div>
-                <div class="icon-box">
-                    <span class="icon d-flex">
-                        <Icon name="material-symbols:contact-mail"/>
-                    </span>
-                </div>
-            </div>
-            <div id="infoMail2" class="card-emails wow animate__animated animate__fadeInUp"
-                 data-wow-delay="0.3s" data-wow-offset="10">
-                <div class="card-content">
-                    <div class="card-title">Contacto 2</div>
-                    <p class="card-description">This is a cool card design.</p>
-                    <p class="mail">demo1@prueba.com</p>
-                    <button id="btn2"
-                            class="card-button" type="button" 
-                            @click="getInfoMail" 
-                            data-bs-toggle="collapse" 
-                            data-bs-target="#ContainerForm" 
-                            data-id="infoMail2"
-                            aria-expanded="false" 
-                            aria-controls="ContainerForm">
-                        Click Me
-                    </button>
-                </div>
-                <div class="icon-box">
-                    <span class="icon d-flex">
-                        <Icon name="material-symbols:contact-mail"/>
-                    </span>
-                </div>
-            </div>
-            <div id="infoMail3" class="card-emails wow animate__animated animate__fadeInUp"
-                 data-wow-delay="0.1s" data-wow-offset="10">
-                <div class="card-content">
-                    <div class="card-title">Contacto 3</div>
-                    <p class="card-description">This is a cool card design.</p>
-                    <p class="mail">demo2@prueba.com</p>
-                    <button id="btn3"
-                            class="card-button" type="button" 
-                            @click="getInfoMail"  
-                            data-id="infoMail3"
-                            aria-expanded="false" 
-                            aria-controls="ContainerForm">
-                            Click Me
+                            Presiona para Contactarnos
                     </button>
                 </div>
                 <div class="icon-box">
@@ -85,6 +49,8 @@
     const DataGlobal = dataGlobal();  
     // 
     const { getElement, scrollSection, initializationWow } = DataGlobal; 
+    // 
+    const props = defineProps({ info: Array, title: Object });
     /**
     * @description Funcion que obtiene la informacion del tipo de correo que se enviara
     */   

@@ -3,9 +3,10 @@
         <div class="container-products-services d-flex">
             <div class="title-products-services w-100 d-flex">
                 <h2 class="wow animate__animated animate__fadeInDown"
-                    data-wow-delay="0.3s" data-wow-offset="10"> {{ props?.title.titulo }} </h2>
+                    data-wow-delay="0.3s" data-wow-offset="10">{{ props?.title.titulo }}</h2>
             </div>
-            <div class="categories-products wow animate__animated animate__fadeInDown d-none" data-wow-delay="0.4s" data-wow-offset="10">
+            <div class="categories-products wow animate__animated animate__fadeInDown d-none" 
+                 data-wow-delay="0.4s" data-wow-offset="10">
                 <div class="list-categories">
                     <div id="categorie_all" class="item-categorie active" 
                          @click="filterServices">
@@ -27,61 +28,63 @@
             </div>
             <div class="content-items-products-services d-flex w-100" 
                  data-contador="3" data-limite="1">
-                <nuxt-link v-for="(item, index) in props?.info" :key="index?.id"
-                           :class="paginationItems(index + 1, props?.info?.length)"
-                           :to="parserURL('/servicios/', item?.titulo)" 
-                           class="items-products-services d-flex services-mecanica wow animate__animated animate__fadeInUp"
-                           data-wow-delay="0.1s" data-wow-offset="10" aria-label="Redirección">
-                    <div class="visuals-products-services">
-                        <NuxtPicture
-                            :src="( item?.imagenw != null ) 
-                                ? props?.url+item?.imagenw 
-                                : props?.url+item?.imagenw"
-                            densities="x1 x2"
-                            preset="blog" 
-                            format="webp" 
-                            quality="90" 
-                            fit="cover" 
-                            preload
-                            loading="lazy"
-                            width="425"
-                            height="270" 
-                            :imgAttrs="{
-                                id:'img-us-1', 
-                                class:'img-fluid bg-products-services', 
-                                alt: 'Image',                                
-                                title: 'Imagen',
-                                'data-my-data': 'my-value'}"/>  
-                    </div> 
-                    <div class="info-products-services">
-                        <div class="image-item">
+                 <template v-for="(item, index) in props?.info" :key="index?.id">
+                    <nuxt-link :class="paginationItems(index + 1, props?.info?.length)"
+                               :to="parserURL('/servicios/', item?.titulo)" 
+                               v-if="parseoTexto(item.titulo) != String(props?.id)"
+                               class="items-products-services d-flex services-mecanica wow animate__animated animate__fadeInUp"
+                               data-wow-delay="0.1s" data-wow-offset="10" aria-label="Redirección">
+                        <div class="visuals-products-services">
                             <NuxtPicture
-                            :src="( item?.imagenw2 != null ) 
-                                    ? props?.url+item?.imagenw2 
-                                    : props?.url+item?.imagen2"
-                            densities="x1 x2"
-                            preset="blog" 
-                            format="webp" 
-                            quality="90" 
-                            fit="cover" 
-                            preload
-                            :imgAttrs="{
-                                id:'img-us-2', 
-                                class:'img-fluid bg-products-services', 
-                                style:'display:block', 
-                                alt: 'Image',                                
-                                title: 'Imagen',
-                                'data-my-data': 'my-value'}"/>  
-                        </div>
-                        <h3>{{ item?.titulo }}</h3>
-                        <p class="sinopsis"> {{ item?.descripcion }} </p>
-                        <p class="redirect"> 
-                            Da click para para saber más <Icon name="ri:arrow-right-line" />
-                        </p>    
-                    </div>   
-                </nuxt-link>
+                                    :src="( item?.imagenw != null ) 
+                                        ? props?.url+item?.imagenw 
+                                        : props?.url+item?.imagen"
+                                    densities="x1 x2"
+                                    preset="blog" 
+                                    format="webp" 
+                                    quality="90" 
+                                    fit="cover" 
+                                    preload
+                                    loading="lazy"
+                                    width="425"
+                                    height="270" 
+                                    :imgAttrs="{
+                                        id:'img-us-1', 
+                                        class:'img-fluid bg-products-services', 
+                                        alt: 'Image',                                
+                                        title: 'Imagen',
+                                        'data-my-data': 'my-value'}"/>  
+                        </div>        
+                        <div class="info-products-services">
+                            <div class="image-item">
+                                <NuxtPicture
+                                :src="( item?.imagenw2 != null ) 
+                                        ? props?.url+item?.imagenw2 
+                                        : props?.url+item?.imagen2"
+                                densities="x1 x2"
+                                preset="blog" 
+                                format="webp" 
+                                quality="90" 
+                                fit="cover" 
+                                preload
+                                :imgAttrs="{
+                                    id:'img-us-2', 
+                                    class:'img-fluid bg-products-services', 
+                                    style:'display:block', 
+                                    alt: 'Image',                                
+                                    title: 'Imagen',
+                                    'data-my-data': 'my-value'}"/>  
+                            </div>
+                            <h3>{{ item?.titulo }}</h3>
+                            <p class="sinopsis"> {{ item?.descripcion }} </p>
+                            <p class="redirect"> 
+                                Da click para para saber más <Icon name="ri:arrow-right-line" />
+                            </p>    
+                        </div>                          
+                    </nuxt-link>
+                 </template>
             </div>
-            <div class="content-show-more" :class="(props?.info.length <= 3  ) ? 'd-none': 'd-flex'">
+            <div class="content-show-more" :class="filterItemProducts( props?.info, props?.id) ">
                 <hr>
                 <button class="" @click="showMore">
                     <span class="box">
@@ -102,9 +105,10 @@
     const DataGlobal = dataGlobal();
     let num = 3;
     // 
-    const { getElement, getAllElement, addAllClass, removeClass, scrollSection,
-            removeAllClass, addClassElement, initializationWow, parseoTexto } = DataGlobal; 
-    const props = defineProps({ info: Array, url: String, title: Object });
+    const { getElement, getAllElement, addAllClass, scrollSection, filterItems,
+            removeClass, removeAllClass, addClassElement, initializationWow, parseoTexto } = DataGlobal;
+    // 
+    const props = defineProps({ info: Array, url: String, id: String, title: Object  });
     // 
     const paginationItems = (index, sizeProducts) => {        
         let classItem = '';
@@ -150,7 +154,7 @@
         let items = getAllElement('.content-items-products-services .page-'+newCount);
         removeAllClass(getAllElement('.items-products-services'), 'd-none')
         if(items.length != 0){
-            let height = getElement('.content-items-products-services').offsetHeight + 20;    
+            let height = getElement('.content-items-products-services').offsetHeight + 20;
             let MaxHeight = height * limiteProductos;
             let nextItems = getAllElement('.content-items-products-services .page-'+nextCount);     
                 container.style = "max-height: "+MaxHeight+"px;";
@@ -161,6 +165,15 @@
     }
     const parserURL = (direccion, titulo) => {
         return `${direccion + parseoTexto(titulo)}`;
+    }
+    const filterItemProducts = (info, idProduct) => {
+        let data = []
+        info.forEach((ele, index) => {
+            if(parseoTexto(ele.titulo) != idProduct){
+                data.push(ele);
+            }
+        });        
+        return ( data.length <= 3 ) ? 'd-none': 'd-flex';
     }
     onMounted(() => {
         initializationWow();

@@ -3,25 +3,22 @@
         <div class="container-footer d-flex">
             <div class="info-contact wow animate__animated animate__fadeInDown" data-wow-delay="0.1s" data-wow-offset="10">
                 <h2>Información de contacto</h2>
-                <p>
+                <p class="ubi">
                     <Icon name="ic:baseline-location-on" size="1.5rem" />
-                    Ubicación                    
+                    {{ infoIcsem?.datos[0].titulo }}                    
                 </p>
                 <p>
                     <Icon name="ic:baseline-local-phone" size="1.5rem" />
-                    Telefono
+                    {{ infoIcsem?.datos[1].titulo }} 
                 </p>
                 <p>                    
                     <Icon name="material-symbols:mail" size="1.5rem" />
-                    Correo                    
+                    {{ infoIcsem?.datos[2].titulo }} 
                 </p>
             </div>
             <div class="notice-privacy wow animate__animated animate__fadeInDown" data-wow-delay="0.2s" data-wow-offset="10">
-                <h2>Aviso de privacidad</h2>
-                <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil sunt repellat sapiente unde voluptates illo voluptatum officia,
-                     maiores earum corporis a corrupti, porro id ipsam repellendus. Molestiae aliquam voluptas inventore!
-                </p>
+                <h2>{{ infoIcsem?.aviso[0].titulo }}</h2>
+                <p>{{ infoIcsem?.aviso[1].titulo }}</p>
             </div>
             <div class="links-navigation wow animate__animated animate__fadeInDown" data-wow-delay="0.3s" data-wow-offset="10">
                 <h2>Lista de Navegación</h2>
@@ -52,9 +49,17 @@
     import 'assets/css/footer.css'
     // Global Data (Pinia)
     import {dataGlobal} from '@/store/globalData'
+    import {infoGlobal} from '@/store/jsonData'
     // 
-    const DataGlobal = dataGlobal();   
-    const { getElement, scrollSection } = DataGlobal; 
+    const DataGlobal = dataGlobal(); 
+    const InfoGlobal = infoGlobal();   
+    const { getElement, scrollSection, fetchInfoIcsem } = DataGlobal; 
+    const { fetchData } = InfoGlobal; 
+    // 
+    const jsonIcsem = await fetchInfoIcsem('Api');
+    //
+    // const { data: infoIcsem } = await useFetch(jsonIcsem)
+    const infoIcsem = await fetchData('api');
     /**
      * @description Funcion que da opacidad o da backgound solido al navbar dependiendo de la posición del top de la vista
     */
